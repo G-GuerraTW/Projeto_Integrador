@@ -1,0 +1,12 @@
+C:\Users\GoatG\Desktop\Projeto_Integrador\Aplicacao\backend\CadeMeuPet.Domain\bin\Debug\net9.0\CadeMeuPet.Domain.deps.json
+C:\Users\GoatG\Desktop\Projeto_Integrador\Aplicacao\backend\CadeMeuPet.Domain\bin\Debug\net9.0\CadeMeuPet.Domain.dll
+C:\Users\GoatG\Desktop\Projeto_Integrador\Aplicacao\backend\CadeMeuPet.Domain\bin\Debug\net9.0\CadeMeuPet.Domain.pdb
+C:\Users\GoatG\Desktop\Projeto_Integrador\Aplicacao\backend\CadeMeuPet.Domain\obj\Debug\net9.0\CadeMeuPet.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\GoatG\Desktop\Projeto_Integrador\Aplicacao\backend\CadeMeuPet.Domain\obj\Debug\net9.0\CadeMeuPet.Domain.AssemblyInfoInputs.cache
+C:\Users\GoatG\Desktop\Projeto_Integrador\Aplicacao\backend\CadeMeuPet.Domain\obj\Debug\net9.0\CadeMeuPet.Domain.AssemblyInfo.cs
+C:\Users\GoatG\Desktop\Projeto_Integrador\Aplicacao\backend\CadeMeuPet.Domain\obj\Debug\net9.0\CadeMeuPet.Domain.csproj.CoreCompileInputs.cache
+C:\Users\GoatG\Desktop\Projeto_Integrador\Aplicacao\backend\CadeMeuPet.Domain\obj\Debug\net9.0\CadeMeuPet.Domain.sourcelink.json
+C:\Users\GoatG\Desktop\Projeto_Integrador\Aplicacao\backend\CadeMeuPet.Domain\obj\Debug\net9.0\CadeMeuPet.Domain.dll
+C:\Users\GoatG\Desktop\Projeto_Integrador\Aplicacao\backend\CadeMeuPet.Domain\obj\Debug\net9.0\refint\CadeMeuPet.Domain.dll
+C:\Users\GoatG\Desktop\Projeto_Integrador\Aplicacao\backend\CadeMeuPet.Domain\obj\Debug\net9.0\CadeMeuPet.Domain.pdb
+C:\Users\GoatG\Desktop\Projeto_Integrador\Aplicacao\backend\CadeMeuPet.Domain\obj\Debug\net9.0\ref\CadeMeuPet.Domain.dll

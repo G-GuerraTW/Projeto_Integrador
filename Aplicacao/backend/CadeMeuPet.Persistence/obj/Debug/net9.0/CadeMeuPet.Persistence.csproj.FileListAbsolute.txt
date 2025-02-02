@@ -1,0 +1,12 @@
+C:\Users\GoatG\Desktop\Projeto_Integrador\Aplicacao\backend\CadeMeuPet.Persistence\bin\Debug\net9.0\CadeMeuPet.Persistence.deps.json
+C:\Users\GoatG\Desktop\Projeto_Integrador\Aplicacao\backend\CadeMeuPet.Persistence\bin\Debug\net9.0\CadeMeuPet.Persistence.dll
+C:\Users\GoatG\Desktop\Projeto_Integrador\Aplicacao\backend\CadeMeuPet.Persistence\bin\Debug\net9.0\CadeMeuPet.Persistence.pdb
+C:\Users\GoatG\Desktop\Projeto_Integrador\Aplicacao\backend\CadeMeuPet.Persistence\obj\Debug\net9.0\CadeMeuPet.Persistence.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\GoatG\Desktop\Projeto_Integrador\Aplicacao\backend\CadeMeuPet.Persistence\obj\Debug\net9.0\CadeMeuPet.Persistence.AssemblyInfoInputs.cache
+C:\Users\GoatG\Desktop\Projeto_Integrador\Aplicacao\backend\CadeMeuPet.Persistence\obj\Debug\net9.0\CadeMeuPet.Persistence.AssemblyInfo.cs
+C:\Users\GoatG\Desktop\Projeto_Integrador\Aplicacao\backend\CadeMeuPet.Persistence\obj\Debug\net9.0\CadeMeuPet.Persistence.csproj.CoreCompileInputs.cache
+C:\Users\GoatG\Desktop\Projeto_Integrador\Aplicacao\backend\CadeMeuPet.Persistence\obj\Debug\net9.0\CadeMeuPet.Persistence.sourcelink.json
+C:\Users\GoatG\Desktop\Projeto_Integrador\Aplicacao\backend\CadeMeuPet.Persistence\obj\Debug\net9.0\CadeMeuPet.Persistence.dll
+C:\Users\GoatG\Desktop\Projeto_Integrador\Aplicacao\backend\CadeMeuPet.Persistence\obj\Debug\net9.0\refint\CadeMeuPet.Persistence.dll
+C:\Users\GoatG\Desktop\Projeto_Integrador\Aplicacao\backend\CadeMeuPet.Persistence\obj\Debug\net9.0\CadeMeuPet.Persistence.pdb
+C:\Users\GoatG\Desktop\Projeto_Integrador\Aplicacao\backend\CadeMeuPet.Persistence\obj\Debug\net9.0\ref\CadeMeuPet.Persistence.dll
