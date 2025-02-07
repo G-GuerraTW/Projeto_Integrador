@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CadeMeuPet.Persistence")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+67a638113c55afdcc4023be1d9206e579ed89c38")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c13b12cd82609961c140631aa888e1a3b3575ae0")]
 [assembly: System.Reflection.AssemblyProductAttribute("CadeMeuPet.Persistence")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CadeMeuPet.Persistence")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
