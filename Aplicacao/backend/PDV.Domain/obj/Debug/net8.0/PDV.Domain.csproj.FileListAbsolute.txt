@@ -1,0 +1,12 @@
+C:\Users\Gabriel G\Desktop\Projeto_Integrador\Aplicacao\backend\PDV.Domain\bin\Debug\net8.0\PDV.Domain.deps.json
+C:\Users\Gabriel G\Desktop\Projeto_Integrador\Aplicacao\backend\PDV.Domain\bin\Debug\net8.0\PDV.Domain.dll
+C:\Users\Gabriel G\Desktop\Projeto_Integrador\Aplicacao\backend\PDV.Domain\bin\Debug\net8.0\PDV.Domain.pdb
+C:\Users\Gabriel G\Desktop\Projeto_Integrador\Aplicacao\backend\PDV.Domain\obj\Debug\net8.0\PDV.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Gabriel G\Desktop\Projeto_Integrador\Aplicacao\backend\PDV.Domain\obj\Debug\net8.0\PDV.Domain.AssemblyInfoInputs.cache
+C:\Users\Gabriel G\Desktop\Projeto_Integrador\Aplicacao\backend\PDV.Domain\obj\Debug\net8.0\PDV.Domain.AssemblyInfo.cs
+C:\Users\Gabriel G\Desktop\Projeto_Integrador\Aplicacao\backend\PDV.Domain\obj\Debug\net8.0\PDV.Domain.csproj.CoreCompileInputs.cache
+C:\Users\Gabriel G\Desktop\Projeto_Integrador\Aplicacao\backend\PDV.Domain\obj\Debug\net8.0\PDV.Domain.sourcelink.json
+C:\Users\Gabriel G\Desktop\Projeto_Integrador\Aplicacao\backend\PDV.Domain\obj\Debug\net8.0\PDV.Domain.dll
+C:\Users\Gabriel G\Desktop\Projeto_Integrador\Aplicacao\backend\PDV.Domain\obj\Debug\net8.0\refint\PDV.Domain.dll
+C:\Users\Gabriel G\Desktop\Projeto_Integrador\Aplicacao\backend\PDV.Domain\obj\Debug\net8.0\PDV.Domain.pdb
+C:\Users\Gabriel G\Desktop\Projeto_Integrador\Aplicacao\backend\PDV.Domain\obj\Debug\net8.0\ref\PDV.Domain.dll

@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PDV.Application", "PDV.Application\PDV.Application.csproj", "{6074CF12-9456-4172-BA54-B6E4FA67A4FD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PDV.Domain", "PDV.Domain\PDV.Domain.csproj", "{CA6A474B-F120-451A-80F3-05DE91482BC0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PDV.Persistence", "PDV.Persistence\PDV.Persistence.csproj", "{9B2799CA-6EB3-4327-93F3-75CE72AD1027}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6074CF12-9456-4172-BA54-B6E4FA67A4FD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6074CF12-9456-4172-BA54-B6E4FA67A4FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6074CF12-9456-4172-BA54-B6E4FA67A4FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6074CF12-9456-4172-BA54-B6E4FA67A4FD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CA6A474B-F120-451A-80F3-05DE91482BC0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CA6A474B-F120-451A-80F3-05DE91482BC0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CA6A474B-F120-451A-80F3-05DE91482BC0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CA6A474B-F120-451A-80F3-05DE91482BC0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9B2799CA-6EB3-4327-93F3-75CE72AD1027}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9B2799CA-6EB3-4327-93F3-75CE72AD1027}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9B2799CA-6EB3-4327-93F3-75CE72AD1027}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9B2799CA-6EB3-4327-93F3-75CE72AD1027}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
