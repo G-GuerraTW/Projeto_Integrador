@@ -1,10 +1,10 @@
 
 using AutoMapper;
-using PDV.Application.Contracts;
-using PDV.Application.DTOs;
 using PDV.Domain.Entities;
+using PDV.Application.DTOs;
+using PDV.Application.Contracts;
 using PDV.Persistence.Contracts;
-using System.Xml.Linq;
+using PDV.Persistence.Repositories;
 
 namespace PDV.Application.Services
 {
@@ -39,7 +39,7 @@ namespace PDV.Application.Services
             }
         }
 
-        public async Task<ProdutoDTO> UpdateEvento(int produtoId, ProdutoEntity model)
+        public async Task<ProdutoDTO> UpdateProduto(int produtoId, ProdutoDTO model)
         {
             try
             {
@@ -64,17 +64,35 @@ namespace PDV.Application.Services
             }
         }
 
-        public async void DeleteEvento(int produtoID)
+        public async Task<bool> DeleteProduto(int produtoID)
         {
             try
             {
-                _produtoPersist.Delete(produtoID);
+                var verificaProduto = await _produtoPersist.GetProdutoByIDAsync(produtoID);
+                if(verificaProduto == null) throw new Exception("Produto não existente para ser apagado.");
 
-                await _produtoPersist.SaveChangesAsync();
+                _produtoPersist.Delete(verificaProduto);
+
+                if(await _produtoPersist.SaveChangesAsync());
+                    return true;
             }
             catch (Exception ex)
             {
                 throw new Exception($"Erro ao remover o produto: {ex.Message}");
+            }
+        }
+
+        public async Task<ProdutoDTO> GetProdutoByIDAsync(int ID)
+        {
+            try
+            {
+                var produto = await _produtoPersist.GetProdutoByIDAsync(ID);
+
+                return _mapper.Map<ProdutoDTO>(produto);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception($"Erro ao buscar os produtos pelo nome: {ex.Message}");
             }
         }
 
@@ -96,9 +114,8 @@ namespace PDV.Application.Services
         {
             try
             {
-                var produtos = await _produtoPersist.GetAllProdutoAsync();
-
-                return _mapper.Map<ProdutoDTO[]>(produtos);
+                var produtosRetorno = await _produtoPersist.GetAllProdutoAsync();
+                return _mapper.Map<ProdutoDTO[]>(produtosRetorno);
             }
             catch (Exception ex)
             {

@@ -70,7 +70,10 @@ namespace PDV.Application.Services
         {
             try
             {
-                _vendaPersist.Delete(vendaID);
+                var verificaVenda = await _vendaPersist.GetVendasByIDAsync(vendaID);
+
+                if(verificaVenda != null) throw new Exception("ID De venda não existe para exclusão");
+                _vendaPersist.Delete(verificaVenda);
 
                 await _vendaPersist.SaveChangesAsync();
             }

@@ -9,10 +9,10 @@ namespace PDV.Persistence.Configuration
         public void Configure(EntityTypeBuilder<ItemVendaEntity> builder)
         {
             builder.ToTable("Itens_Venda");
-            builder.HasKey("Id");
-            builder.Property(I => I.Quantidade).HasColumnType("INTEGER(6)");
-            builder.Property(I => I.PrecoUnitario).HasColumnType("DECIMAL(10,2)");
-            builder.Property(I => I.Subtotal).HasColumnType("DECIMAL(10,2)");
+            builder.HasKey(I => I.Id);
+            builder.Property(I => I.Quantidade).HasColumnType("INTEGER");
+            builder.Property(I => I.PrecoUnitario).HasColumnType("REAL");
+            builder.Property(I => I.Subtotal).HasColumnType("REAL");
 
             builder.HasOne(I => I.Venda)
                 .WithMany(V => V.ItensVenda)

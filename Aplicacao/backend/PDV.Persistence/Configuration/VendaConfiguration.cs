@@ -10,18 +10,14 @@ namespace PDV.Persistence.Configuration
         public void Configure(EntityTypeBuilder<VendaEntity> builder)
         {
             builder.ToTable("Venda");
-            builder.HasKey("Id");
-            builder.Property(V => V.ValorTotal).HasColumnType("DECIMAL(10,2)");
-            builder.Property(V => V.CriadoEm).HasColumnType("DATETIME()").HasDefaultValueSql("GETDATE()");
+            builder.HasKey(V => V.Id);
+            builder.Property(V => V.ValorTotal).HasColumnType("REAL");
+            builder.Property(V => V.CriadoEm).HasColumnType("TEXT");
 
             builder.HasMany(V => V.ItensVenda)
             .WithOne(I => I.Venda)
             .IsRequired(false)
             .OnDelete(DeleteBehavior.Cascade);
-
-            // builder.HasOne(V => V.Usuario)
-            // .WithMany(U => U.Venda)
-            // .IsRequired(true);
         }
     }
 }
