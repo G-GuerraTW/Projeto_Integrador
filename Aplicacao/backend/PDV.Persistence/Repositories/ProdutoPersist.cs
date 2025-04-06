@@ -5,42 +5,42 @@ using PDV.Persistence.Contracts;
 
 namespace PDV.Persistence.Repositories
 {
-    public class ProdutoPersist : IProdutoPersist
+    public class ProdutoPersist : GeralPersist, IProdutoPersist
     {
         private readonly PDVContext contexto;
-        public ProdutoPersist(PDVContext contexto)
+        public ProdutoPersist(PDVContext contexto) : base(contexto)
         {
             this.contexto = contexto;
         }
 
-        public async Task<Produto[]> GetAllProdutoAsync()
+        public async Task<ProdutoEntity[]> GetAllProdutoAsync()
         {
-            IQueryable<Produto> query = contexto.Produtos.AsNoTracking();
+            IQueryable<ProdutoEntity> query = contexto.Produtos.AsNoTracking();
 
             return await query.ToArrayAsync();
         }
 
-        public async Task<Produto[]> GetAllProdutByNameAsync(string Name)
+        public async Task<ProdutoEntity[]> GetAllProdutByNameAsync(string Name)
         {
-            IQueryable<Produto> query = contexto.Produtos.AsNoTracking();
+            IQueryable<ProdutoEntity> query = contexto.Produtos.AsNoTracking();
 
             query = query.Where(P => P.Nome == Name);
 
             return await query.ToArrayAsync();
         }
 
-        public async Task<Produto[]> GetAllProdutoByCategoriaAsync(string Categoria)
+        public async Task<ProdutoEntity[]> GetAllProdutoByCategoriaAsync(string Categoria)
         {
-            IQueryable<Produto> query = contexto.Produtos.AsNoTracking();
+            IQueryable<ProdutoEntity> query = contexto.Produtos.AsNoTracking();
 
             query = query.Where(P => P.Categoria == Categoria);
 
             return await query.ToArrayAsync();
         }
 
-        public async Task<Produto> GetProdutoByIDAsync(int ID)
+        public async Task<ProdutoEntity> GetProdutoByIDAsync(int ID)
         {
-            IQueryable<Produto> query = contexto.Produtos.AsNoTracking();
+            IQueryable<ProdutoEntity> query = contexto.Produtos.AsNoTracking();
 
             query = query.Where(P => P.Id == ID);
 

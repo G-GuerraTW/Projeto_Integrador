@@ -16,3 +16,12 @@ C:\Users\Gabriel G\Desktop\Projeto_Integrador\Aplicacao\backend\PDV.Persistence\
 C:\Users\Gabriel G\Desktop\Projeto_Integrador\Aplicacao\backend\PDV.Persistence\obj\Debug\net8.0\PDV.Persistence.csproj.AssemblyReference.cache
 C:\Users\Gabriel G\Desktop\Projeto_Integrador\Aplicacao\backend\PDV.Persistence\obj\Debug\net8.0\PDV.Pers.3F32E63D.Up2Date
 C:\Users\Gabriel G\Desktop\Projeto_Integrador\Aplicacao\backend\PDV.Persistence\obj\Debug\net8.0\PDV.Persistence.genruntimeconfig.cache
+C:\Users\eliel.silva\Repositories\Projeto_Integrador\Aplicacao\backend\PDV.Persistence\obj\Debug\net8.0\PDV.Persistence.csproj.AssemblyReference.cache
+C:\Users\eliel.silva\Repositories\Projeto_Integrador\Aplicacao\backend\PDV.Persistence\obj\Debug\net8.0\PDV.Persistence.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\eliel.silva\Repositories\Projeto_Integrador\Aplicacao\backend\PDV.Persistence\obj\Debug\net8.0\PDV.Persistence.AssemblyInfoInputs.cache
+C:\Users\eliel.silva\Repositories\Projeto_Integrador\Aplicacao\backend\PDV.Persistence\obj\Debug\net8.0\PDV.Persistence.AssemblyInfo.cs
+C:\Users\eliel.silva\Repositories\Projeto_Integrador\Aplicacao\backend\PDV.Persistence\obj\Debug\net8.0\PDV.Persistence.csproj.CoreCompileInputs.cache
+C:\Users\eliel.silva\Repositories\Projeto_Integrador\Aplicacao\backend\PDV.Persistence\obj\Debug\net8.0\PDV.Persistence.sourcelink.json
+C:\Users\eliel.silva\Repositories\Projeto_Integrador\Aplicacao\backend\PDV.Persistence\obj\Debug\net8.0\PDV.Persistence.dll
+C:\Users\eliel.silva\Repositories\Projeto_Integrador\Aplicacao\backend\PDV.Persistence\obj\Debug\net8.0\refint\PDV.Persistence.dll
+C:\Users\eliel.silva\Repositories\Projeto_Integrador\Aplicacao\backend\PDV.Persistence\obj\Debug\net8.0\PDV.Persistence.pdb

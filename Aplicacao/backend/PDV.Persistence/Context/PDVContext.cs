@@ -8,9 +8,9 @@ namespace PDV.Persistence.Context
     {
         public PDVContext(DbContextOptions<PDVContext> options) : base(options) {}
     
-        public DbSet<ItemVenda> ItemVendas { get; set; }
-        public DbSet<Produto> Produtos { get; set; }
-        public DbSet<Venda> Vendas { get; set; }
+        public DbSet<ItemVendaEntity> ItemVendas { get; set; }
+        public DbSet<ProdutoEntity> Produtos { get; set; }
+        public DbSet<VendaEntity> Vendas { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

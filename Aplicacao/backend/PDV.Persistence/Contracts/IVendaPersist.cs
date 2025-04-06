@@ -2,9 +2,9 @@ using PDV.Domain.Entities;
 
 namespace PDV.Persistence.Contracts
 {
-    public interface IVendaPersist
+    public interface IVendaPersist : IGeralPersist
     {
-        public Task<Venda[]> GetAllVendasAsync();
-        public Task<Venda[]> GetVendasByIDAsync(int ID, bool includeItensVenda = false);
+        public Task<VendaEntity[]> GetAllVendasAsync();
+        public Task<VendaEntity[]> GetVendasByIDAsync(int ID, bool includeItensVenda = false);
     }
 }

@@ -5,24 +5,24 @@ using Microsoft.EntityFrameworkCore;
 
 namespace PDV.Persistence.Repositories
 {
-    public class VendaPersist : IVendaPersist
+    public class VendaPersist : GeralPersist, IVendaPersist
     {
         private readonly PDVContext context;
-        public VendaPersist(PDVContext context)
+        public VendaPersist(PDVContext context) : base(context)
         {
             this.context = context;
         }
 
-        public async Task<Venda[]> GetAllVendasAsync()
+        public async Task<VendaEntity[]> GetAllVendasAsync()
         {
-            IQueryable<Venda> query = context.Vendas.AsNoTracking();
+            IQueryable<VendaEntity> query = context.Vendas.AsNoTracking();
 
             return await query.ToArrayAsync();
         }
 
-        public async Task<Venda[]> GetVendasByIDAsync(int ID, bool includeItensVenda = false)
+        public async Task<VendaEntity[]> GetVendasByIDAsync(int ID, bool includeItensVenda = false)
         {
-            IQueryable<Venda> query = context.Vendas.AsNoTracking();
+            IQueryable<VendaEntity> query = context.Vendas.AsNoTracking();
 
             query = query.Where(V => V.Id == ID);
 

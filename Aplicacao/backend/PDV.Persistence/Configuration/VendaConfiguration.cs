@@ -5,9 +5,9 @@ using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace PDV.Persistence.Configuration
 {
-    public class VendaConfiguration : IEntityTypeConfiguration<Venda>
+    public class VendaConfiguration : IEntityTypeConfiguration<VendaEntity>
     {
-        public void Configure(EntityTypeBuilder<Venda> builder)
+        public void Configure(EntityTypeBuilder<VendaEntity> builder)
         {
             builder.ToTable("Venda");
             builder.HasKey("Id");

@@ -1,6 +1,6 @@
 namespace PDV.Domain.Entities
 {
-    public class ItemVenda
+    public class ItemVendaEntity
     {
         public int Id { get; set; }
         public int Quantidade { get; set; }
@@ -8,8 +8,8 @@ namespace PDV.Domain.Entities
         public decimal Subtotal { get; set; }
 
         public int VendaId { get; set; }
-        public Venda Venda { get; set; }
+        public VendaEntity Venda { get; set; }
         public int ProdutoId { get; set; }
-        public Produto Produto { get; set; }
+        public ProdutoEntity Produto { get; set; }
     }
 }

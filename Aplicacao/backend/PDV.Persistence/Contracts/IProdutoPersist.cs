@@ -2,13 +2,12 @@ using PDV.Domain.Entities;
 
 namespace PDV.Persistence.Contracts
 {
-    public interface IProdutoPersist
+    public interface IProdutoPersist : IGeralPersist
     {
-        public Task<Produto[]> GetAllProdutoAsync();
-        public Task<Produto[]> GetAllProdutByNameAsync(string Name);
-        public Task<Produto[]> GetAllProdutoByCategoriaAsync(string Categoria);
-        public Task<Produto> GetProdutoByIDAsync(int ID);
-
+        public Task<ProdutoEntity[]> GetAllProdutoAsync();
+        public Task<ProdutoEntity[]> GetAllProdutByNameAsync(string Name);
+        public Task<ProdutoEntity[]> GetAllProdutoByCategoriaAsync(string Categoria);
+        public Task<ProdutoEntity> GetProdutoByIDAsync(int ID);
 
     }
 }

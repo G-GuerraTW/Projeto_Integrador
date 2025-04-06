@@ -4,9 +4,9 @@ using PDV.Domain.Entities;
 
 namespace PDV.Persistence.Configuration
 {
-    public class ItensVendaConfiguration : IEntityTypeConfiguration<ItemVenda>
+    public class ItensVendaConfiguration : IEntityTypeConfiguration<ItemVendaEntity>
     {
-        public void Configure(EntityTypeBuilder<ItemVenda> builder)
+        public void Configure(EntityTypeBuilder<ItemVendaEntity> builder)
         {
             builder.ToTable("Itens_Venda");
             builder.HasKey("Id");

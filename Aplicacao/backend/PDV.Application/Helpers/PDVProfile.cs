@@ -8,9 +8,10 @@ namespace PDV.Application.Helpers
     {
         public PDVProfile()
         {
-            CreateMap<Venda, VendaDTO>().ReverseMap();
-            CreateMap<Produto, ProdutoDTO>().ReverseMap();
-            CreateMap<ItemVenda, ItensVendaDTO>().ReverseMap();
+            CreateMap<VendaEntity, VendaDTO>().ReverseMap();
+            CreateMap<ProdutoEntity[], ProdutoDTO[]>().ReverseMap();
+            CreateMap<ProdutoEntity, ProdutoDTO>().ReverseMap();
+            CreateMap<ItemVendaEntity, ItensVendaDTO>().ReverseMap();
         }
     }
 }
