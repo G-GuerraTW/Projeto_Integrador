@@ -1,10 +1,7 @@
 ﻿using AutoMapper;
 using PDV.Application.Contracts;
 using PDV.Application.DTOs;
-using PDV.Domain.Entities;
 using PDV.Persistence.Contracts;
-using PDV.Persistence.Repositories;
-using System.Xml.Linq;
 
 namespace PDV.Application.Services
 {
@@ -20,7 +17,7 @@ namespace PDV.Application.Services
             _mapper = mapper;
             _vendaPersist = vendaPersist;
         }
-        public async Task<VendaDTO> AddVenda(VendaEntity model)
+        public async Task<VendaDTO> AddVenda(VendaDTO model)
         {
             try
             {
@@ -41,7 +38,7 @@ namespace PDV.Application.Services
             }
         }
 
-        public async Task<VendaDTO> UpdateEvento(int vendaId, VendaEntity model)
+        public async Task<VendaDTO> UpdateVenda(int vendaId, VendaDTO model)
         {
             try
             {
@@ -66,7 +63,7 @@ namespace PDV.Application.Services
             }
         }
 
-        public async void DeleteEvento(int vendaID)
+        public async Task<bool> DeleteVenda(int vendaID)
         {
             try
             {

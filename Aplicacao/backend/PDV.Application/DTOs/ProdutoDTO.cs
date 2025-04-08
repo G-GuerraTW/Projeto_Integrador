@@ -1,3 +1,5 @@
+using PDV.Domain.Entities;
+
 namespace PDV.Application.DTOs
 {
     public class ProdutoDTO
@@ -11,5 +13,8 @@ namespace PDV.Application.DTOs
         public decimal PrecoCusto { get; set; }
         public decimal PrecoVenda { get; set; }
         public DateTime CriadoEm { get; set; }
+
+        public IEnumerable<ProdutoDTO> ItensVenda { get; set; } = new List<ProdutoDTO>();
+
     }
 }

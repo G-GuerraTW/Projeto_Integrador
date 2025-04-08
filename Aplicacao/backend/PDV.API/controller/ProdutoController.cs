@@ -1,7 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 using PDV.Application.Contracts;
 using PDV.Application.DTOs;
-using PDV.Domain.Entities;
 
 namespace PDV.API.controller
 {
@@ -16,40 +15,47 @@ namespace PDV.API.controller
         }
 
         [HttpPost]
-        public async Task<IActionResult> AddProduto(ProdutoEntity model) 
+        public async Task<IActionResult> AddProduto(ProdutoDTO model)
         {
             try
             {
-                if(model == null) return BadRequest("Erro ao tentar Adicionar novo Produto");
+                if (model == null)
+                    return BadRequest("Erro ao tentar Adicionar novo Produto");
+
                 var produto = await _produtoService.AddProduto(model);
-                if(produto != null) return Ok(produto);
-                return BadRequest("Erro ao persistir cadastro do produto ao banco.");
+                if (produto == null)
+                    return BadRequest("Erro ao persistir cadastro do produto ao banco.");
+
+                return Ok(produto);
             }
             catch (Exception ex)
             {
-                return this.StatusCode(StatusCodes.Status500InternalServerError,
+                return StatusCode(StatusCodes.Status500InternalServerError,
                     $"Erro ao tentar adicionar eventos, Erro: {ex.Message}"
                 );
             }
         }
 
         [HttpPut("{id}")]
-        public async Task<IActionResult> UpdateEvento(int id, ProdutoDTO model) 
+        public async Task<IActionResult> UpdateEvento(int id, ProdutoDTO model)
         {
             var produto = await _produtoService.UpdateProduto(id, model);
-            if(produto == null) return BadRequest("Erro ao tentar adicionar Produto");
+            if (produto == null)
+                return BadRequest("Erro ao tentar atualizar o Produto");
+
             return Ok(produto);
         }
 
         [HttpDelete("{id}")]
-        public async Task<IActionResult> DeleteProduto(int id) 
+        public async Task<IActionResult> DeleteProduto(int id)
         {
             try
             {
-                if(id == null || id < 0) return BadRequest("Erro ao tentar deletar Produto");
+                if (id == null || id < 0)
+                    return BadRequest("Erro ao tentar deletar Produto");
                 var resultado = await _produtoService.DeleteProduto(id);
 
-                if(resultado) return Ok("Produto deletado");
+                if (resultado) return Ok("Produto deletado");
                 return BadRequest("Produto não deletado");
             }
             catch (Exception ex)
@@ -61,7 +67,7 @@ namespace PDV.API.controller
         }
 
         [HttpGet]
-        public async Task<IActionResult> GetProdutos() 
+        public async Task<IActionResult> GetProdutos()
         {
             try
             {
@@ -82,7 +88,8 @@ namespace PDV.API.controller
             try
             {
                 var produtos = await _produtoService.GetAllProdutByNameAsync(nomeProduto);
-                if(produtos == null) return NoContent();
+                if (produtos == null)
+                    return NoContent();
                 return Ok(produtos);
             }
             catch (Exception ex)
@@ -92,18 +99,18 @@ namespace PDV.API.controller
             }
         }
 
-        [HttpGet("categoria/{Categoria}")]
-        public async Task<IActionResult> GetProdutosByCategoria(string Categoria) 
+        [HttpGet("categoria/{categoria}")]
+        public async Task<IActionResult> GetProdutosByCategoria(string categoria)
         {
             try
             {
-                var produtos = await _produtoService.GetAllProdutoByCategoriaAsync(Categoria);
-                if(produtos == null) return NoContent();
+                var produtos = await _produtoService.GetAllProdutoByCategoriaAsync(categoria);
+                if (produtos == null) return NoContent();
                 return Ok(produtos);
             }
             catch (Exception ex)
             {
-                return this.StatusCode(StatusCodes.Status500InternalServerError,
+                return StatusCode(StatusCodes.Status500InternalServerError,
                     $"Erro ao tentar recuperar Produtos por categoria. Erro: {ex.Message}"
                 );
             }

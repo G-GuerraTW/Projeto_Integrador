@@ -22,6 +22,8 @@ builder.Services.AddScoped<IProdutoPersist, ProdutoPersist>();
 
 builder.Services.AddScoped<IVendaService, VendaService>();
 builder.Services.AddScoped<IProdutoService, ProdutoService>();
+builder.Services.AddScoped<IItensVendaService, ItensVendaService>();
+
 
 
 //Configurando Conexão com o Banco

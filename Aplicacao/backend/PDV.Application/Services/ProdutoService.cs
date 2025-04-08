@@ -1,10 +1,8 @@
-
 using AutoMapper;
-using PDV.Domain.Entities;
-using PDV.Application.DTOs;
 using PDV.Application.Contracts;
+using PDV.Application.DTOs;
+using PDV.Domain.Entities;
 using PDV.Persistence.Contracts;
-using PDV.Persistence.Repositories;
 
 namespace PDV.Application.Services
 {
@@ -19,12 +17,15 @@ namespace PDV.Application.Services
             _produtoPersist = produtoPersist;
             _mapper = mapper;
         }
-        public async Task<ProdutoDTO> AddProduto(ProdutoEntity model)
+        public async Task<ProdutoDTO> AddProduto(ProdutoDTO model)
         {
             try
             {
-                if (model == null) throw new Exception("Objeto Nulo ou Inválido");
-                _produtoPersist.Add(model);
+                if (model == null)
+                    throw new Exception("Objeto Nulo ou Inválido");
+
+                var entity = _mapper.Map<ProdutoEntity>(model);
+                _produtoPersist.Add(entity);
 
                 if (await _produtoPersist.SaveChangesAsync())
                 {
@@ -69,12 +70,12 @@ namespace PDV.Application.Services
             try
             {
                 var verificaProduto = await _produtoPersist.GetProdutoByIDAsync(produtoID);
-                if(verificaProduto == null) throw new Exception("Produto não existente para ser apagado.");
+                if (verificaProduto == null) 
+                    throw new Exception("Produto não existente para ser apagado.");
 
                 _produtoPersist.Delete(verificaProduto);
 
-                if(await _produtoPersist.SaveChangesAsync());
-                    return true;
+                return await _produtoPersist.SaveChangesAsync();
             }
             catch (Exception ex)
             {
