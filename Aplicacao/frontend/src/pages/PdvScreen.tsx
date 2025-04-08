@@ -1,5 +1,4 @@
-import React, { useState, useEffect } from "react";
-import Grid from '@mui/material/Grid';
+import { useState, useEffect } from "react";
 import {
   Box,
   Typography,
@@ -10,16 +9,66 @@ import {
   TableCell,
   TableContainer,
   TableHead,
-  TableRow
+  TableRow,
+  Drawer,
+  List,
+  ListItem,
+  ListItemText,
+  Breadcrumbs,
+  Link,
+  Grid,
+  Card,
+  CardContent,
 } from "@mui/material";
-import { Product, getProducts, createSale } from "../api/pdvApi";
+import { useNavigate } from "react-router-dom";
+import { getProducts, createSale } from "../api/pdvApi";
+
+export interface Product {
+  id: number;
+  name: string;
+  price: number;
+  active: boolean; // Added the 'active' property
+}
 
 const PdvScreen = () => {
   const [products, setProducts] = useState<Product[]>([]);
   const [cart, setCart] = useState<Product[]>([]);
+  const [sales, setSales] = useState<any[]>([]); // Mock de vendas realizadas
+  const navigate = useNavigate();
 
   useEffect(() => {
-    getProducts().then(setProducts).catch(console.error);
+    getProducts()
+      .then((fetchedProducts) =>
+        setProducts(
+          fetchedProducts.map((product) => ({ ...product, active: true }))
+        )
+      )
+      .catch(console.error);
+
+    // Mock de vendas realizadas
+    setSales([
+      {
+        id: 1,
+        total: 150.0,
+        paid: 200.0,
+        change: 50.0,
+        paymentMethod: "Dinheiro",
+      },
+      {
+        id: 2,
+        total: 300.0,
+        paid: 300.0,
+        change: 0.0,
+        paymentMethod: "Cartão",
+      },
+      {
+        id: 3,
+        total: 120.0,
+        paid: 120.0,
+        change: 0.0,
+        paymentMethod: "Pix",
+      },
+    ]);
   }, []);
 
   const handleAddToCart = (product: Product) => {
@@ -29,11 +78,11 @@ const PdvScreen = () => {
   const handleCheckout = async () => {
     try {
       await createSale({
-        items: cart.map(item => ({
+        items: cart.map((item) => ({
           productId: item.id,
           quantity: 1,
-          price: item.price
-        }))
+          price: item.price,
+        })),
       });
       setCart([]);
       alert("Venda registrada!");
@@ -43,71 +92,144 @@ const PdvScreen = () => {
   };
 
   return (
-    <Box p={3}>
-      <Typography variant="h4" gutterBottom>
-        Ponto de Venda
-      </Typography>
+    <Box sx={{ display: "flex", height: "100vh" }}>
+      {/* Menu Lateral */}
+      <Drawer
+        variant="permanent"
+        sx={{
+          width: 240,
+          flexShrink: 0,
+          [`& .MuiDrawer-paper`]: {
+            width: 240,
+            boxSizing: "border-box",
+            backgroundColor: "#4A148C", // Roxo
+            color: "white",
+          },
+        }}
+      >
+        <Typography variant="h5" sx={{ textAlign: "center", py: 2 }}>
+          Menu
+        </Typography>
+        <List>
+          <ListItem component="button" onClick={() => navigate("/")}>
+            <ListItemText primary="PDV" />
+          </ListItem>
+          <ListItem component="button" onClick={() => navigate("/products")}>
+            <ListItemText primary="Cadastro de Produtos" />
+          </ListItem>
+          <ListItem component="button" onClick={() => navigate("/clients")}>
+            <ListItemText primary="Cadastro de Cliente" />
+          </ListItem>
+          <ListItem component="button" onClick={() => navigate("/suppliers")}>
+            <ListItemText primary="Cadastro de Fornecedor" />
+          </ListItem>
+          <ListItem component="button" onClick={() => navigate("/reports")}>
+            <ListItemText primary="Relatórios" />
+          </ListItem>
+        </List>
+      </Drawer>
 
-      <Grid container spacing={3} component="div">
-        {/* Lista de Produtos */}
-      <Grid component="div">
-          <Paper sx={{ p: 2 }}>
-            <Typography variant="h6" gutterBottom>
-              Produtos
-            </Typography>
-            <Grid container spacing={2} component="div">
-              {products.map(product => (
-                <Grid component="div">
-                  <Button
-                    fullWidth
-                    variant="outlined"
-                    onClick={() => handleAddToCart(product)}
-                  >
-                    {product.name} - R$ {product.price.toFixed(2)}
-                  </Button>
-                </Grid>
-              ))}
-            </Grid>
-          </Paper>
-        </Grid>
+      {/* Conteúdo Principal */}
+      <Box
+        component="main"
+        sx={{ flexGrow: 1, p: 3, backgroundColor: "#F3E5F5" }}
+      >
+        {/* Breadcrumb */}
+        <Breadcrumbs aria-label="breadcrumb" sx={{ mb: 2 }}>
+          <Link
+            underline="hover"
+            color="inherit"
+            onClick={() => navigate("/")}
+            sx={{ cursor: "pointer" }}
+          >
+            Home
+          </Link>
+          <Typography color="text.primary">PDV</Typography>
+        </Breadcrumbs>
 
-        {/* Carrinho */}
-        <Grid >
-          <Paper sx={{ p: 2 }}>
-            <Typography variant="h6" gutterBottom>
-              Carrinho ({cart.length})
-            </Typography>
-            <TableContainer>
-              <Table>
-                <TableHead>
-                  <TableRow>
-                    <TableCell>Produto</TableCell>
-                    <TableCell>Preço</TableCell>
-                  </TableRow>
-                </TableHead>
-                <TableBody>
-                  {cart.map((item, index) => (
-                    <TableRow key={index}>
-                      <TableCell>{item.name}</TableCell>
-                      <TableCell>R$ {item.price.toFixed(2)}</TableCell>
-                    </TableRow>
-                  ))}
-                </TableBody>
-              </Table>
-            </TableContainer>
-            <Button
-              fullWidth
-              variant="contained"
-              sx={{ mt: 2 }}
-              onClick={handleCheckout}
-              disabled={cart.length === 0}
+        <Typography variant="h4" gutterBottom>
+          Ponto de Venda
+        </Typography>
+
+        {/* Cards de Resumo */}
+        <Box sx={{ display: "flex", gap: 3, flexWrap: "wrap", mb: 3 }}>
+          {/* Card: Total de Vendas */}
+          <Box sx={{ flex: "1 1 22%", minWidth: "250px" }}>
+            <Card>
+              <CardContent>
+                <Typography variant="h6">Total de Vendas</Typography>
+                <Typography variant="h4">{sales.length}</Typography>
+              </CardContent>
+            </Card>
+          </Box>
+
+          {/* Card: Valor Total Vendido */}
+          <Box sx={{ flex: "1 1 22%", minWidth: "250px" }}>
+            <Card>
+              <CardContent>
+                <Typography variant="h6">Valor Total Vendido</Typography>
+                <Typography variant="h4">
+                  R${" "}
+                  {sales.reduce((sum, sale) => sum + sale.total, 0).toFixed(2)}
+                </Typography>
+              </CardContent>
+            </Card>
+          </Box>
+
+          {/* Card: Produtos Cadastrados */}
+          <Box sx={{ flex: "1 1 22%", minWidth: "250px" }}>
+            <Paper
+              sx={{ p: 2, textAlign: "center", backgroundColor: "#EDE7F6" }}
             >
-              Finalizar Venda (Total: R${" "}
-              {cart.reduce((sum, item) => sum + item.price, 0).toFixed(2)})
-            </Button>
-          </Paper>
-        </Grid>
-      </Grid>
+              <Typography variant="h6">Produtos Cadastrados</Typography>
+              <Typography variant="h4">{products.length}</Typography>
+            </Paper>
+          </Box>
+
+          {/* Card: Produtos Ativos */}
+          <Box sx={{ flex: "1 1 22%", minWidth: "250px" }}>
+            <Card>
+              <CardContent>
+                <Typography variant="h6">Produtos Ativos</Typography>
+                <Typography variant="h4">
+                  {products.filter((product) => product.active === true).length}
+                </Typography>
+              </CardContent>
+            </Card>
+          </Box>
+        </Box>
+
+        {/* Lista de Últimas Vendas */}
+        <Typography variant="h5" gutterBottom>
+          Últimas Vendas
+        </Typography>
+        <TableContainer component={Paper} sx={{ mb: 3 }}>
+          <Table>
+            <TableHead sx={{ backgroundColor: "#4A148C" }}>
+              <TableRow>
+                <TableCell sx={{ color: "white" }}>Número da Venda</TableCell>
+                <TableCell sx={{ color: "white" }}>Valor Total</TableCell>
+                <TableCell sx={{ color: "white" }}>Valor Pago</TableCell>
+                <TableCell sx={{ color: "white" }}>Troco</TableCell>
+                <TableCell sx={{ color: "white" }}>
+                  Forma de Pagamento
+                </TableCell>
+              </TableRow>
+            </TableHead>
+            <TableBody>
+              {sales.map((sale) => (
+                <TableRow key={sale.id}>
+                  <TableCell>{sale.id}</TableCell>
+                  <TableCell>R$ {sale.total.toFixed(2)}</TableCell>
+                  <TableCell>R$ {sale.paid.toFixed(2)}</TableCell>
+                  <TableCell>R$ {sale.change.toFixed(2)}</TableCell>
+                  <TableCell>{sale.paymentMethod}</TableCell>
+                </TableRow>
+              ))}
+            </TableBody>
+          </Table>
+        </TableContainer>      
+      </Box>
     </Box>
   );
 };
