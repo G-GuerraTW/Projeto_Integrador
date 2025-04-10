@@ -18,7 +18,7 @@ export const router = createBrowserRouter([
       { index: true, element: <PdvScreen /> },
       { path: 'pdv', element: <PdvScreen /> },
       { path: 'products', element: <ProductsScreen /> },
-      { path: 'sales', element: <SalesScreen /> },
+      { path: 'sales', element: <SalesScreen products={[]} onSaleComplete={() => {}} /> },
       { path: 'clients', element: <ClientScreen/> },
       { path: 'reports', element: <ReportsScreen /> },
       { path: 'suppliers', element: <SupplierScreen /> },

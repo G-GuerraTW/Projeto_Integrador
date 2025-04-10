@@ -3,7 +3,6 @@ import {
   Box,
   Typography,
   Paper,
-  Button,
   Table,
   TableBody,
   TableCell,
@@ -16,23 +15,22 @@ import {
   ListItemText,
   Breadcrumbs,
   Link,
-  Grid,
   Card,
   CardContent,
+  Button,
 } from "@mui/material";
 import { useNavigate } from "react-router-dom";
-import { getProducts, createSale } from "../api/pdvApi";
+import { getProducts } from "../api/pdvApi";
 
 export interface Product {
   id: number;
   name: string;
   price: number;
-  active: boolean; // Added the 'active' property
+  active: boolean;
 }
 
 const PdvScreen = () => {
   const [products, setProducts] = useState<Product[]>([]);
-  const [cart, setCart] = useState<Product[]>([]);
   const [sales, setSales] = useState<any[]>([]); // Mock de vendas realizadas
   const navigate = useNavigate();
 
@@ -71,26 +69,6 @@ const PdvScreen = () => {
     ]);
   }, []);
 
-  const handleAddToCart = (product: Product) => {
-    setCart([...cart, product]);
-  };
-
-  const handleCheckout = async () => {
-    try {
-      await createSale({
-        items: cart.map((item) => ({
-          productId: item.id,
-          quantity: 1,
-          price: item.price,
-        })),
-      });
-      setCart([]);
-      alert("Venda registrada!");
-    } catch (error) {
-      console.error("Erro ao finalizar venda:", error);
-    }
-  };
-
   return (
     <Box sx={{ display: "flex", height: "100vh" }}>
       {/* Menu Lateral */}
@@ -102,7 +80,7 @@ const PdvScreen = () => {
           [`& .MuiDrawer-paper`]: {
             width: 240,
             boxSizing: "border-box",
-            backgroundColor: "#4A148C", // Roxo
+            backgroundColor: "#4A148C",
             color: "white",
           },
         }}
@@ -116,15 +94,6 @@ const PdvScreen = () => {
           </ListItem>
           <ListItem component="button" onClick={() => navigate("/products")}>
             <ListItemText primary="Cadastro de Produtos" />
-          </ListItem>
-          <ListItem component="button" onClick={() => navigate("/clients")}>
-            <ListItemText primary="Cadastro de Cliente" />
-          </ListItem>
-          <ListItem component="button" onClick={() => navigate("/suppliers")}>
-            <ListItemText primary="Cadastro de Fornecedor" />
-          </ListItem>
-          <ListItem component="button" onClick={() => navigate("/reports")}>
-            <ListItemText primary="Relatórios" />
           </ListItem>
         </List>
       </Drawer>
@@ -150,6 +119,22 @@ const PdvScreen = () => {
         <Typography variant="h4" gutterBottom>
           Ponto de Venda
         </Typography>
+
+        {/* Botão Vender */}
+        <Box sx={{ display: "flex", justifyContent: "center", mb: 3 }}>
+          <Button
+            variant="contained"
+            sx={{
+              backgroundColor: "#4A148C",
+              color: "white",
+              fontSize: "1.5rem",
+              padding: "1rem 2rem",
+            }}
+            onClick={() => navigate("/sales")}
+          >
+            Vender
+          </Button>
+        </Box>
 
         {/* Cards de Resumo */}
         <Box sx={{ display: "flex", gap: 3, flexWrap: "wrap", mb: 3 }}>
@@ -192,7 +177,7 @@ const PdvScreen = () => {
               <CardContent>
                 <Typography variant="h6">Produtos Ativos</Typography>
                 <Typography variant="h4">
-                  {products.filter((product) => product.active === true).length}
+                  {products.filter((product) => product.active).length}
                 </Typography>
               </CardContent>
             </Card>
@@ -228,7 +213,7 @@ const PdvScreen = () => {
               ))}
             </TableBody>
           </Table>
-        </TableContainer>      
+        </TableContainer>
       </Box>
     </Box>
   );

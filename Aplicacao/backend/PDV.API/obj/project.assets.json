@@ -4188,19 +4188,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Gabriel G\\.nuget\\packages\\": {}
+    "/home/silviobis/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Gabriel G\\Desktop\\Projeto_Integrador\\Aplicacao\\backend\\PDV.API\\PDV.API.csproj",
+      "projectUniqueName": "/home/silviobis/Área de Trabalho/Projeto_Integrador/Aplicacao/backend/PDV.API/PDV.API.csproj",
       "projectName": "PDV.API",
-      "projectPath": "C:\\Users\\Gabriel G\\Desktop\\Projeto_Integrador\\Aplicacao\\backend\\PDV.API\\PDV.API.csproj",
-      "packagesPath": "C:\\Users\\Gabriel G\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Gabriel G\\Desktop\\Projeto_Integrador\\Aplicacao\\backend\\PDV.API\\obj\\",
+      "projectPath": "/home/silviobis/Área de Trabalho/Projeto_Integrador/Aplicacao/backend/PDV.API/PDV.API.csproj",
+      "packagesPath": "/home/silviobis/.nuget/packages/",
+      "outputPath": "/home/silviobis/Área de Trabalho/Projeto_Integrador/Aplicacao/backend/PDV.API/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Gabriel G\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "/home/silviobis/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
@@ -4212,11 +4212,11 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\Users\\Gabriel G\\Desktop\\Projeto_Integrador\\Aplicacao\\backend\\PDV.Application\\PDV.Application.csproj": {
-              "projectPath": "C:\\Users\\Gabriel G\\Desktop\\Projeto_Integrador\\Aplicacao\\backend\\PDV.Application\\PDV.Application.csproj"
+            "/home/silviobis/Área de Trabalho/Projeto_Integrador/Aplicacao/backend/PDV.Application/PDV.Application.csproj": {
+              "projectPath": "/home/silviobis/Área de Trabalho/Projeto_Integrador/Aplicacao/backend/PDV.Application/PDV.Application.csproj"
             },
-            "c:\\Users\\Gabriel G\\Desktop\\Projeto_Integrador\\Aplicacao\\backend\\PDV.Persistence\\PDV.Persistence.csproj": {
-              "projectPath": "c:\\Users\\Gabriel G\\Desktop\\Projeto_Integrador\\Aplicacao\\backend\\PDV.Persistence\\PDV.Persistence.csproj"
+            "/home/silviobis/Área de Trabalho/Projeto_Integrador/Aplicacao/backend/PDV.Persistence/PDV.Persistence.csproj": {
+              "projectPath": "/home/silviobis/Área de Trabalho/Projeto_Integrador/Aplicacao/backend/PDV.Persistence/PDV.Persistence.csproj"
             }
           }
         }
@@ -4225,11 +4225,6 @@
         "warnAsError": [
           "NU1605"
         ]
-      },
-      "restoreAuditProperties": {
-        "enableAudit": "true",
-        "auditLevel": "low",
-        "auditMode": "direct"
       }
     },
     "frameworks": {
@@ -4274,7 +4269,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.407/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/8.0.114/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

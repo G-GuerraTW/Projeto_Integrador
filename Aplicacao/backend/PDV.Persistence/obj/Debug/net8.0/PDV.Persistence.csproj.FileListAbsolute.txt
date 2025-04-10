@@ -1,27 +1,45 @@
-C:\Users\Gabriel G\Desktop\Projeto_Integrador\Aplicacao\backend\PDV.Persistence\bin\Debug\net8.0\PDV.Persistence.deps.json
-C:\Users\Gabriel G\Desktop\Projeto_Integrador\Aplicacao\backend\PDV.Persistence\bin\Debug\net8.0\PDV.Persistence.dll
-C:\Users\Gabriel G\Desktop\Projeto_Integrador\Aplicacao\backend\PDV.Persistence\bin\Debug\net8.0\PDV.Persistence.pdb
-C:\Users\Gabriel G\Desktop\Projeto_Integrador\Aplicacao\backend\PDV.Persistence\obj\Debug\net8.0\PDV.Persistence.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\Gabriel G\Desktop\Projeto_Integrador\Aplicacao\backend\PDV.Persistence\obj\Debug\net8.0\PDV.Persistence.AssemblyInfoInputs.cache
-C:\Users\Gabriel G\Desktop\Projeto_Integrador\Aplicacao\backend\PDV.Persistence\obj\Debug\net8.0\PDV.Persistence.AssemblyInfo.cs
-C:\Users\Gabriel G\Desktop\Projeto_Integrador\Aplicacao\backend\PDV.Persistence\obj\Debug\net8.0\PDV.Persistence.csproj.CoreCompileInputs.cache
-C:\Users\Gabriel G\Desktop\Projeto_Integrador\Aplicacao\backend\PDV.Persistence\obj\Debug\net8.0\PDV.Persistence.sourcelink.json
-C:\Users\Gabriel G\Desktop\Projeto_Integrador\Aplicacao\backend\PDV.Persistence\obj\Debug\net8.0\PDV.Persistence.dll
-C:\Users\Gabriel G\Desktop\Projeto_Integrador\Aplicacao\backend\PDV.Persistence\obj\Debug\net8.0\refint\PDV.Persistence.dll
-C:\Users\Gabriel G\Desktop\Projeto_Integrador\Aplicacao\backend\PDV.Persistence\obj\Debug\net8.0\PDV.Persistence.pdb
-C:\Users\Gabriel G\Desktop\Projeto_Integrador\Aplicacao\backend\PDV.Persistence\obj\Debug\net8.0\ref\PDV.Persistence.dll
-C:\Users\Gabriel G\Desktop\Projeto_Integrador\Aplicacao\backend\PDV.Persistence\bin\Debug\net8.0\PDV.Persistence.runtimeconfig.json
-C:\Users\Gabriel G\Desktop\Projeto_Integrador\Aplicacao\backend\PDV.Persistence\bin\Debug\net8.0\PDV.Domain.dll
-C:\Users\Gabriel G\Desktop\Projeto_Integrador\Aplicacao\backend\PDV.Persistence\bin\Debug\net8.0\PDV.Domain.pdb
-C:\Users\Gabriel G\Desktop\Projeto_Integrador\Aplicacao\backend\PDV.Persistence\obj\Debug\net8.0\PDV.Persistence.csproj.AssemblyReference.cache
-C:\Users\Gabriel G\Desktop\Projeto_Integrador\Aplicacao\backend\PDV.Persistence\obj\Debug\net8.0\PDV.Pers.3F32E63D.Up2Date
-C:\Users\Gabriel G\Desktop\Projeto_Integrador\Aplicacao\backend\PDV.Persistence\obj\Debug\net8.0\PDV.Persistence.genruntimeconfig.cache
-C:\Users\eliel.silva\Repositories\Projeto_Integrador\Aplicacao\backend\PDV.Persistence\obj\Debug\net8.0\PDV.Persistence.csproj.AssemblyReference.cache
-C:\Users\eliel.silva\Repositories\Projeto_Integrador\Aplicacao\backend\PDV.Persistence\obj\Debug\net8.0\PDV.Persistence.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\eliel.silva\Repositories\Projeto_Integrador\Aplicacao\backend\PDV.Persistence\obj\Debug\net8.0\PDV.Persistence.AssemblyInfoInputs.cache
-C:\Users\eliel.silva\Repositories\Projeto_Integrador\Aplicacao\backend\PDV.Persistence\obj\Debug\net8.0\PDV.Persistence.AssemblyInfo.cs
-C:\Users\eliel.silva\Repositories\Projeto_Integrador\Aplicacao\backend\PDV.Persistence\obj\Debug\net8.0\PDV.Persistence.csproj.CoreCompileInputs.cache
-C:\Users\eliel.silva\Repositories\Projeto_Integrador\Aplicacao\backend\PDV.Persistence\obj\Debug\net8.0\PDV.Persistence.sourcelink.json
-C:\Users\eliel.silva\Repositories\Projeto_Integrador\Aplicacao\backend\PDV.Persistence\obj\Debug\net8.0\PDV.Persistence.dll
-C:\Users\eliel.silva\Repositories\Projeto_Integrador\Aplicacao\backend\PDV.Persistence\obj\Debug\net8.0\refint\PDV.Persistence.dll
-C:\Users\eliel.silva\Repositories\Projeto_Integrador\Aplicacao\backend\PDV.Persistence\obj\Debug\net8.0\PDV.Persistence.pdb
+C:/Users/Gabriel G/Desktop/Projeto_Integrador/Aplicacao/backend/PDV.Persistence/bin/Debug/net8.0/PDV.Persistence.deps.json
+C:/Users/Gabriel G/Desktop/Projeto_Integrador/Aplicacao/backend/PDV.Persistence/bin/Debug/net8.0/PDV.Persistence.dll
+C:/Users/Gabriel G/Desktop/Projeto_Integrador/Aplicacao/backend/PDV.Persistence/bin/Debug/net8.0/PDV.Persistence.pdb
+C:/Users/Gabriel G/Desktop/Projeto_Integrador/Aplicacao/backend/PDV.Persistence/obj/Debug/net8.0/PDV.Persistence.GeneratedMSBuildEditorConfig.editorconfig
+C:/Users/Gabriel G/Desktop/Projeto_Integrador/Aplicacao/backend/PDV.Persistence/obj/Debug/net8.0/PDV.Persistence.AssemblyInfoInputs.cache
+C:/Users/Gabriel G/Desktop/Projeto_Integrador/Aplicacao/backend/PDV.Persistence/obj/Debug/net8.0/PDV.Persistence.AssemblyInfo.cs
+C:/Users/Gabriel G/Desktop/Projeto_Integrador/Aplicacao/backend/PDV.Persistence/obj/Debug/net8.0/PDV.Persistence.csproj.CoreCompileInputs.cache
+C:/Users/Gabriel G/Desktop/Projeto_Integrador/Aplicacao/backend/PDV.Persistence/obj/Debug/net8.0/PDV.Persistence.sourcelink.json
+C:/Users/Gabriel G/Desktop/Projeto_Integrador/Aplicacao/backend/PDV.Persistence/obj/Debug/net8.0/PDV.Persistence.dll
+C:/Users/Gabriel G/Desktop/Projeto_Integrador/Aplicacao/backend/PDV.Persistence/obj/Debug/net8.0/refint/PDV.Persistence.dll
+C:/Users/Gabriel G/Desktop/Projeto_Integrador/Aplicacao/backend/PDV.Persistence/obj/Debug/net8.0/PDV.Persistence.pdb
+C:/Users/Gabriel G/Desktop/Projeto_Integrador/Aplicacao/backend/PDV.Persistence/obj/Debug/net8.0/ref/PDV.Persistence.dll
+C:/Users/Gabriel G/Desktop/Projeto_Integrador/Aplicacao/backend/PDV.Persistence/bin/Debug/net8.0/PDV.Persistence.runtimeconfig.json
+C:/Users/Gabriel G/Desktop/Projeto_Integrador/Aplicacao/backend/PDV.Persistence/bin/Debug/net8.0/PDV.Domain.dll
+C:/Users/Gabriel G/Desktop/Projeto_Integrador/Aplicacao/backend/PDV.Persistence/bin/Debug/net8.0/PDV.Domain.pdb
+C:/Users/Gabriel G/Desktop/Projeto_Integrador/Aplicacao/backend/PDV.Persistence/obj/Debug/net8.0/PDV.Persistence.csproj.AssemblyReference.cache
+C:/Users/Gabriel G/Desktop/Projeto_Integrador/Aplicacao/backend/PDV.Persistence/obj/Debug/net8.0/PDV.Pers.3F32E63D.Up2Date
+C:/Users/Gabriel G/Desktop/Projeto_Integrador/Aplicacao/backend/PDV.Persistence/obj/Debug/net8.0/PDV.Persistence.genruntimeconfig.cache
+C:/Users/eliel.silva/Repositories/Projeto_Integrador/Aplicacao/backend/PDV.Persistence/obj/Debug/net8.0/PDV.Persistence.csproj.AssemblyReference.cache
+C:/Users/eliel.silva/Repositories/Projeto_Integrador/Aplicacao/backend/PDV.Persistence/obj/Debug/net8.0/PDV.Persistence.GeneratedMSBuildEditorConfig.editorconfig
+C:/Users/eliel.silva/Repositories/Projeto_Integrador/Aplicacao/backend/PDV.Persistence/obj/Debug/net8.0/PDV.Persistence.AssemblyInfoInputs.cache
+C:/Users/eliel.silva/Repositories/Projeto_Integrador/Aplicacao/backend/PDV.Persistence/obj/Debug/net8.0/PDV.Persistence.AssemblyInfo.cs
+C:/Users/eliel.silva/Repositories/Projeto_Integrador/Aplicacao/backend/PDV.Persistence/obj/Debug/net8.0/PDV.Persistence.csproj.CoreCompileInputs.cache
+C:/Users/eliel.silva/Repositories/Projeto_Integrador/Aplicacao/backend/PDV.Persistence/obj/Debug/net8.0/PDV.Persistence.sourcelink.json
+C:/Users/eliel.silva/Repositories/Projeto_Integrador/Aplicacao/backend/PDV.Persistence/obj/Debug/net8.0/PDV.Persistence.dll
+C:/Users/eliel.silva/Repositories/Projeto_Integrador/Aplicacao/backend/PDV.Persistence/obj/Debug/net8.0/refint/PDV.Persistence.dll
+C:/Users/eliel.silva/Repositories/Projeto_Integrador/Aplicacao/backend/PDV.Persistence/obj/Debug/net8.0/PDV.Persistence.pdb
+/home/silviobis/Área de Trabalho/Projeto_Integrador/Aplicacao/backend/PDV.Persistence/bin/Debug/net8.0/PDV.Persistence.deps.json
+/home/silviobis/Área de Trabalho/Projeto_Integrador/Aplicacao/backend/PDV.Persistence/bin/Debug/net8.0/PDV.Persistence.runtimeconfig.json
+/home/silviobis/Área de Trabalho/Projeto_Integrador/Aplicacao/backend/PDV.Persistence/bin/Debug/net8.0/PDV.Persistence.dll
+/home/silviobis/Área de Trabalho/Projeto_Integrador/Aplicacao/backend/PDV.Persistence/bin/Debug/net8.0/PDV.Persistence.pdb
+/home/silviobis/Área de Trabalho/Projeto_Integrador/Aplicacao/backend/PDV.Persistence/bin/Debug/net8.0/PDV.Domain.dll
+/home/silviobis/Área de Trabalho/Projeto_Integrador/Aplicacao/backend/PDV.Persistence/bin/Debug/net8.0/PDV.Domain.pdb
+/home/silviobis/Área de Trabalho/Projeto_Integrador/Aplicacao/backend/PDV.Persistence/obj/Debug/net8.0/PDV.Persistence.csproj.AssemblyReference.cache
+/home/silviobis/Área de Trabalho/Projeto_Integrador/Aplicacao/backend/PDV.Persistence/obj/Debug/net8.0/PDV.Persistence.GeneratedMSBuildEditorConfig.editorconfig
+/home/silviobis/Área de Trabalho/Projeto_Integrador/Aplicacao/backend/PDV.Persistence/obj/Debug/net8.0/PDV.Persistence.AssemblyInfoInputs.cache
+/home/silviobis/Área de Trabalho/Projeto_Integrador/Aplicacao/backend/PDV.Persistence/obj/Debug/net8.0/PDV.Persistence.AssemblyInfo.cs
+/home/silviobis/Área de Trabalho/Projeto_Integrador/Aplicacao/backend/PDV.Persistence/obj/Debug/net8.0/PDV.Persistence.csproj.CoreCompileInputs.cache
+/home/silviobis/Área de Trabalho/Projeto_Integrador/Aplicacao/backend/PDV.Persistence/obj/Debug/net8.0/PDV.Persistence.sourcelink.json
+/home/silviobis/Área de Trabalho/Projeto_Integrador/Aplicacao/backend/PDV.Persistence/obj/Debug/net8.0/PDV.Persistence.csproj.CopyComplete
+/home/silviobis/Área de Trabalho/Projeto_Integrador/Aplicacao/backend/PDV.Persistence/obj/Debug/net8.0/PDV.Persistence.dll
+/home/silviobis/Área de Trabalho/Projeto_Integrador/Aplicacao/backend/PDV.Persistence/obj/Debug/net8.0/refint/PDV.Persistence.dll
+/home/silviobis/Área de Trabalho/Projeto_Integrador/Aplicacao/backend/PDV.Persistence/obj/Debug/net8.0/PDV.Persistence.pdb
+/home/silviobis/Área de Trabalho/Projeto_Integrador/Aplicacao/backend/PDV.Persistence/obj/Debug/net8.0/PDV.Persistence.genruntimeconfig.cache
+/home/silviobis/Área de Trabalho/Projeto_Integrador/Aplicacao/backend/PDV.Persistence/obj/Debug/net8.0/ref/PDV.Persistence.dll

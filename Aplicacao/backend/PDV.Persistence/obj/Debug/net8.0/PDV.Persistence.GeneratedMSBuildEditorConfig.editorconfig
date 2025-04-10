@@ -16,6 +16,6 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = PDV.Persistence
-build_property.ProjectDir = C:\Users\Gabriel G\Desktop\Projeto_Integrador\Aplicacao\backend\PDV.Persistence\
+build_property.ProjectDir = /home/silviobis/Área de Trabalho/Projeto_Integrador/Aplicacao/backend/PDV.Persistence/
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 

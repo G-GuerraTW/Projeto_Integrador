@@ -12,7 +12,10 @@ function App() {
     <Routes>
       <Route path="/" element={<PdvScreen />} />
       <Route path="/products" element={<ProductsScreen />} />
-      <Route path="/sales" element={<SalesScreen />} />
+      <Route
+        path="/sales"
+        element={<SalesScreen products={[]} onSaleComplete={() => {}} />}
+      />
       <Route path="/clients" element={<ClientScreen />} />
       <Route path="/suppliers" element={<SupplierScreen />} />
       <Route path="/reports" element={<ReportsScreen />} />
