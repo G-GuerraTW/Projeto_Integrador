@@ -7,7 +7,7 @@ using PDV.Persistence.Repositories;
 
 var builder = WebApplication.CreateBuilder(args);
 
-//Adicionando Servi√ßos
+//Adicionando ServiÁos
 builder.Services.AddCors();
 builder.Services.AddControllers()
     .AddNewtonsoftJson(x => x.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore);
@@ -22,11 +22,12 @@ builder.Services.AddScoped<IProdutoPersist, ProdutoPersist>();
 
 builder.Services.AddScoped<IVendaService, VendaService>();
 builder.Services.AddScoped<IProdutoService, ProdutoService>();
-builder.Services.AddScoped<IItensVendaService, ItensVendaService>();
+builder.Services.AddScoped<IItemVendaPersist, ItemVendaPersist>();
+builder.Services.AddScoped<IItemVendaService, ItemVendaService>();
 
 
 
-//Configurando Conex√£o com o Banco
+//Configurando Conex„o com o Banco
 builder.Services.AddDbContext<PDVContext>(options =>
     options.UseSqlite("DATA Source=banco.db")
 );

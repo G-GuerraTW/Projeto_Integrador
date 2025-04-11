@@ -2,7 +2,7 @@ using Microsoft.AspNetCore.Mvc;
 using PDV.Application.Contracts;
 using PDV.Application.DTOs;
 
-namespace PDV.API.controller
+namespace PDV.API.Controller
 {
     [Route("api/[controller]")]
     [ApiController]

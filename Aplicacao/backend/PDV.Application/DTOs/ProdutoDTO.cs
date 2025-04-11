@@ -1,5 +1,3 @@
-using PDV.Domain.Entities;
-
 namespace PDV.Application.DTOs
 {
     public class ProdutoDTO

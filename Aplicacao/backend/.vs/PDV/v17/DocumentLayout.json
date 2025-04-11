@@ -1,0 +1,139 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\eliel.silva\\Repositories\\Projeto_Integrador\\Aplicacao\\backend\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{6074CF12-9456-4172-BA54-B6E4FA67A4FD}|PDV.Application\\PDV.Application.csproj|c:\\users\\eliel.silva\\repositories\\projeto_integrador\\aplicacao\\backend\\pdv.application\\services\\vendaservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6074CF12-9456-4172-BA54-B6E4FA67A4FD}|PDV.Application\\PDV.Application.csproj|solutionrelative:pdv.application\\services\\vendaservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B15333DB-ABFF-47F6-8E4B-4C3E907E5B93}|PDV.API\\PDV.API.csproj|c:\\users\\eliel.silva\\repositories\\projeto_integrador\\aplicacao\\backend\\pdv.api\\controller\\produtocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B15333DB-ABFF-47F6-8E4B-4C3E907E5B93}|PDV.API\\PDV.API.csproj|solutionrelative:pdv.api\\controller\\produtocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B15333DB-ABFF-47F6-8E4B-4C3E907E5B93}|PDV.API\\PDV.API.csproj|c:\\users\\eliel.silva\\repositories\\projeto_integrador\\aplicacao\\backend\\pdv.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B15333DB-ABFF-47F6-8E4B-4C3E907E5B93}|PDV.API\\PDV.API.csproj|solutionrelative:pdv.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B15333DB-ABFF-47F6-8E4B-4C3E907E5B93}|PDV.API\\PDV.API.csproj|c:\\users\\eliel.silva\\repositories\\projeto_integrador\\aplicacao\\backend\\pdv.api\\controller\\vendascontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B15333DB-ABFF-47F6-8E4B-4C3E907E5B93}|PDV.API\\PDV.API.csproj|solutionrelative:pdv.api\\controller\\vendascontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6074CF12-9456-4172-BA54-B6E4FA67A4FD}|PDV.Application\\PDV.Application.csproj|c:\\users\\eliel.silva\\repositories\\projeto_integrador\\aplicacao\\backend\\pdv.application\\services\\itemvendaservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6074CF12-9456-4172-BA54-B6E4FA67A4FD}|PDV.Application\\PDV.Application.csproj|solutionrelative:pdv.application\\services\\itemvendaservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6074CF12-9456-4172-BA54-B6E4FA67A4FD}|PDV.Application\\PDV.Application.csproj|c:\\users\\eliel.silva\\repositories\\projeto_integrador\\aplicacao\\backend\\pdv.application\\services\\produtoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6074CF12-9456-4172-BA54-B6E4FA67A4FD}|PDV.Application\\PDV.Application.csproj|solutionrelative:pdv.application\\services\\produtoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CA6A474B-F120-451A-80F3-05DE91482BC0}|PDV.Domain\\PDV.Domain.csproj|c:\\users\\eliel.silva\\repositories\\projeto_integrador\\aplicacao\\backend\\pdv.domain\\entities\\itemvendaentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CA6A474B-F120-451A-80F3-05DE91482BC0}|PDV.Domain\\PDV.Domain.csproj|solutionrelative:pdv.domain\\entities\\itemvendaentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ProdutoController.cs",
+              "DocumentMoniker": "C:\\Users\\eliel.silva\\Repositories\\Projeto_Integrador\\Aplicacao\\backend\\PDV.API\\Controller\\ProdutoController.cs",
+              "RelativeDocumentMoniker": "PDV.API\\Controller\\ProdutoController.cs",
+              "ToolTip": "C:\\Users\\eliel.silva\\Repositories\\Projeto_Integrador\\Aplicacao\\backend\\PDV.API\\Controller\\ProdutoController.cs",
+              "RelativeToolTip": "PDV.API\\Controller\\ProdutoController.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAkwBgAAAA/AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-11T01:47:01.429Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\eliel.silva\\Repositories\\Projeto_Integrador\\Aplicacao\\backend\\PDV.API\\Program.cs",
+              "RelativeDocumentMoniker": "PDV.API\\Program.cs",
+              "ToolTip": "C:\\Users\\eliel.silva\\Repositories\\Projeto_Integrador\\Aplicacao\\backend\\PDV.API\\Program.cs",
+              "RelativeToolTip": "PDV.API\\Program.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAkwBkAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-11T01:46:58.497Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "VendasController.cs",
+              "DocumentMoniker": "C:\\Users\\eliel.silva\\Repositories\\Projeto_Integrador\\Aplicacao\\backend\\PDV.API\\Controller\\VendasController.cs",
+              "RelativeDocumentMoniker": "PDV.API\\Controller\\VendasController.cs",
+              "ToolTip": "C:\\Users\\eliel.silva\\Repositories\\Projeto_Integrador\\Aplicacao\\backend\\PDV.API\\Controller\\VendasController.cs",
+              "RelativeToolTip": "PDV.API\\Controller\\VendasController.cs",
+              "ViewState": "AgIAADMAAAAAAAAAAAAkwEIAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-11T01:46:55.665Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "VendaService.cs",
+              "DocumentMoniker": "C:\\Users\\eliel.silva\\Repositories\\Projeto_Integrador\\Aplicacao\\backend\\PDV.Application\\Services\\VendaService.cs",
+              "RelativeDocumentMoniker": "PDV.Application\\Services\\VendaService.cs",
+              "ToolTip": "C:\\Users\\eliel.silva\\Repositories\\Projeto_Integrador\\Aplicacao\\backend\\PDV.Application\\Services\\VendaService.cs",
+              "RelativeToolTip": "PDV.Application\\Services\\VendaService.cs",
+              "ViewState": "AgIAADwAAAAAAAAAAAAgwFAAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-11T01:46:23.625Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ItemVendaEntity.cs",
+              "DocumentMoniker": "C:\\Users\\eliel.silva\\Repositories\\Projeto_Integrador\\Aplicacao\\backend\\PDV.Domain\\Entities\\ItemVendaEntity.cs",
+              "RelativeDocumentMoniker": "PDV.Domain\\Entities\\ItemVendaEntity.cs",
+              "ToolTip": "C:\\Users\\eliel.silva\\Repositories\\Projeto_Integrador\\Aplicacao\\backend\\PDV.Domain\\Entities\\ItemVendaEntity.cs",
+              "RelativeToolTip": "PDV.Domain\\Entities\\ItemVendaEntity.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-11T01:39:50.902Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ItemVendaService.cs",
+              "DocumentMoniker": "C:\\Users\\eliel.silva\\Repositories\\Projeto_Integrador\\Aplicacao\\backend\\PDV.Application\\Services\\ItemVendaService.cs",
+              "RelativeDocumentMoniker": "PDV.Application\\Services\\ItemVendaService.cs",
+              "ToolTip": "C:\\Users\\eliel.silva\\Repositories\\Projeto_Integrador\\Aplicacao\\backend\\PDV.Application\\Services\\ItemVendaService.cs",
+              "RelativeToolTip": "PDV.Application\\Services\\ItemVendaService.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAAgwCoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-11T01:23:23.117Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ProdutoService.cs",
+              "DocumentMoniker": "C:\\Users\\eliel.silva\\Repositories\\Projeto_Integrador\\Aplicacao\\backend\\PDV.Application\\Services\\ProdutoService.cs",
+              "RelativeDocumentMoniker": "PDV.Application\\Services\\ProdutoService.cs",
+              "ToolTip": "C:\\Users\\eliel.silva\\Repositories\\Projeto_Integrador\\Aplicacao\\backend\\PDV.Application\\Services\\ProdutoService.cs",
+              "RelativeToolTip": "PDV.Application\\Services\\ProdutoService.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAxwCcAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-11T01:23:22.614Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
