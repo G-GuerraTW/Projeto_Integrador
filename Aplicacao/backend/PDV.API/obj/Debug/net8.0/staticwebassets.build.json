@@ -1,11 +1,12 @@
 {
   "Version": 1,
-  "Hash": "oDEOBNcytV9htbFiFXs2Z8x+yKqKT3/KmlzeSMO6PUk=",
+  "Hash": "O/4XUJI4v6tzCp7cNNQCiw/R5oeZrXkwpWP1Bxlnzu8=",
   "Source": "PDV.API",
   "BasePath": "_content/PDV.API",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],
   "DiscoveryPatterns": [],
-  "Assets": []
+  "Assets": [],
+  "Endpoints": []
 }

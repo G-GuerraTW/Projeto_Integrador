@@ -72,7 +72,8 @@ namespace PDV.Application.Services
                 if(verificaVenda != null) throw new Exception("ID De venda não existe para exclusão");
                 _vendaPersist.Delete(verificaVenda);
 
-                await _vendaPersist.SaveChangesAsync();
+                if(await _vendaPersist.SaveChangesAsync()) return true;
+                return false;
             }
             catch (Exception ex)
             {

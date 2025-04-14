@@ -75,7 +75,8 @@ namespace PDV.Application.Services
 
                 _produtoPersist.Delete(verificaProduto);
 
-                return await _produtoPersist.SaveChangesAsync();
+                if(await _produtoPersist.SaveChangesAsync()) return true;
+                return false;
             }
             catch (Exception ex)
             {
