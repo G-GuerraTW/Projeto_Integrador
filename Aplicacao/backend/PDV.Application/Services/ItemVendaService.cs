@@ -3,7 +3,6 @@ using PDV.Application.Contracts;
 using PDV.Application.DTOs;
 using PDV.Domain.Entities;
 using PDV.Persistence.Contracts;
-using PDV.Persistence.Repositories;
 
 namespace PDV.Application.Services
 {
