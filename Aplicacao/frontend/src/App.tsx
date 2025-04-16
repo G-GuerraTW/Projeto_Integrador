@@ -1,25 +1,16 @@
-import React from "react";
-import { Routes, Route } from "react-router-dom";
-import PdvScreen from "./pages/PdvScreen";
-import ProductsScreen from "./pages/ProductsScreen";
-import SalesScreen from "./pages/SalesScreen";
-import ClientScreen from "./pages/ClientScreen";
-import SupplierScreen from "./pages/SupplierScreen";
-import ReportsScreen from "./pages/ReportsScreen";
+import React from 'react';
+import { Outlet } from 'react-router-dom';
+import { Box } from '@mui/material';
+import Header from './components/Header';
 
 function App() {
   return (
-    <Routes>
-      <Route path="/" element={<PdvScreen />} />
-      <Route path="/products" element={<ProductsScreen />} />
-      <Route
-        path="/sales"
-        element={<SalesScreen products={[]} onSaleComplete={() => {}} />}
-      />
-      <Route path="/clients" element={<ClientScreen />} />
-      <Route path="/suppliers" element={<SupplierScreen />} />
-      <Route path="/reports" element={<ReportsScreen />} />
-    </Routes>
+    <Box sx={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
+      <Header />
+      <Box component="main" sx={{ flexGrow: 1 }}>
+        <Outlet />
+      </Box>
+    </Box>
   );
 }
 

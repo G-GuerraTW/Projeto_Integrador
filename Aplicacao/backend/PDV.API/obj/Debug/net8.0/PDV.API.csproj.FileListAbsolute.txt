@@ -334,9 +334,12 @@ C:/Users/Gabriel G/Desktop/Projeto_Integrador/Aplicacao/backend/PDV.API/bin/Debu
 /home/silviobis/Área de Trabalho/Projeto_Integrador/Aplicacao/backend/PDV.API/obj/Debug/net8.0/staticwebassets/msbuild.buildTransitive.PDV.API.props
 /home/silviobis/Área de Trabalho/Projeto_Integrador/Aplicacao/backend/PDV.API/obj/Debug/net8.0/staticwebassets.pack.json
 /home/silviobis/Área de Trabalho/Projeto_Integrador/Aplicacao/backend/PDV.API/obj/Debug/net8.0/scopedcss/bundle/PDV.API.styles.css
-/home/silviobis/Área de Trabalho/Projeto_Integrador/Aplicacao/backend/PDV.API/obj/Debug/net8.0/PDV.API.csproj.CopyComplete
 /home/silviobis/Área de Trabalho/Projeto_Integrador/Aplicacao/backend/PDV.API/obj/Debug/net8.0/PDV.API.dll
 /home/silviobis/Área de Trabalho/Projeto_Integrador/Aplicacao/backend/PDV.API/obj/Debug/net8.0/refint/PDV.API.dll
 /home/silviobis/Área de Trabalho/Projeto_Integrador/Aplicacao/backend/PDV.API/obj/Debug/net8.0/PDV.API.pdb
 /home/silviobis/Área de Trabalho/Projeto_Integrador/Aplicacao/backend/PDV.API/obj/Debug/net8.0/PDV.API.genruntimeconfig.cache
 /home/silviobis/Área de Trabalho/Projeto_Integrador/Aplicacao/backend/PDV.API/obj/Debug/net8.0/ref/PDV.API.dll
+/home/silviobis/Área de Trabalho/Projeto_Integrador/Aplicacao/backend/PDV.API/bin/Debug/net8.0/PDV.API.staticwebassets.endpoints.json
+/home/silviobis/Área de Trabalho/Projeto_Integrador/Aplicacao/backend/PDV.API/obj/Debug/net8.0/staticwebassets.build.endpoints.json
+/home/silviobis/Área de Trabalho/Projeto_Integrador/Aplicacao/backend/PDV.API/obj/Debug/net8.0/staticwebassets/msbuild.PDV.API.Microsoft.AspNetCore.StaticWebAssetEndpoints.props
+/home/silviobis/Área de Trabalho/Projeto_Integrador/Aplicacao/backend/PDV.API/obj/Debug/net8.0/PDV.API.csproj.Up2Date

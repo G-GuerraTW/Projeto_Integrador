@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState, useEffect } from "react";
 import {
   Box,
   TextField,
@@ -21,121 +21,226 @@ import {
   DialogTitle,
   DialogContent,
   DialogActions,
+  Card,
+  CardContent,
+  IconButton,
+  InputAdornment,
+  FormHelperText
 } from "@mui/material";
 import { useNavigate } from "react-router-dom";
+import { Search, Add, Edit, Delete } from "@mui/icons-material";
+import { SelectChangeEvent } from '@mui/material/Select';
 
+// Interface que corresponderá ao modelo do backend
 interface Product {
   id: number;
-  name: string;
-  category: string;
-  price: number;
-  size: number | undefined;
-  color: string;
-  supplier: string;
-  stock: number;
+  nome: string;
+  categoria: string;
+  tamanho: string;
+  cor: string;
+  quantidade: number;
+  precoCusto: number;
+  precoVenda: number;
+  criadoEm: string;
 }
 
 const ProductsScreen = () => {
+  // Estados
   const [products, setProducts] = useState<Product[]>([]);
   const [openModal, setOpenModal] = useState(false);
+  const [searchTerm, setSearchTerm] = useState("");
+  const [categoryFilter, setCategoryFilter] = useState("");
+  const [formErrors, setFormErrors] = useState<{[key: string]: string}>({});
+  
   const [product, setProduct] = useState<Product>({
     id: 0,
-    name: "",
-    category: "",
-    price: 0,
-    size: undefined,
-    color: "",
-    supplier: "",
-    stock: 0,
+    nome: "",
+    categoria: "",
+    tamanho: "",
+    cor: "",
+    quantidade: 0,
+    precoCusto: 0,
+    precoVenda: 0,
+    criadoEm: new Date().toISOString()
   });
-  const [searchName, setSearchName] = useState("");
-  const [searchCategory, setSearchCategory] = useState("");
 
   const navigate = useNavigate();
 
-  const handleChange = (
-    e:
-      | React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
-      | {
-          target: { name?: string; value: unknown };
-        }
+  // Carregar dados fictícios
+  useEffect(() => {
+    // Dados fictícios de produtos
+    const mockProducts: Product[] = [
+      {
+        id: 1,
+        nome: "Tênis Esportivo",
+        categoria: "Calçados",
+        tamanho: "42",
+        cor: "Preto",
+        quantidade: 15,
+        precoCusto: 120.00,
+        precoVenda: 249.99,
+        criadoEm: "2023-05-10T14:30:00"
+      },
+      {
+        id: 2,
+        nome: "Camiseta Básica",
+        categoria: "Roupas",
+        tamanho: "M",
+        cor: "Branco",
+        quantidade: 30,
+        precoCusto: 25.00,
+        precoVenda: 59.99,
+        criadoEm: "2023-05-12T10:15:00"
+      },
+      {
+        id: 3,
+        nome: "Boné Ajustável",
+        categoria: "Acessórios",
+        tamanho: "Único",
+        cor: "Azul",
+        quantidade: 20,
+        precoCusto: 15.00,
+        precoVenda: 39.99,
+        criadoEm: "2023-05-15T16:45:00"
+      },
+      {
+        id: 4,
+        nome: "Calça Jeans",
+        categoria: "Roupas",
+        tamanho: "40",
+        cor: "Azul",
+        quantidade: 12,
+        precoCusto: 60.00,
+        precoVenda: 129.99,
+        criadoEm: "2023-05-18T09:20:00"
+      },
+      {
+        id: 5,
+        nome: "Relógio Esportivo",
+        categoria: "Acessórios",
+        tamanho: "Único",
+        cor: "Prata",
+        quantidade: 8,
+        precoCusto: 80.00,
+        precoVenda: 179.99,
+        criadoEm: "2023-05-20T11:30:00"
+      }
+    ];
+
+    setProducts(mockProducts);
+
+    // Quando implementar o backend, substitua por:
+    /*
+    const fetchProducts = async () => {
+      try {
+        const response = await fetch('http://localhost:5193/api/produto');
+        if (!response.ok) throw new Error(`Erro HTTP: ${response.status}`);
+        const data = await response.json();
+        setProducts(data);
+      } catch (error) {
+        console.error("Erro ao buscar produtos:", error);
+      }
+    };
+
+    fetchProducts();
+    */
+  }, []);
+
+  // Funções para manipulação de produtos
+  const handleInputChange = (
+
+    e: React.ChangeEvent<HTMLInputElement>
   ) => {
     const { name, value } = e.target;
-    setProduct((prev) => ({ ...prev, [name!]: value }));
+    setProduct({
+      ...product,
+      [name as string]: value
+    });
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
+  // Adicione esta função
+  const handleSelectChange = (e: SelectChangeEvent) => {
+    const { name, value } = e.target;
+    setProduct({
+      ...product,
+      [name as string]: value
+    });
+  };
 
-    // Verificar se o produto é da categoria "Calçado" e se o tamanho foi informado
-    if (product.category === "Calçado" && !product.size) {
-      alert("Por favor, informe o tamanho para calçados.");
-      return;
-    }
+  const validateForm = () => {
+    const errors: {[key: string]: string} = {};
+    
+    if (!product.nome) errors.nome = "Nome é obrigatório";
+    if (!product.categoria) errors.categoria = "Categoria é obrigatória";
+    if (product.quantidade < 0) errors.quantidade = "Quantidade não pode ser negativa";
+    if (product.precoCusto <= 0) errors.precoCusto = "Preço de custo deve ser maior que zero";
+    if (product.precoVenda <= 0) errors.precoVenda = "Preço de venda deve ser maior que zero";
+    
+    setFormErrors(errors);
+    return Object.keys(errors).length === 0;
+  };
 
-    // Verificar se a categoria foi selecionada
-    if (!product.category) {
-      alert("Por favor, selecione uma categoria.");
-      return;
-    }
-
-    // Verificar se é uma edição ou um novo produto
-    if (product.id !== 0) {
-      // Atualizar o produto existente
-      setProducts((prev) =>
-        prev.map((p) => (p.id === product.id ? product : p))
-      );
-      alert("Produto atualizado com sucesso!");
+  const handleSave = () => {
+    if (!validateForm()) return;
+    
+    if (product.id === 0) {
+      // Adicionar novo produto
+      const newProduct = {
+        ...product,
+        id: Date.now(), // Gera um ID único baseado no timestamp
+        criadoEm: new Date().toISOString()
+      };
+      setProducts([...products, newProduct]);
     } else {
-      // Adicionar um novo produto
-      setProducts((prev) => [
-        ...prev,
-        { ...product, id: Date.now() }, // Usar timestamp para gerar ID único
-      ]);
-      alert("Produto cadastrado com sucesso!");
+      // Atualizar produto existente
+      setProducts(products.map(p => p.id === product.id ? product : p));
     }
-
-    // Resetar o formulário e fechar o modal
+    
+    // Resetar formulário e fechar modal
     setProduct({
       id: 0,
-      name: "",
-      category: "",
-      price: 0,
-      size: undefined,
-      color: "",
-      supplier: "",
-      stock: 0,
+      nome: "",
+      categoria: "",
+      tamanho: "",
+      cor: "",
+      quantidade: 0,
+      precoCusto: 0,
+      precoVenda: 0,
+      criadoEm: new Date().toISOString()
     });
     setOpenModal(false);
   };
 
-  const handleDelete = (id: number) => {
-    setProducts((prev) => prev.filter((product) => product.id !== id));
-    alert("Produto excluído com sucesso!");
-  };
-
   const handleEdit = (id: number) => {
-    const productToEdit = products.find((product) => product.id === id);
+    const productToEdit = products.find(p => p.id === id);
     if (productToEdit) {
       setProduct(productToEdit);
       setOpenModal(true);
     }
   };
 
-  const filteredProducts = products.filter(
-    (product) =>
-      product.name.toLowerCase().includes(searchName.toLowerCase()) &&
-      (searchCategory === "" || product.category === searchCategory)
-  );
+  const handleDelete = (id: number) => {
+    if (window.confirm("Tem certeza que deseja excluir este produto?")) {
+      setProducts(products.filter(p => p.id !== id));
+    }
+  };
 
+  // Filtrar produtos
+  const filteredProducts = products.filter(product => {
+    const matchesSearch = product.nome.toLowerCase().includes(searchTerm.toLowerCase());
+    const matchesCategory = categoryFilter ? product.categoria === categoryFilter : true;
+    return matchesSearch && matchesCategory;
+  });
+
+  // Calcular estatísticas
   const calculateStockByCategory = (category: string) => {
     return products
-      .filter((product) => product.category === category)
-      .reduce((total, product) => total + Number(product.stock), 0);
+      .filter(product => product.categoria === category)
+      .reduce((total, product) => total + product.quantidade, 0);
   };
 
   return (
-    <Box sx={{ maxWidth: 1200, margin: "0 auto", mt: 4 }}>
+    <Box sx={{ maxWidth: 1200, margin: "0 auto", p: 3 }}>
       {/* Breadcrumb */}
       <Breadcrumbs aria-label="breadcrumb" sx={{ mb: 2 }}>
         <Link
@@ -146,208 +251,239 @@ const ProductsScreen = () => {
         >
           Home
         </Link>
-        <Typography color="text.primary">
-          Cadastro e Listagem de Produtos
-        </Typography>
+        <Typography color="text.primary">Cadastro de Produtos</Typography>
       </Breadcrumbs>
 
       <Typography variant="h4" gutterBottom>
-        Cadastro e Listagem de Produtos
+        Cadastro e Gestão de Produtos
       </Typography>
 
-      {/* Botão Novo Produto */}
-      <Button
-        variant="contained"
-        sx={{ mb: 3, backgroundColor: "#4A148C", color: "white" }}
-        onClick={() => setOpenModal(true)}
-      >
-        Novo Produto
-      </Button>
-
-      {/* Campos de Busca */}
-      <Box sx={{ display: "flex", gap: 2, mb: 3 }}>
+      {/* Barra de Ações */}
+      <Box sx={{ display: "flex", gap: 2, mb: 3, flexWrap: "wrap" }}>
         <TextField
-          label="Buscar por Nome"
+          label="Buscar Produto"
           variant="outlined"
-          value={searchName}
-          onChange={(e) => setSearchName(e.target.value)}
-          fullWidth
+          size="small"
+          value={searchTerm}
+          onChange={(e) => setSearchTerm(e.target.value)}
+          sx={{ flexGrow: 1 }}
+          InputProps={{
+            startAdornment: (
+              <InputAdornment position="start">
+                <Search />
+              </InputAdornment>
+            ),
+          }}
         />
-        <FormControl fullWidth>
-          <InputLabel>Filtrar por Categoria</InputLabel>
+        
+        <FormControl size="small" sx={{ minWidth: 200 }}>
+          <InputLabel>Categoria</InputLabel>
           <Select
-            value={searchCategory}
-            onChange={(e) => setSearchCategory(e.target.value)}
+            value={categoryFilter}
+            label="Categoria"
+            onChange={(e) => setCategoryFilter(e.target.value as string)}
           >
             <MenuItem value="">Todas</MenuItem>
-            <MenuItem value="Calçado">Calçado</MenuItem>
-            <MenuItem value="Roupa">Roupa</MenuItem>
+            <MenuItem value="Calçados">Calçados</MenuItem>
+            <MenuItem value="Roupas">Roupas</MenuItem>
             <MenuItem value="Acessórios">Acessórios</MenuItem>
           </Select>
         </FormControl>
+        
+        <Button
+          variant="contained"
+          color="primary"
+          startIcon={<Add />}
+          onClick={() => setOpenModal(true)}
+        >
+          Novo Produto
+        </Button>
       </Box>
-        {/* Cards de Estoque por Categoria */}
-        <Box sx={{ display: "flex", gap: 3, mb: 3 }}>
-          <Box sx={{ flex: "1 1 30%", minWidth: "250px" }}>
-            <Paper sx={{ p: 2, textAlign: "center", backgroundColor: "#EDE7F6" }}>
+
+      {/* Cards de Estatísticas - Substituindo Grid por Box */}
+      <Box sx={{ display: "flex", flexWrap: "wrap", gap: 2, mb: 3 }}>
+        <Box sx={{ flex: "1 1 calc(33.333% - 16px)", minWidth: "240px" }}>
+          <Card>
+            <CardContent>
               <Typography variant="h6">Estoque de Calçados</Typography>
-              <Typography variant="h4">
-                {calculateStockByCategory("Calçado")}
-              </Typography>
-            </Paper>
-          </Box>
-          <Box sx={{ flex: "1 1 30%", minWidth: "250px" }}>
-            <Paper sx={{ p: 2, textAlign: "center", backgroundColor: "#E3F2FD" }}>
-              <Typography variant="h6">Estoque de Roupas</Typography>
-              <Typography variant="h4">
-                {calculateStockByCategory("Roupa")}
-              </Typography>
-            </Paper>
-          </Box>
-          <Box sx={{ flex: "1 1 30%", minWidth: "250px" }}>
-            <Paper sx={{ p: 2, textAlign: "center", backgroundColor: "#FFF3E0" }}>
-              <Typography variant="h6">Estoque de Acessórios</Typography>
-              <Typography variant="h4">
-                {calculateStockByCategory("Acessórios")}
-              </Typography>
-            </Paper>
-          </Box>
+              <Typography variant="h4">{calculateStockByCategory("Calçados")}</Typography>
+            </CardContent>
+          </Card>
         </Box>
+        
+        <Box sx={{ flex: "1 1 calc(33.333% - 16px)", minWidth: "240px" }}>
+          <Card>
+            <CardContent>
+              <Typography variant="h6">Estoque de Roupas</Typography>
+              <Typography variant="h4">{calculateStockByCategory("Roupas")}</Typography>
+            </CardContent>
+          </Card>
+        </Box>
+        
+        <Box sx={{ flex: "1 1 calc(33.333% - 16px)", minWidth: "240px" }}>
+          <Card>
+            <CardContent>
+              <Typography variant="h6">Estoque de Acessórios</Typography>
+              <Typography variant="h4">{calculateStockByCategory("Acessórios")}</Typography>
+            </CardContent>
+          </Card>
+        </Box>
+      </Box>
 
       {/* Tabela de Produtos */}
-      <TableContainer component={Paper}>
+      <TableContainer component={Paper} sx={{ mb: 3 }}>
         <Table>
           <TableHead sx={{ backgroundColor: "#4A148C" }}>
             <TableRow>
-              <TableCell sx={{ color: "white" }}>Nome do Produto</TableCell>
-              <TableCell sx={{ color: "white" }}>Fornecedor</TableCell>
+              <TableCell sx={{ color: "white" }}>Nome</TableCell>
               <TableCell sx={{ color: "white" }}>Categoria</TableCell>
-              <TableCell sx={{ color: "white" }}>
-                Quantidade em Estoque
-              </TableCell>
+              <TableCell sx={{ color: "white" }}>Tamanho</TableCell>
+              <TableCell sx={{ color: "white" }}>Cor</TableCell>
+              <TableCell sx={{ color: "white" }}>Estoque</TableCell>
+              <TableCell sx={{ color: "white" }}>Preço de Venda</TableCell>
               <TableCell sx={{ color: "white" }}>Ações</TableCell>
             </TableRow>
           </TableHead>
           <TableBody>
-            {filteredProducts.map((product) => (
-              <TableRow key={product.id}>
-                <TableCell>{product.name}</TableCell>
-                <TableCell>{product.supplier}</TableCell>
-                <TableCell>{product.category}</TableCell>
-                <TableCell>{product.stock}</TableCell>
-                <TableCell>
-                  <Button
-                    variant="outlined"
-                    color="primary"
-                    onClick={() => handleEdit(product.id)}
-                    sx={{ mr: 1 }}
-                  >
-                    Editar
-                  </Button>
-                  <Button
-                    variant="outlined"
-                    color="error"
-                    onClick={() => handleDelete(product.id)}
-                  >
-                    Excluir
-                  </Button>
+            {filteredProducts.length > 0 ? (
+              filteredProducts.map((product) => (
+                <TableRow key={product.id}>
+                  <TableCell>{product.nome}</TableCell>
+                  <TableCell>{product.categoria}</TableCell>
+                  <TableCell>{product.tamanho}</TableCell>
+                  <TableCell>{product.cor}</TableCell>
+                  <TableCell>{product.quantidade}</TableCell>
+                  <TableCell>R$ {product.precoVenda.toFixed(2)}</TableCell>
+                  <TableCell>
+                    <IconButton color="primary" onClick={() => handleEdit(product.id)}>
+                      <Edit />
+                    </IconButton>
+                    <IconButton color="error" onClick={() => handleDelete(product.id)}>
+                      <Delete />
+                    </IconButton>
+                  </TableCell>
+                </TableRow>
+              ))
+            ) : (
+              <TableRow>
+                <TableCell colSpan={7} align="center">
+                  Nenhum produto encontrado
                 </TableCell>
               </TableRow>
-            ))}
+            )}
           </TableBody>
         </Table>
       </TableContainer>
 
-      {/* Modal de Cadastro/Editar Produto */}
-      <Dialog open={openModal} onClose={() => setOpenModal(false)} fullWidth>
+      {/* Modal de Cadastro/Edição - Substituindo Grid por Box */}
+      <Dialog open={openModal} onClose={() => setOpenModal(false)} maxWidth="md" fullWidth>
         <DialogTitle>
-          {product.id ? "Editar Produto" : "Novo Produto"}
+          {product.id === 0 ? "Novo Produto" : "Editar Produto"}
         </DialogTitle>
         <DialogContent>
-          <form onSubmit={handleSubmit}>
-            <TextField
-              fullWidth
-              label="Nome do Produto"
-              name="name"
-              value={product.name}
-              onChange={handleChange}
-              margin="normal"
-            />
-            <FormControl fullWidth margin="normal">
-              <InputLabel>Categoria</InputLabel>
-              <Select
-                name="category"
-                value={product.category}
-                onChange={handleChange}
-              >
-                <MenuItem value="Calçado">Calçado</MenuItem>
-                <MenuItem value="Roupa">Roupa</MenuItem>
-                <MenuItem value="Acessórios">Acessórios</MenuItem>
-              </Select>
-            </FormControl>
-            {product.category === "Calçado" && (
+          <Box sx={{ display: "flex", flexWrap: "wrap", gap: 2, mt: 1 }}>
+            <Box sx={{ width: "calc(50% - 8px)" }}>
               <TextField
                 fullWidth
-                label="Tamanho (somente para calçados)"
-                name="size"
-                type="number"
-                value={product.size || ""}
-                onChange={handleChange}
-                margin="normal"
+                label="Nome do Produto"
+                name="nome"
+                value={product.nome}
+                onChange={handleInputChange}
+                error={!!formErrors.nome}
+                helperText={formErrors.nome}
               />
-            )}
-            <TextField
-              fullWidth
-              label="Preço Unitário"
-              name="price"
-              type="number"
-              value={product.price}
-              onChange={handleChange}
-              margin="normal"
-            />
-            <TextField
-              fullWidth
-              label="Cor"
-              name="color"
-              value={product.color}
-              onChange={handleChange}
-              margin="normal"
-            />
-            <TextField
-              fullWidth
-              label="Fornecedor"
-              name="supplier"
-              value={product.supplier}
-              onChange={handleChange}
-              margin="normal"
-            />
-            <TextField
-              fullWidth
-              label="Quantidade em Estoque"
-              name="stock"
-              type="number"
-              value={product.stock}
-              onChange={handleChange}
-              margin="normal"
-            />
-            <DialogActions>
-              <Button
-                onClick={() => setOpenModal(false)}
-                color="secondary"
-                variant="outlined"
-              >
-                Cancelar
-              </Button>
-              <Button
-                type="submit"
-                variant="contained"
-                sx={{ backgroundColor: "#4A148C", color: "white" }}
-              >
-                Salvar
-              </Button>
-            </DialogActions>
-          </form>
+            </Box>
+            
+            <Box sx={{ width: "calc(50% - 8px)" }}>
+              <FormControl fullWidth error={!!formErrors.categoria}>
+                <InputLabel>Categoria</InputLabel>
+                <Select
+                  name="categoria"
+                  value={product.categoria}
+                  label="Categoria"
+
+                  onChange={handleSelectChange}
+                >
+                  <MenuItem value="Calçados">Calçados</MenuItem>
+                  <MenuItem value="Roupas">Roupas</MenuItem>
+                  <MenuItem value="Acessórios">Acessórios</MenuItem>
+                </Select>
+                {formErrors.categoria && <FormHelperText>{formErrors.categoria}</FormHelperText>}
+              </FormControl>
+            </Box>
+            
+            <Box sx={{ width: "calc(50% - 8px)" }}>
+              <TextField
+                fullWidth
+                label="Tamanho"
+                name="tamanho"
+                value={product.tamanho}
+                onChange={handleInputChange}
+              />
+            </Box>
+            
+            <Box sx={{ width: "calc(50% - 8px)" }}>
+              <TextField
+                fullWidth
+                label="Cor"
+                name="cor"
+                value={product.cor}
+                onChange={handleInputChange}
+              />
+            </Box>
+            
+            <Box sx={{ width: "calc(33.333% - 8px)" }}>
+              <TextField
+                fullWidth
+                label="Quantidade em Estoque"
+                name="quantidade"
+                type="number"
+                value={product.quantidade}
+                onChange={handleInputChange}
+                error={!!formErrors.quantidade}
+                helperText={formErrors.quantidade}
+              />
+            </Box>
+            
+            <Box sx={{ width: "calc(33.333% - 8px)" }}>
+              <TextField
+                fullWidth
+                label="Preço de Custo"
+                name="precoCusto"
+                type="number"
+                value={product.precoCusto}
+                onChange={handleInputChange}
+                error={!!formErrors.precoCusto}
+                helperText={formErrors.precoCusto}
+                InputProps={{
+                  startAdornment: <InputAdornment position="start">R$</InputAdornment>,
+                }}
+              />
+            </Box>
+            
+            <Box sx={{ width: "calc(33.333% - 8px)" }}>
+              <TextField
+                fullWidth
+                label="Preço de Venda"
+                name="precoVenda"
+                type="number"
+                value={product.precoVenda}
+                onChange={handleInputChange}
+                error={!!formErrors.precoVenda}
+                helperText={formErrors.precoVenda}
+                InputProps={{
+                  startAdornment: <InputAdornment position="start">R$</InputAdornment>,
+                }}
+              />
+            </Box>
+          </Box>
         </DialogContent>
+        <DialogActions>
+          <Button onClick={() => setOpenModal(false)}>Cancelar</Button>
+          <Button onClick={handleSave} variant="contained" color="primary">
+            Salvar
+          </Button>
+        </DialogActions>
       </Dialog>
     </Box>
   );

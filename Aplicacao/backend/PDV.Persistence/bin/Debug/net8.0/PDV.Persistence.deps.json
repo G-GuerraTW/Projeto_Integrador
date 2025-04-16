@@ -818,7 +818,10 @@
       "System.Threading.Channels/7.0.0": {},
       "PDV.Domain/1.0.0": {
         "runtime": {
-          "PDV.Domain.dll": {}
+          "PDV.Domain.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       }
     }

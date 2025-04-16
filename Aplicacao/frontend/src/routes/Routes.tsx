@@ -1,27 +1,32 @@
 import React from 'react';
-import { createBrowserRouter } from 'react-router-dom';
+import { createBrowserRouter, Navigate } from 'react-router-dom';
 import App from '../App';
 import PdvScreen from '../pages/PdvScreen';
 import ProductsScreen from '../pages/ProductsScreen';
 import SalesScreen from '../pages/SalesScreen';
 import ErrorScreen from '../pages/ErrorScreen';
-import ClientScreen from '../pages/ClientScreen';
-import ReportsScreen from '../pages/ReportsScreen';
-import SupplierScreen from '../pages/SupplierScreen';
+import LoginScreen from '../pages/LoginScreen';
+import ProtectedRoute from '../components/ProtectedRoute';
 
 export const router = createBrowserRouter([
   {
     path: '/',
-    element: <App />,
+    element: <ProtectedRoute />,
     errorElement: <ErrorScreen />,
     children: [
-      { index: true, element: <PdvScreen /> },
-      { path: 'pdv', element: <PdvScreen /> },
-      { path: 'products', element: <ProductsScreen /> },
-      { path: 'sales', element: <SalesScreen products={[]} onSaleComplete={() => {}} /> },
-      { path: 'clients', element: <ClientScreen/> },
-      { path: 'reports', element: <ReportsScreen /> },
-      { path: 'suppliers', element: <SupplierScreen /> },
+      {
+        element: <App />,
+        children: [
+          { index: true, element: <Navigate to="/pdv" replace /> },
+          { path: 'pdv', element: <PdvScreen /> },
+          { path: 'products', element: <ProductsScreen /> },
+          { path: 'sales', element: <SalesScreen /> },
+        ],
+      },
     ],
+  },
+  {
+    path: '/login',
+    element: <LoginScreen />,
   },
 ]);

@@ -28,21 +28,31 @@ builder.Services.AddScoped<IProdutoService, ProdutoService>();
 builder.Services.AddDbContext<PDVContext>(options =>
     options.UseSqlite("DATA Source=banco.db")
 );
+  builder.Services.AddCors(options =>
+  {
+      options.AddDefaultPolicy(
+          policy =>
+          {
+              policy.WithOrigins("http://localhost:3000") // URL do seu frontend
+                    .AllowAnyHeader()
+                    .AllowAnyMethod();
+          });
+  });
 
+  var app = builder.Build();
 
-var app = builder.Build();
+  // Configure the HTTP request pipeline.
+  if (app.Environment.IsDevelopment())
+  {
+      app.UseSwagger();
+      app.UseSwaggerUI(options =>
+      {
+          options.SwaggerEndpoint("/swagger/v1/swagger.json", "v1");
+          options.RoutePrefix = string.Empty;
+      });
+  }
 
-// Configure the HTTP request pipeline.
-if (app.Environment.IsDevelopment())
-{
-    app.UseSwagger();
-    app.UseSwaggerUI(options =>
-    {
-        options.SwaggerEndpoint("/swagger/v1/swagger.json", "v1");
-        options.RoutePrefix = string.Empty;
-    });
-}
-
-app.MapControllers();
+  app.UseCors();
+  app.MapControllers();
 app.UseHttpsRedirection();
 app.Run();

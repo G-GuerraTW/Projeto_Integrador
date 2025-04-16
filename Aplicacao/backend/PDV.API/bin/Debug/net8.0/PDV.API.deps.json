@@ -974,12 +974,18 @@
           "PDV.Persistence": "1.0.0"
         },
         "runtime": {
-          "PDV.Application.dll": {}
+          "PDV.Application.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       },
       "PDV.Domain/1.0.0": {
         "runtime": {
-          "PDV.Domain.dll": {}
+          "PDV.Domain.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       },
       "PDV.Persistence/1.0.0": {
@@ -989,7 +995,10 @@
           "PDV.Domain": "1.0.0"
         },
         "runtime": {
-          "PDV.Persistence.dll": {}
+          "PDV.Persistence.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       }
     }

@@ -38,8 +38,8 @@ C:/Users/eliel.silva/Repositories/Projeto_Integrador/Aplicacao/backend/PDV.Appli
 /home/silviobis/Área de Trabalho/Projeto_Integrador/Aplicacao/backend/PDV.Application/obj/Debug/net8.0/PDV.Application.AssemblyInfo.cs
 /home/silviobis/Área de Trabalho/Projeto_Integrador/Aplicacao/backend/PDV.Application/obj/Debug/net8.0/PDV.Application.csproj.CoreCompileInputs.cache
 /home/silviobis/Área de Trabalho/Projeto_Integrador/Aplicacao/backend/PDV.Application/obj/Debug/net8.0/PDV.Application.sourcelink.json
-/home/silviobis/Área de Trabalho/Projeto_Integrador/Aplicacao/backend/PDV.Application/obj/Debug/net8.0/PDV.Application.csproj.CopyComplete
 /home/silviobis/Área de Trabalho/Projeto_Integrador/Aplicacao/backend/PDV.Application/obj/Debug/net8.0/PDV.Application.dll
 /home/silviobis/Área de Trabalho/Projeto_Integrador/Aplicacao/backend/PDV.Application/obj/Debug/net8.0/refint/PDV.Application.dll
 /home/silviobis/Área de Trabalho/Projeto_Integrador/Aplicacao/backend/PDV.Application/obj/Debug/net8.0/PDV.Application.pdb
 /home/silviobis/Área de Trabalho/Projeto_Integrador/Aplicacao/backend/PDV.Application/obj/Debug/net8.0/ref/PDV.Application.dll
+/home/silviobis/Área de Trabalho/Projeto_Integrador/Aplicacao/backend/PDV.Application/obj/Debug/net8.0/PDV.Appl.81E6E6EE.Up2Date

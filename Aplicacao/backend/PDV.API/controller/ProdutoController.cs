@@ -32,9 +32,8 @@ namespace PDV.API.controller
                 );
             }
         }
-
         [HttpPut("{id}")]
-        public async Task<IActionResult> UpdateEvento(int id, ProdutoDTO model) 
+        public async Task<IActionResult> UpdateProduto(int id, ProdutoDTO model) 
         {
             var produto = await _produtoService.UpdateProduto(id, model);
             if(produto == null) return BadRequest("Erro ao tentar adicionar Produto");
@@ -46,7 +45,7 @@ namespace PDV.API.controller
         {
             try
             {
-                if(id == null || id < 0) return BadRequest("Erro ao tentar deletar Produto");
+                if( id < 0) return BadRequest("Erro ao tentar deletar Produto");
                 var resultado = await _produtoService.DeleteProduto(id);
 
                 if(resultado) return Ok("Produto deletado");

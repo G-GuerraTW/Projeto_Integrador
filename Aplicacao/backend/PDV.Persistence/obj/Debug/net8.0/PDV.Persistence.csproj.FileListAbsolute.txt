@@ -37,9 +37,9 @@ C:/Users/eliel.silva/Repositories/Projeto_Integrador/Aplicacao/backend/PDV.Persi
 /home/silviobis/Área de Trabalho/Projeto_Integrador/Aplicacao/backend/PDV.Persistence/obj/Debug/net8.0/PDV.Persistence.AssemblyInfo.cs
 /home/silviobis/Área de Trabalho/Projeto_Integrador/Aplicacao/backend/PDV.Persistence/obj/Debug/net8.0/PDV.Persistence.csproj.CoreCompileInputs.cache
 /home/silviobis/Área de Trabalho/Projeto_Integrador/Aplicacao/backend/PDV.Persistence/obj/Debug/net8.0/PDV.Persistence.sourcelink.json
-/home/silviobis/Área de Trabalho/Projeto_Integrador/Aplicacao/backend/PDV.Persistence/obj/Debug/net8.0/PDV.Persistence.csproj.CopyComplete
 /home/silviobis/Área de Trabalho/Projeto_Integrador/Aplicacao/backend/PDV.Persistence/obj/Debug/net8.0/PDV.Persistence.dll
 /home/silviobis/Área de Trabalho/Projeto_Integrador/Aplicacao/backend/PDV.Persistence/obj/Debug/net8.0/refint/PDV.Persistence.dll
 /home/silviobis/Área de Trabalho/Projeto_Integrador/Aplicacao/backend/PDV.Persistence/obj/Debug/net8.0/PDV.Persistence.pdb
 /home/silviobis/Área de Trabalho/Projeto_Integrador/Aplicacao/backend/PDV.Persistence/obj/Debug/net8.0/PDV.Persistence.genruntimeconfig.cache
 /home/silviobis/Área de Trabalho/Projeto_Integrador/Aplicacao/backend/PDV.Persistence/obj/Debug/net8.0/ref/PDV.Persistence.dll
+/home/silviobis/Área de Trabalho/Projeto_Integrador/Aplicacao/backend/PDV.Persistence/obj/Debug/net8.0/PDV.Pers.3F32E63D.Up2Date
