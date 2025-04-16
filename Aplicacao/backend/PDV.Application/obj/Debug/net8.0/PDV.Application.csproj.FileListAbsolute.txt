@@ -16,15 +16,6 @@ C:\Users\Gabriel G\Desktop\Projeto_Integrador\Aplicacao\backend\PDV.Application\
 C:\Users\Gabriel G\Desktop\Projeto_Integrador\Aplicacao\backend\PDV.Application\bin\Debug\net8.0\PDV.Persistence.pdb
 C:\Users\Gabriel G\Desktop\Projeto_Integrador\Aplicacao\backend\PDV.Application\obj\Debug\net8.0\PDV.Application.csproj.AssemblyReference.cache
 C:\Users\Gabriel G\Desktop\Projeto_Integrador\Aplicacao\backend\PDV.Application\obj\Debug\net8.0\PDV.Appl.81E6E6EE.Up2Date
-C:\Users\eliel.silva\Repositories\Projeto_Integrador\Aplicacao\backend\PDV.Application\obj\Debug\net8.0\PDV.Application.csproj.AssemblyReference.cache
-C:\Users\eliel.silva\Repositories\Projeto_Integrador\Aplicacao\backend\PDV.Application\obj\Debug\net8.0\PDV.Application.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\eliel.silva\Repositories\Projeto_Integrador\Aplicacao\backend\PDV.Application\obj\Debug\net8.0\PDV.Application.AssemblyInfoInputs.cache
-C:\Users\eliel.silva\Repositories\Projeto_Integrador\Aplicacao\backend\PDV.Application\obj\Debug\net8.0\PDV.Application.AssemblyInfo.cs
-C:\Users\eliel.silva\Repositories\Projeto_Integrador\Aplicacao\backend\PDV.Application\obj\Debug\net8.0\PDV.Application.csproj.CoreCompileInputs.cache
-C:\Users\eliel.silva\Repositories\Projeto_Integrador\Aplicacao\backend\PDV.Application\obj\Debug\net8.0\PDV.Application.sourcelink.json
-C:\Users\eliel.silva\Repositories\Projeto_Integrador\Aplicacao\backend\PDV.Application\obj\Debug\net8.0\PDV.Application.dll
-C:\Users\eliel.silva\Repositories\Projeto_Integrador\Aplicacao\backend\PDV.Application\obj\Debug\net8.0\refint\PDV.Application.dll
-C:\Users\eliel.silva\Repositories\Projeto_Integrador\Aplicacao\backend\PDV.Application\obj\Debug\net8.0\PDV.Application.pdb
 C:\Users\eliel.silva\Repositories\Projeto_Integrador\Aplicacao\backend\PDV.Application\bin\Debug\net8.0\PDV.Application.deps.json
 C:\Users\eliel.silva\Repositories\Projeto_Integrador\Aplicacao\backend\PDV.Application\bin\Debug\net8.0\PDV.Application.dll
 C:\Users\eliel.silva\Repositories\Projeto_Integrador\Aplicacao\backend\PDV.Application\bin\Debug\net8.0\PDV.Application.pdb
@@ -32,5 +23,14 @@ C:\Users\eliel.silva\Repositories\Projeto_Integrador\Aplicacao\backend\PDV.Appli
 C:\Users\eliel.silva\Repositories\Projeto_Integrador\Aplicacao\backend\PDV.Application\bin\Debug\net8.0\PDV.Persistence.dll
 C:\Users\eliel.silva\Repositories\Projeto_Integrador\Aplicacao\backend\PDV.Application\bin\Debug\net8.0\PDV.Domain.pdb
 C:\Users\eliel.silva\Repositories\Projeto_Integrador\Aplicacao\backend\PDV.Application\bin\Debug\net8.0\PDV.Persistence.pdb
+C:\Users\eliel.silva\Repositories\Projeto_Integrador\Aplicacao\backend\PDV.Application\obj\Debug\net8.0\PDV.Application.csproj.AssemblyReference.cache
+C:\Users\eliel.silva\Repositories\Projeto_Integrador\Aplicacao\backend\PDV.Application\obj\Debug\net8.0\PDV.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\eliel.silva\Repositories\Projeto_Integrador\Aplicacao\backend\PDV.Application\obj\Debug\net8.0\PDV.Application.AssemblyInfoInputs.cache
+C:\Users\eliel.silva\Repositories\Projeto_Integrador\Aplicacao\backend\PDV.Application\obj\Debug\net8.0\PDV.Application.AssemblyInfo.cs
+C:\Users\eliel.silva\Repositories\Projeto_Integrador\Aplicacao\backend\PDV.Application\obj\Debug\net8.0\PDV.Application.csproj.CoreCompileInputs.cache
+C:\Users\eliel.silva\Repositories\Projeto_Integrador\Aplicacao\backend\PDV.Application\obj\Debug\net8.0\PDV.Application.sourcelink.json
 C:\Users\eliel.silva\Repositories\Projeto_Integrador\Aplicacao\backend\PDV.Application\obj\Debug\net8.0\PDV.Appl.81E6E6EE.Up2Date
+C:\Users\eliel.silva\Repositories\Projeto_Integrador\Aplicacao\backend\PDV.Application\obj\Debug\net8.0\PDV.Application.dll
+C:\Users\eliel.silva\Repositories\Projeto_Integrador\Aplicacao\backend\PDV.Application\obj\Debug\net8.0\refint\PDV.Application.dll
+C:\Users\eliel.silva\Repositories\Projeto_Integrador\Aplicacao\backend\PDV.Application\obj\Debug\net8.0\PDV.Application.pdb
 C:\Users\eliel.silva\Repositories\Projeto_Integrador\Aplicacao\backend\PDV.Application\obj\Debug\net8.0\ref\PDV.Application.dll

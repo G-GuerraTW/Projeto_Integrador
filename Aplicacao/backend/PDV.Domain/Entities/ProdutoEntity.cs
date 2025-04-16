@@ -1,3 +1,5 @@
+using PDV.Domain.Identity;
+
 namespace PDV.Domain.Entities
 {
     public class ProdutoEntity
@@ -13,5 +15,8 @@ namespace PDV.Domain.Entities
         public DateTime CriadoEm { get; set; }
 
         public IEnumerable<ItemVendaEntity> ItensVenda { get; set; } = new List<ItemVendaEntity>();
+
+        public int UserId { get; set; }
+        public User User { get; set; }
     }
 }
