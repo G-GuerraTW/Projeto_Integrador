@@ -5,10 +5,10 @@ namespace PDV.Application.Contracts
     public interface IItemVendaService
     {
         public Task<ItemVendaDTO> AddItemVenda(ItemVendaDTO model);
-        public Task<ItemVendaDTO> UpdateItemVenda(int produtoId, ItemVendaDTO model);
-        public Task<bool> DeleteItemVenda(int produtoId);
-        public Task<ItemVendaDTO[]> GetAllItemVendaAsync(string vendaId);
-        public Task<ItemVendaDTO> GetItemVendaByIDAsync(int ID);
+        public Task<ItemVendaDTO> UpdateItemVenda(int idItemVenda, ItemVendaDTO model);
+        public Task<bool> DeleteItemVenda(int idItemVenda);
+        public Task<ItemVendaDTO[]> GetAllItemVendaAsync(int vendaId);
+        public Task<ItemVendaDTO> GetItemVendaByIdAsync(int idItemVenda);
         public decimal CalcularPreco(int quantidade, decimal preco);
     }
 }

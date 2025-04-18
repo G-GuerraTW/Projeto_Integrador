@@ -8,14 +8,14 @@ namespace PDV.Persistence.Repositories
 {
     public class ItemVendaPersist(PDVContext contexto) : GeralPersist(contexto), IItemVendaPersist
     {
-        public async Task<ItemVendaEntity[]> GetAllItensVendaAsync(string vendaId)
+        public async Task<ItemVendaEntity[]> GetAllItensVendaAsync(int vendaId)
         {
             IQueryable<ItemVendaEntity> query = contexto.ItemVendas.AsNoTracking();
 
             return await query.ToArrayAsync();
         }
 
-        public Task<ItemVendaEntity?> GetItensVendaByIDAsync(int id)
+        public Task<ItemVendaEntity?> GetItemVendaByIDAsync(int id)
         {
             IQueryable<ItemVendaEntity> query = contexto.ItemVendas.AsNoTracking();
 
