@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("PDV.Domain")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b8dddc17f258fd30729a954bf060a735bbb812de")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+25c24c9e5559cebb950a5c8d8a1fbd2533295f43")]
 [assembly: System.Reflection.AssemblyProductAttribute("PDV.Domain")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PDV.Domain")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
