@@ -89,8 +89,6 @@ namespace PDV.API.Controller
                 );
             }
         }
-<<<<<<< HEAD
-
         [Authorize]
         [HttpGet("{UserName}")]
         public async Task<ActionResult<VendaDTO[]>> GetVendasByUserName(string userName)
@@ -101,8 +99,5 @@ namespace PDV.API.Controller
 
             return Ok(result);
         }
-        
-=======
->>>>>>> 4ed2af4e31243ebdcbac8ceb57f90e0a1e0eaa39
     }
 }

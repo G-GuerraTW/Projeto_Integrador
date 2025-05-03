@@ -2776,67 +2776,35 @@
     ]
   },
   "packageFolders": {
-<<<<<<< HEAD
     "C:\\Users\\YOJP\\.nuget\\packages\\": {}
-=======
-    "C:\\Users\\eliel.silva\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
->>>>>>> 4ed2af4e31243ebdcbac8ceb57f90e0a1e0eaa39
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-<<<<<<< HEAD
       "projectUniqueName": "C:\\Users\\YOJP\\Desktop\\Projeto_Integrador\\Aplicacao\\backend\\PDV.Application\\PDV.Application.csproj",
       "projectName": "PDV.Application",
       "projectPath": "C:\\Users\\YOJP\\Desktop\\Projeto_Integrador\\Aplicacao\\backend\\PDV.Application\\PDV.Application.csproj",
       "packagesPath": "C:\\Users\\YOJP\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\YOJP\\Desktop\\Projeto_Integrador\\Aplicacao\\backend\\PDV.Application\\obj\\",
-=======
-      "projectUniqueName": "C:\\Users\\eliel.silva\\Repositories\\Projeto_Integrador\\Aplicacao\\backend\\PDV.Application\\PDV.Application.csproj",
-      "projectName": "PDV.Application",
-      "projectPath": "C:\\Users\\eliel.silva\\Repositories\\Projeto_Integrador\\Aplicacao\\backend\\PDV.Application\\PDV.Application.csproj",
-      "packagesPath": "C:\\Users\\eliel.silva\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\eliel.silva\\Repositories\\Projeto_Integrador\\Aplicacao\\backend\\PDV.Application\\obj\\",
->>>>>>> 4ed2af4e31243ebdcbac8ceb57f90e0a1e0eaa39
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-<<<<<<< HEAD
         "C:\\Users\\YOJP\\AppData\\Roaming\\NuGet\\NuGet.Config"
-=======
-        "C:\\Users\\eliel.silva\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
->>>>>>> 4ed2af4e31243ebdcbac8ceb57f90e0a1e0eaa39
       ],
       "originalTargetFrameworks": [
         "net9.0"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net9.0": {
           "targetAlias": "net9.0",
           "projectReferences": {
-<<<<<<< HEAD
             "C:\\Users\\YOJP\\Desktop\\Projeto_Integrador\\Aplicacao\\backend\\PDV.Domain\\PDV.Domain.csproj": {
               "projectPath": "C:\\Users\\YOJP\\Desktop\\Projeto_Integrador\\Aplicacao\\backend\\PDV.Domain\\PDV.Domain.csproj"
             },
             "C:\\Users\\YOJP\\Desktop\\Projeto_Integrador\\Aplicacao\\backend\\PDV.Persistence\\PDV.Persistence.csproj": {
               "projectPath": "C:\\Users\\YOJP\\Desktop\\Projeto_Integrador\\Aplicacao\\backend\\PDV.Persistence\\PDV.Persistence.csproj"
-=======
-            "C:\\Users\\eliel.silva\\Repositories\\Projeto_Integrador\\Aplicacao\\backend\\PDV.Domain\\PDV.Domain.csproj": {
-              "projectPath": "C:\\Users\\eliel.silva\\Repositories\\Projeto_Integrador\\Aplicacao\\backend\\PDV.Domain\\PDV.Domain.csproj"
-            },
-            "C:\\Users\\eliel.silva\\Repositories\\Projeto_Integrador\\Aplicacao\\backend\\PDV.Persistence\\PDV.Persistence.csproj": {
-              "projectPath": "C:\\Users\\eliel.silva\\Repositories\\Projeto_Integrador\\Aplicacao\\backend\\PDV.Persistence\\PDV.Persistence.csproj"
->>>>>>> 4ed2af4e31243ebdcbac8ceb57f90e0a1e0eaa39
             }
           }
         }
@@ -2890,8 +2858,16 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.201/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.203/PortableRuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problema ao ler o arquivo de cache C:\\Users\\YOJP\\Desktop\\Projeto_Integrador\\Aplicacao\\backend\\PDV.Application\\obj\\project.nuget.cache: Invalid property identifier character: <. Path 'version', line 3, position 0."
+    }
+  ]
 }
