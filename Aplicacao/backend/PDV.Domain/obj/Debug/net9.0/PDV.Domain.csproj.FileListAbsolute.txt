@@ -1,0 +1,13 @@
+C:\Users\YOJP\Desktop\Projeto_Integrador\Aplicacao\backend\PDV.Domain\bin\Debug\net9.0\PDV.Domain.deps.json
+C:\Users\YOJP\Desktop\Projeto_Integrador\Aplicacao\backend\PDV.Domain\bin\Debug\net9.0\PDV.Domain.dll
+C:\Users\YOJP\Desktop\Projeto_Integrador\Aplicacao\backend\PDV.Domain\bin\Debug\net9.0\PDV.Domain.pdb
+C:\Users\YOJP\Desktop\Projeto_Integrador\Aplicacao\backend\PDV.Domain\obj\Debug\net9.0\PDV.Domain.csproj.AssemblyReference.cache
+C:\Users\YOJP\Desktop\Projeto_Integrador\Aplicacao\backend\PDV.Domain\obj\Debug\net9.0\PDV.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\YOJP\Desktop\Projeto_Integrador\Aplicacao\backend\PDV.Domain\obj\Debug\net9.0\PDV.Domain.AssemblyInfoInputs.cache
+C:\Users\YOJP\Desktop\Projeto_Integrador\Aplicacao\backend\PDV.Domain\obj\Debug\net9.0\PDV.Domain.AssemblyInfo.cs
+C:\Users\YOJP\Desktop\Projeto_Integrador\Aplicacao\backend\PDV.Domain\obj\Debug\net9.0\PDV.Domain.csproj.CoreCompileInputs.cache
+C:\Users\YOJP\Desktop\Projeto_Integrador\Aplicacao\backend\PDV.Domain\obj\Debug\net9.0\PDV.Domain.sourcelink.json
+C:\Users\YOJP\Desktop\Projeto_Integrador\Aplicacao\backend\PDV.Domain\obj\Debug\net9.0\PDV.Domain.dll
+C:\Users\YOJP\Desktop\Projeto_Integrador\Aplicacao\backend\PDV.Domain\obj\Debug\net9.0\refint\PDV.Domain.dll
+C:\Users\YOJP\Desktop\Projeto_Integrador\Aplicacao\backend\PDV.Domain\obj\Debug\net9.0\PDV.Domain.pdb
+C:\Users\YOJP\Desktop\Projeto_Integrador\Aplicacao\backend\PDV.Domain\obj\Debug\net9.0\ref\PDV.Domain.dll

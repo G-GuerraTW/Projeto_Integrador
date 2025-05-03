@@ -3,7 +3,7 @@ using PDV.Persistence.Contracts;
 
 namespace PDV.Persistence.Repositories
 {
-    public abstract class GeralPersist : IGeralPersist
+    public class GeralPersist : IGeralPersist
     {
         private readonly PDVContext contexto;
         public GeralPersist(PDVContext contexto)

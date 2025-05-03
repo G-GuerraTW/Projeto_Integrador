@@ -58,16 +58,12 @@ builder.Services.AddScoped<IGeralPersist, GeralPersist>();
 builder.Services.AddScoped<IVendaPersist, VendaPersist>();
 builder.Services.AddScoped<IProdutoPersist, ProdutoPersist>();
 builder.Services.AddScoped<IUserPersist, UserPersist>();
-builder.Services.AddScoped<ITokenService, TokenService>();
+
 //Adicionando Scopeds Serviços
 builder.Services.AddScoped<IVendaService, VendaService>();
 builder.Services.AddScoped<IProdutoService, ProdutoService>();
 builder.Services.AddScoped<IAccountService, AccountService>();  
 builder.Services.AddScoped<ITokenService, TokenService>();
-
-builder.Services.AddScoped<IItemVendaPersist, ItemVendaPersist>();
-builder.Services.AddScoped<IItemVendaService, ItemVendaService>();
-
 
 //Configurando Identity (Usuário, Senhas, Regras)
 builder.Services.AddIdentityCore<User>(options =>
