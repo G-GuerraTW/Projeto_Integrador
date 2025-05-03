@@ -344,10 +344,12 @@ const PdvScreen = () => {
             <ListItemText primary="Produtos" />
           </ListItemButton>
           <ListItemButton 
-            onClick={() => navigate("/sales")}
+            onClick={() => navigate("/sales-history")}
             sx={{ 
+              '&.Mui-selected': { backgroundColor: 'rgba(255,255,255,0.2)' },
               '&:hover': { backgroundColor: 'rgba(255,255,255,0.1)' }
             }}
+            selected={true}
           >
             <ReceiptLongIcon sx={{ mr: 2 }} />
             <ListItemText primary="Histórico de Vendas" />

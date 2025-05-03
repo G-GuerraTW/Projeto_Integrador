@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("PDV.Persistence")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4931b83e19650b6aff13be7781ca80105229f572")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+fded6d13bf1b0bc75001dca1fe3b75fbfabf866b")]
 [assembly: System.Reflection.AssemblyProductAttribute("PDV.Persistence")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PDV.Persistence")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

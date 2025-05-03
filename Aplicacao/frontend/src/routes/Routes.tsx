@@ -7,6 +7,7 @@ import SalesScreen from '../pages/SalesScreen';
 import ErrorScreen from '../pages/ErrorScreen';
 import LoginScreen from '../pages/LoginScreen';
 import ProtectedRoute from '../components/ProtectedRoute';
+import SalesHistoryScreen from '../pages/SalesHistoryScreen';
 
 export const router = createBrowserRouter([
   {
@@ -21,6 +22,7 @@ export const router = createBrowserRouter([
           { path: 'pdv', element: <PdvScreen /> },
           { path: 'products', element: <ProductsScreen /> },
           { path: 'sales', element: <SalesScreen /> },
+          { path: 'sales-history', element: <SalesHistoryScreen /> },
         ],
       },
     ],
