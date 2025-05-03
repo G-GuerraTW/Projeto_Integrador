@@ -1,39 +1,38 @@
+using AutoMapper;
+using PDV.Domain.Identity;
 using PDV.Application.DTOs;
 using PDV.Application.Contracts;
-using Microsoft.AspNetCore.Identity;
-using PDV.Domain.Identity;
-using AutoMapper;
-using PDV.Persistence.Repositories;
+using PDV.Persistence.Contracts;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Identity;
 
-namespace PDV.Application.Services
+namespace Application.Services
 {
     public class AccountService : IAccountService
     {
         private readonly IMapper mapper;
-        private readonly UserPersist userPersist;
         private readonly UserManager<User> userManager;
+        private readonly IUserPersist userPersist;
         private readonly SignInManager<User> signInManager;
-        public AccountService(SignInManager<User> signInManager, IMapper mapper, UserPersist userPersist, UserManager<User> userManager)
+
+        public AccountService(UserManager<User> userManager, SignInManager<User> signInManager, IMapper mapper, IUserPersist userPersist)
         {
-            this.mapper = mapper;
             this.userManager = userManager;
+            this.mapper = mapper;
             this.userPersist = userPersist;
             this.signInManager = signInManager;
-            
         }
-        public async Task<SignInResult> CheckUserPasswordAsync(string username, string password)
+        public async Task<SignInResult> CheckUserPasswordAsync(UserUpdateDTO userUpdateDTO, string password)
         {
             try
             {
-                var validandoUserName = await userPersist.GetUserByUserNameAsync(username);
-                if (validandoUserName == null) throw new Exception("Usename Não Existe.");
-
-                return await signInManager.CheckPasswordSignInAsync(validandoUserName, password, false);
+                var user = await userManager.Users.SingleOrDefaultAsync(U => U.UserName == userUpdateDTO.UserName);  
+                return await signInManager.CheckPasswordSignInAsync(user, password, false);
             }
             catch (Exception ex)
-            {   
-                throw new Exception($"Erro ao tentar Conta Logar, Erro: {ex.Message}");
+            {
+                
+                throw new Exception($"Erro ao tentar verificar password. Erro: {ex.Message}");
             }
         }
 
@@ -41,11 +40,10 @@ namespace PDV.Application.Services
         {
             try
             {
-                if (userDTO == null) throw new Exception("Dados inconsistente para cadastro de conta.");
                 var user = mapper.Map<User>(userDTO);
                 var result = await userManager.CreateAsync(user, userDTO.Password);
 
-                if(result.Succeeded)
+                if(result.Succeeded) 
                 {
                     var userRetorno = mapper.Map<UserDTO>(user);
                     return userRetorno;
@@ -54,32 +52,8 @@ namespace PDV.Application.Services
             }
             catch (Exception ex)
             {
-                throw new Exception($"Erro ao tentar Criar Conta, Erro: {ex.Message}");
-            }
-        }
-
-        public async Task<UserUpdateDTO> UpdateAccount(UserUpdateDTO userUpdateDTO)
-        {
-            try
-            {
-                var user = await userPersist.GetUserByUserNameAsync(userUpdateDTO.UserName);
-                if (user == null) throw new Exception("Username não encontrada para atualização");
-
-                var token = await userManager.GeneratePasswordResetTokenAsync(user);
-                var result = await userManager.ResetPasswordAsync(user, token, userUpdateDTO.Password);
-
-                userPersist.Update(user);
-
-                if(await userPersist.SaveChangesAsync())
-                {
-                    var userRetorno = await userPersist.GetUserByUserNameAsync(user.UserName);
-                    return mapper.Map<UserUpdateDTO>(userRetorno);
-                }
-                return null;
-            }
-            catch (Exception ex)
-            {   
-                throw new Exception($"Erro ao tentar Atualizar dados da Conta, Erro: {ex.Message}");
+                
+                throw new Exception($"Erro ao tentar Criar Conta. Erro: {ex.Message}");
             }
         }
 
@@ -87,25 +61,57 @@ namespace PDV.Application.Services
         {
             try
             {
-                if(username == null) throw new Exception("Impossivel de pesquisar um usuario nulo.");
-                var user = await userPersist.GetUserByUserNameAsync(username.ToLower());
-                return mapper.Map<UserUpdateDTO>(user);
+                var user = await userManager.FindByNameAsync(username);
+
+                if(user == null) return null;
+
+                var userRetorno = mapper.Map<UserUpdateDTO>(user);
+                return userRetorno;
             }
             catch (Exception ex)
             {
-                throw new Exception($"Erro ao tentar Recuperar Conta por Username, Erro: {ex.Message}");
+                
+                throw new Exception($"Erro ao tentar Recuperar Usuario. Erro: {ex.Message}");
             }
         }
 
-        public async Task<bool> UserExiste(string username)
+        public async Task<UserUpdateDTO> UpdateAccount(UserUpdateDTO userUpdateDTO)
+        {
+            try
+            {
+                var user = await userPersist.GetUserByUsernameAsync(userUpdateDTO.UserName);
+                if(user == null) return null;
+
+                var token = await userManager.GeneratePasswordResetTokenAsync(user);
+                var result = await userManager.ResetPasswordAsync(user, token, userUpdateDTO.Password);
+
+                mapper.Map(userUpdateDTO, user);
+                userPersist.Update(user);
+
+                if(await userPersist.SaveChangesAsync()) 
+                {
+                    var userRetorno = await userPersist.GetUserByUsernameAsync(user.UserName);
+                    return mapper.Map<UserUpdateDTO>(userRetorno);
+                }
+                return null;
+            }
+            catch (Exception ex)
+            {
+                
+                throw new Exception($"Erro ao tentar Atualizar Cadastro. Erro: {ex.Message}");
+            }
+        }
+
+        public async Task<bool> UserExists(string username)
         {
             try
             {
                 return await userManager.Users.AnyAsync(U => U.UserName == username.ToLower());
             }
             catch (Exception ex)
-            {   
-                throw new Exception($"Erro ao tentar Verificar se o usuario existe, Erro: {ex.Message}");
+            {
+                
+                throw new Exception($"Erro ao tentar verificar Username. Erro: {ex.Message}");
             }
         }
     }

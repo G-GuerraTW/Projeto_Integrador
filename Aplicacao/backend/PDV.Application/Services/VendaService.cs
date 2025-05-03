@@ -94,5 +94,19 @@ namespace PDV.Application.Services
                 throw new Exception($"Erro ao buscar as vendas: {ex.Message}");
             }
         }
+
+        public async Task<VendaDTO[]> GetVendasByUserName(string userName)
+        {
+            try
+            {
+                var vendas = await _vendaPersist.GetVendasByUserName(userName);
+
+                return _mapper.Map<VendaDTO[]>(vendas);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception($"Erro ao buscar as vendas do usuario: {ex.Message}");
+            }
+        }
     }
 }

@@ -8,5 +8,6 @@ namespace PDV.Application.Contracts
         public Task<VendaDTO> UpdateVenda(int vendaId, VendaDTO model);
         public Task<bool> DeleteVenda(int vendaID);
         public Task<VendaDTO[]> GetAllVendaAsync();
+        public Task<VendaDTO[]> GetVendasByUserName(string userName);
     }
 }

@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using PDV.Application.Contracts;
 using PDV.Application.DTOs;
 
@@ -15,6 +16,7 @@ namespace PDV.API.controller
             _service = service;
         }
 
+        [Authorize]
         [HttpPost]
         public async Task<ActionResult> AddVendas(VendaDTO venddaDto)
         {
@@ -37,6 +39,7 @@ namespace PDV.API.controller
             }
         }
 
+        [Authorize]
         [HttpGet]
         public async Task<ActionResult<VendaDTO[]>> GetVendas()
         {
@@ -47,6 +50,7 @@ namespace PDV.API.controller
             return Ok(result);
         }
 
+        [Authorize]
         [HttpPut("{id}")]
         public async Task<ActionResult<VendaDTO>> UpdateVendas(int id, VendaDTO vendaDto)
         {
@@ -58,7 +62,7 @@ namespace PDV.API.controller
             return Ok(result);
         }
 
-
+        [Authorize]    
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteVenda(int id)
         {
@@ -75,6 +79,17 @@ namespace PDV.API.controller
                     $"Erro ao tentar deletar a venda. Erro: {ex.Message}"
                 );
             }
+        }
+
+        [Authorize]
+        [HttpGet("{UserName}")]
+        public async Task<ActionResult<VendaDTO[]>> GetVendasByUserName(string userName)
+        {
+            var result = await _service.GetVendasByUserName(userName);
+            if (result is null)
+                return NoContent();
+
+            return Ok(result);
         }
         
     }

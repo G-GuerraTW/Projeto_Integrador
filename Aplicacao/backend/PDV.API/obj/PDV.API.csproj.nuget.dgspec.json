@@ -1,36 +1,36 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Gabriel G\\Desktop\\Projeto_Integrador\\Aplicacao\\backend\\PDV.API\\PDV.API.csproj": {}
+    "C:\\Users\\YOJP\\Desktop\\Projeto_Integrador\\Aplicacao\\backend\\PDV.API\\PDV.API.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Gabriel G\\Desktop\\Projeto_Integrador\\Aplicacao\\backend\\PDV.API\\PDV.API.csproj": {
+    "C:\\Users\\YOJP\\Desktop\\Projeto_Integrador\\Aplicacao\\backend\\PDV.API\\PDV.API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Gabriel G\\Desktop\\Projeto_Integrador\\Aplicacao\\backend\\PDV.API\\PDV.API.csproj",
+        "projectUniqueName": "C:\\Users\\YOJP\\Desktop\\Projeto_Integrador\\Aplicacao\\backend\\PDV.API\\PDV.API.csproj",
         "projectName": "PDV.API",
-        "projectPath": "C:\\Users\\Gabriel G\\Desktop\\Projeto_Integrador\\Aplicacao\\backend\\PDV.API\\PDV.API.csproj",
-        "packagesPath": "C:\\Users\\Gabriel G\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Gabriel G\\Desktop\\Projeto_Integrador\\Aplicacao\\backend\\PDV.API\\obj\\",
+        "projectPath": "C:\\Users\\YOJP\\Desktop\\Projeto_Integrador\\Aplicacao\\backend\\PDV.API\\PDV.API.csproj",
+        "packagesPath": "C:\\Users\\YOJP\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\YOJP\\Desktop\\Projeto_Integrador\\Aplicacao\\backend\\PDV.API\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Gabriel G\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\YOJP\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
-          "net8.0"
+          "net9.0"
         ],
         "sources": {
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net8.0": {
-            "targetAlias": "net8.0",
+          "net9.0": {
+            "targetAlias": "net9.0",
             "projectReferences": {
-              "C:\\Users\\Gabriel G\\Desktop\\Projeto_Integrador\\Aplicacao\\backend\\PDV.Application\\PDV.Application.csproj": {
-                "projectPath": "C:\\Users\\Gabriel G\\Desktop\\Projeto_Integrador\\Aplicacao\\backend\\PDV.Application\\PDV.Application.csproj"
+              "C:\\Users\\YOJP\\Desktop\\Projeto_Integrador\\Aplicacao\\backend\\PDV.Application\\PDV.Application.csproj": {
+                "projectPath": "C:\\Users\\YOJP\\Desktop\\Projeto_Integrador\\Aplicacao\\backend\\PDV.Application\\PDV.Application.csproj"
               },
-              "C:\\Users\\Gabriel G\\Desktop\\Projeto_Integrador\\Aplicacao\\backend\\PDV.Persistence\\PDV.Persistence.csproj": {
-                "projectPath": "C:\\Users\\Gabriel G\\Desktop\\Projeto_Integrador\\Aplicacao\\backend\\PDV.Persistence\\PDV.Persistence.csproj"
+              "C:\\Users\\YOJP\\Desktop\\Projeto_Integrador\\Aplicacao\\backend\\PDV.Persistence\\PDV.Persistence.csproj": {
+                "projectPath": "C:\\Users\\YOJP\\Desktop\\Projeto_Integrador\\Aplicacao\\backend\\PDV.Persistence\\PDV.Persistence.csproj"
               }
             }
           }
@@ -48,9 +48,13 @@
         "SdkAnalysisLevel": "9.0.200"
       },
       "frameworks": {
-        "net8.0": {
-          "targetAlias": "net8.0",
+        "net9.0": {
+          "targetAlias": "net9.0",
           "dependencies": {
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[9.0.4, )"
+            },
             "Microsoft.AspNetCore.Cors": {
               "target": "Package",
               "version": "[2.3.0, )"
@@ -81,24 +85,6 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.AspNetCore.App.Ref",
-              "version": "[8.0.15, 8.0.15]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Host.win-x64",
-              "version": "[8.0.15, 8.0.15]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Ref",
-              "version": "[8.0.15, 8.0.15]"
-            },
-            {
-              "name": "Microsoft.WindowsDesktop.App.Ref",
-              "version": "[8.0.15, 8.0.15]"
-            }
-          ],
           "frameworkReferences": {
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
@@ -111,33 +97,33 @@
         }
       }
     },
-    "C:\\Users\\Gabriel G\\Desktop\\Projeto_Integrador\\Aplicacao\\backend\\PDV.Application\\PDV.Application.csproj": {
+    "C:\\Users\\YOJP\\Desktop\\Projeto_Integrador\\Aplicacao\\backend\\PDV.Application\\PDV.Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Gabriel G\\Desktop\\Projeto_Integrador\\Aplicacao\\backend\\PDV.Application\\PDV.Application.csproj",
+        "projectUniqueName": "C:\\Users\\YOJP\\Desktop\\Projeto_Integrador\\Aplicacao\\backend\\PDV.Application\\PDV.Application.csproj",
         "projectName": "PDV.Application",
-        "projectPath": "C:\\Users\\Gabriel G\\Desktop\\Projeto_Integrador\\Aplicacao\\backend\\PDV.Application\\PDV.Application.csproj",
-        "packagesPath": "C:\\Users\\Gabriel G\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Gabriel G\\Desktop\\Projeto_Integrador\\Aplicacao\\backend\\PDV.Application\\obj\\",
+        "projectPath": "C:\\Users\\YOJP\\Desktop\\Projeto_Integrador\\Aplicacao\\backend\\PDV.Application\\PDV.Application.csproj",
+        "packagesPath": "C:\\Users\\YOJP\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\YOJP\\Desktop\\Projeto_Integrador\\Aplicacao\\backend\\PDV.Application\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Gabriel G\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\YOJP\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
-          "net8.0"
+          "net9.0"
         ],
         "sources": {
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net8.0": {
-            "targetAlias": "net8.0",
+          "net9.0": {
+            "targetAlias": "net9.0",
             "projectReferences": {
-              "C:\\Users\\Gabriel G\\Desktop\\Projeto_Integrador\\Aplicacao\\backend\\PDV.Domain\\PDV.Domain.csproj": {
-                "projectPath": "C:\\Users\\Gabriel G\\Desktop\\Projeto_Integrador\\Aplicacao\\backend\\PDV.Domain\\PDV.Domain.csproj"
+              "C:\\Users\\YOJP\\Desktop\\Projeto_Integrador\\Aplicacao\\backend\\PDV.Domain\\PDV.Domain.csproj": {
+                "projectPath": "C:\\Users\\YOJP\\Desktop\\Projeto_Integrador\\Aplicacao\\backend\\PDV.Domain\\PDV.Domain.csproj"
               },
-              "C:\\Users\\Gabriel G\\Desktop\\Projeto_Integrador\\Aplicacao\\backend\\PDV.Persistence\\PDV.Persistence.csproj": {
-                "projectPath": "C:\\Users\\Gabriel G\\Desktop\\Projeto_Integrador\\Aplicacao\\backend\\PDV.Persistence\\PDV.Persistence.csproj"
+              "C:\\Users\\YOJP\\Desktop\\Projeto_Integrador\\Aplicacao\\backend\\PDV.Persistence\\PDV.Persistence.csproj": {
+                "projectPath": "C:\\Users\\YOJP\\Desktop\\Projeto_Integrador\\Aplicacao\\backend\\PDV.Persistence\\PDV.Persistence.csproj"
               }
             }
           }
@@ -155,8 +141,8 @@
         "SdkAnalysisLevel": "9.0.200"
       },
       "frameworks": {
-        "net8.0": {
-          "targetAlias": "net8.0",
+        "net9.0": {
+          "targetAlias": "net9.0",
           "dependencies": {
             "AutoMapper.Extensions.Microsoft.DependencyInjection": {
               "target": "Package",
@@ -165,6 +151,14 @@
             "Microsoft.AspNetCore.Identity": {
               "target": "Package",
               "version": "[2.3.1, )"
+            },
+            "Microsoft.IdentityModel.Tokens": {
+              "target": "Package",
+              "version": "[8.9.0, )"
+            },
+            "System.IdentityModel.Tokens.Jwt": {
+              "target": "Package",
+              "version": "[8.9.0, )"
             }
           },
           "imports": [
@@ -178,20 +172,6 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.AspNetCore.App.Ref",
-              "version": "[8.0.15, 8.0.15]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Ref",
-              "version": "[8.0.15, 8.0.15]"
-            },
-            {
-              "name": "Microsoft.WindowsDesktop.App.Ref",
-              "version": "[8.0.15, 8.0.15]"
-            }
-          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
@@ -201,27 +181,27 @@
         }
       }
     },
-    "C:\\Users\\Gabriel G\\Desktop\\Projeto_Integrador\\Aplicacao\\backend\\PDV.Domain\\PDV.Domain.csproj": {
+    "C:\\Users\\YOJP\\Desktop\\Projeto_Integrador\\Aplicacao\\backend\\PDV.Domain\\PDV.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Gabriel G\\Desktop\\Projeto_Integrador\\Aplicacao\\backend\\PDV.Domain\\PDV.Domain.csproj",
+        "projectUniqueName": "C:\\Users\\YOJP\\Desktop\\Projeto_Integrador\\Aplicacao\\backend\\PDV.Domain\\PDV.Domain.csproj",
         "projectName": "PDV.Domain",
-        "projectPath": "C:\\Users\\Gabriel G\\Desktop\\Projeto_Integrador\\Aplicacao\\backend\\PDV.Domain\\PDV.Domain.csproj",
-        "packagesPath": "C:\\Users\\Gabriel G\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Gabriel G\\Desktop\\Projeto_Integrador\\Aplicacao\\backend\\PDV.Domain\\obj\\",
+        "projectPath": "C:\\Users\\YOJP\\Desktop\\Projeto_Integrador\\Aplicacao\\backend\\PDV.Domain\\PDV.Domain.csproj",
+        "packagesPath": "C:\\Users\\YOJP\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\YOJP\\Desktop\\Projeto_Integrador\\Aplicacao\\backend\\PDV.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Gabriel G\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\YOJP\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
-          "net8.0"
+          "net9.0"
         ],
         "sources": {
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net8.0": {
-            "targetAlias": "net8.0",
+          "net9.0": {
+            "targetAlias": "net9.0",
             "projectReferences": {}
           }
         },
@@ -238,12 +218,16 @@
         "SdkAnalysisLevel": "9.0.200"
       },
       "frameworks": {
-        "net8.0": {
-          "targetAlias": "net8.0",
+        "net9.0": {
+          "targetAlias": "net9.0",
           "dependencies": {
             "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
               "target": "Package",
-              "version": "[8.0.3, )"
+              "version": "[9.0.4, )"
+            },
+            "System.IdentityModel.Tokens.Jwt": {
+              "target": "Package",
+              "version": "[8.9.0, )"
             }
           },
           "imports": [
@@ -257,20 +241,6 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.AspNetCore.App.Ref",
-              "version": "[8.0.15, 8.0.15]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Ref",
-              "version": "[8.0.15, 8.0.15]"
-            },
-            {
-              "name": "Microsoft.WindowsDesktop.App.Ref",
-              "version": "[8.0.15, 8.0.15]"
-            }
-          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
@@ -280,30 +250,30 @@
         }
       }
     },
-    "C:\\Users\\Gabriel G\\Desktop\\Projeto_Integrador\\Aplicacao\\backend\\PDV.Persistence\\PDV.Persistence.csproj": {
+    "C:\\Users\\YOJP\\Desktop\\Projeto_Integrador\\Aplicacao\\backend\\PDV.Persistence\\PDV.Persistence.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Gabriel G\\Desktop\\Projeto_Integrador\\Aplicacao\\backend\\PDV.Persistence\\PDV.Persistence.csproj",
+        "projectUniqueName": "C:\\Users\\YOJP\\Desktop\\Projeto_Integrador\\Aplicacao\\backend\\PDV.Persistence\\PDV.Persistence.csproj",
         "projectName": "PDV.Persistence",
-        "projectPath": "C:\\Users\\Gabriel G\\Desktop\\Projeto_Integrador\\Aplicacao\\backend\\PDV.Persistence\\PDV.Persistence.csproj",
-        "packagesPath": "C:\\Users\\Gabriel G\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Gabriel G\\Desktop\\Projeto_Integrador\\Aplicacao\\backend\\PDV.Persistence\\obj\\",
+        "projectPath": "C:\\Users\\YOJP\\Desktop\\Projeto_Integrador\\Aplicacao\\backend\\PDV.Persistence\\PDV.Persistence.csproj",
+        "packagesPath": "C:\\Users\\YOJP\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\YOJP\\Desktop\\Projeto_Integrador\\Aplicacao\\backend\\PDV.Persistence\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Gabriel G\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\YOJP\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
-          "net8.0"
+          "net9.0"
         ],
         "sources": {
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net8.0": {
-            "targetAlias": "net8.0",
+          "net9.0": {
+            "targetAlias": "net9.0",
             "projectReferences": {
-              "C:\\Users\\Gabriel G\\Desktop\\Projeto_Integrador\\Aplicacao\\backend\\PDV.Domain\\PDV.Domain.csproj": {
-                "projectPath": "C:\\Users\\Gabriel G\\Desktop\\Projeto_Integrador\\Aplicacao\\backend\\PDV.Domain\\PDV.Domain.csproj"
+              "C:\\Users\\YOJP\\Desktop\\Projeto_Integrador\\Aplicacao\\backend\\PDV.Domain\\PDV.Domain.csproj": {
+                "projectPath": "C:\\Users\\YOJP\\Desktop\\Projeto_Integrador\\Aplicacao\\backend\\PDV.Domain\\PDV.Domain.csproj"
               }
             }
           }
@@ -321,32 +291,32 @@
         "SdkAnalysisLevel": "9.0.200"
       },
       "frameworks": {
-        "net8.0": {
-          "targetAlias": "net8.0",
+        "net9.0": {
+          "targetAlias": "net9.0",
           "dependencies": {
             "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
               "target": "Package",
-              "version": "[8.0.3, )"
+              "version": "[9.0.4, )"
             },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
-              "version": "[9.0.3, )"
+              "version": "[9.0.4, )"
             },
             "Microsoft.EntityFrameworkCore.Design": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[9.0.3, )"
+              "version": "[9.0.4, )"
             },
             "Microsoft.EntityFrameworkCore.Sqlite": {
               "target": "Package",
-              "version": "[9.0.3, )"
+              "version": "[9.0.4, )"
             },
             "Microsoft.EntityFrameworkCore.Tools": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[9.0.3, )"
+              "version": "[9.0.4, )"
             }
           },
           "imports": [
@@ -360,20 +330,6 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.AspNetCore.App.Ref",
-              "version": "[8.0.15, 8.0.15]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Ref",
-              "version": "[8.0.15, 8.0.15]"
-            },
-            {
-              "name": "Microsoft.WindowsDesktop.App.Ref",
-              "version": "[8.0.15, 8.0.15]"
-            }
-          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"

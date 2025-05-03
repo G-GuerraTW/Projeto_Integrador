@@ -17,15 +17,14 @@ namespace PDV.Persistence.Repositories
         {
             return await context.Users.ToListAsync();
         }
-
         public async Task<User> GetUserByIdAsync(int id)
-        {
+        {                               //faz uam pesquisa pela chave primaria, podendo ser chave primaria composta separando o parametro por > ",".  se não encontrar nada retornar null
             return await context.Users.FindAsync(id);
         }
 
-        public async Task<User> GetUserByUserNameAsync(string userName)
-        {
-            return await context.Users.SingleOrDefaultAsync(U => U.UserName == userName);
+        public async Task<User> GetUserByUsernameAsync(string username)
+        {                               //Espera que só exista um elemento que satisfaça a condição, Se encontrar mais de um, lança exceção, Se não encontrar nenhum, retorna null.
+            return await context.Users.SingleOrDefaultAsync(U => U.UserName == username);
         }
     }
 }

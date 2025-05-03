@@ -6,5 +6,6 @@ namespace PDV.Persistence.Contracts
     {
         public Task<VendaEntity[]> GetAllVendasAsync();
         public Task<VendaEntity[]> GetVendasByIDAsync(int ID, bool includeItensVenda = false);
+        public Task<VendaEntity[]> GetVendasByUserName(string userName);
     }
 }

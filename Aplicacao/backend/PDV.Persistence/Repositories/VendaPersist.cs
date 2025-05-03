@@ -30,5 +30,12 @@ namespace PDV.Persistence.Repositories
 
             return await query.ToArrayAsync();
         }
+
+        public async Task<VendaEntity[]> GetVendasByUserName(string userName)
+        {
+            IQueryable<VendaEntity> query = context.Vendas.Where(V => V.User.UserName == userName).AsNoTracking();
+
+            return await query.ToArrayAsync();
+        }
     }
 }
