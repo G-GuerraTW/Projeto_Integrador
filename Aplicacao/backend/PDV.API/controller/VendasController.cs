@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using PDV.Application.Contracts;
 using PDV.Application.DTOs;
 
-namespace PDV.API.controller
+namespace PDV.API.Controller
 {
     [Route("api/[controller]")]
     [ApiController]
@@ -18,7 +18,7 @@ namespace PDV.API.controller
 
         [Authorize]
         [HttpPost]
-        public async Task<ActionResult> AddVendas(VendaDTO venddaDto)
+        public async Task<ActionResult<VendaDTO>> AddVendas(VendaDTO venddaDto)
         {
             try
             {
@@ -54,12 +54,21 @@ namespace PDV.API.controller
         [HttpPut("{id}")]
         public async Task<ActionResult<VendaDTO>> UpdateVendas(int id, VendaDTO vendaDto)
         {
-            var result = await _service.UpdateVenda(id, vendaDto);
+            try
+            {
+                var result = await _service.UpdateVenda(id, vendaDto);
 
-            if (result is null)
-                return BadRequest("Erro ao tentar atualizar a venda");
+                if (result is null)
+                    return BadRequest("Erro ao tentar atualizar a venda");
 
-            return Ok(result);
+                return Ok(result);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(StatusCodes.Status500InternalServerError,
+                    $"Erro ao tentar atualizar a venda. Erro: {ex.Message}"
+                );
+            }
         }
 
         [Authorize]    
@@ -80,6 +89,7 @@ namespace PDV.API.controller
                 );
             }
         }
+<<<<<<< HEAD
 
         [Authorize]
         [HttpGet("{UserName}")]
@@ -92,5 +102,7 @@ namespace PDV.API.controller
             return Ok(result);
         }
         
+=======
+>>>>>>> 4ed2af4e31243ebdcbac8ceb57f90e0a1e0eaa39
     }
 }

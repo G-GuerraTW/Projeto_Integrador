@@ -14,7 +14,7 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 
 var builder = WebApplication.CreateBuilder(args);
 
-//Adicionando Serviços
+//Adicionando Servi�os
 builder.Services.AddCors();
 builder.Services.AddControllers()
     .AddNewtonsoftJson(x => x.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore);
@@ -62,9 +62,14 @@ builder.Services.AddScoped<ITokenService, TokenService>();
 //Adicionando Scopeds Serviços
 builder.Services.AddScoped<IVendaService, VendaService>();
 builder.Services.AddScoped<IProdutoService, ProdutoService>();
+<<<<<<< HEAD
 builder.Services.AddScoped<IItensVendaService, ItensVendaService>();
 builder.Services.AddScoped<IAccountService, AccountService>();  
 builder.Services.AddScoped<ITokenService, TokenService>();
+=======
+builder.Services.AddScoped<IItemVendaPersist, ItemVendaPersist>();
+builder.Services.AddScoped<IItemVendaService, ItemVendaService>();
+>>>>>>> 4ed2af4e31243ebdcbac8ceb57f90e0a1e0eaa39
 
 //Configurando Identity (Usuário, Senhas, Regras)
 builder.Services.AddIdentityCore<User>(options =>
@@ -98,7 +103,7 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
         };
     });
 
-//Configurando Conexão com o Banco
+//Configurando Conex�o com o Banco
 builder.Services.AddDbContext<PDVContext>(options =>
     options.UseSqlite("DATA Source=banco.db")
 );

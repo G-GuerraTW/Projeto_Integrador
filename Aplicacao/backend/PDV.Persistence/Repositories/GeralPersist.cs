@@ -1,10 +1,9 @@
-using Microsoft.EntityFrameworkCore;
 using PDV.Persistence.Context;
 using PDV.Persistence.Contracts;
 
 namespace PDV.Persistence.Repositories
 {
-    public class GeralPersist : IGeralPersist
+    public abstract class GeralPersist : IGeralPersist
     {
         private readonly PDVContext contexto;
         public GeralPersist(PDVContext contexto)

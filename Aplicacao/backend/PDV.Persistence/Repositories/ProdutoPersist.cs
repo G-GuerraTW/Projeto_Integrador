@@ -38,11 +38,11 @@ namespace PDV.Persistence.Repositories
             return await query.ToArrayAsync();
         }
 
-        public async Task<ProdutoEntity> GetProdutoByIDAsync(int ID)
+        public async Task<ProdutoEntity?> GetProdutoByIDAsync(int id)
         {
             IQueryable<ProdutoEntity> query = contexto.Produtos.AsNoTracking();
 
-            query = query.Where(P => P.Id == ID);
+            query = query.Where(P => P.Id == id);
 
             return await query.FirstOrDefaultAsync();
         }

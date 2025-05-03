@@ -7,7 +7,7 @@ namespace PDV.Persistence.Contracts
         public Task<ProdutoEntity[]> GetAllProdutoAsync();
         public Task<ProdutoEntity[]> GetAllProdutByNameAsync(string Name);
         public Task<ProdutoEntity[]> GetAllProdutoByCategoriaAsync(string Categoria);
-        public Task<ProdutoEntity> GetProdutoByIDAsync(int ID);
+        public Task<ProdutoEntity?> GetProdutoByIDAsync(int id);
 
     }
 }

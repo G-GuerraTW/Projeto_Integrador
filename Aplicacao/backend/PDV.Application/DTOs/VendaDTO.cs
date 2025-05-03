@@ -6,6 +6,6 @@ namespace PDV.Application.DTOs
         public int usuario_Id { get; set; }
         public decimal valorTotal { get; set; }
         public DateTime CriadoEm { get; set; }
-        public IEnumerable<ItensVendaDTO> itensVenda{ get; set; } = new List<ItensVendaDTO>();
+        public IEnumerable<ItemVendaDTO> itensVenda{ get; set; } = new List<ItemVendaDTO>();
     }
 }

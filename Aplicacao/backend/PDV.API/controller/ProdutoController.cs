@@ -2,7 +2,7 @@ using Microsoft.AspNetCore.Mvc;
 using PDV.Application.Contracts;
 using PDV.Application.DTOs;
 
-namespace PDV.API.controller
+namespace PDV.API.Controller
 {
     [Route("api/[controller]")]
     [ApiController]
@@ -15,7 +15,7 @@ namespace PDV.API.controller
         }
 
         [HttpPost]
-        public async Task<IActionResult> AddProduto(ProdutoDTO model)
+        public async Task<ActionResult<ProdutoDTO>> AddProduto(ProdutoDTO model)
         {
             try
             {
@@ -37,13 +37,22 @@ namespace PDV.API.controller
         }
 
         [HttpPut("{id}")]
-        public async Task<IActionResult> UpdateEvento(int id, ProdutoDTO model)
+        public async Task<ActionResult<ProdutoDTO>> UpdateEvento(int id, ProdutoDTO model)
         {
-            var produto = await _produtoService.UpdateProduto(id, model);
-            if (produto == null)
-                return BadRequest("Erro ao tentar atualizar o Produto");
+            try
+            {
+                var produto = await _produtoService.UpdateProduto(id, model);
+                if (produto == null)
+                    return BadRequest("Erro ao tentar atualizar o Produto");
 
-            return Ok(produto);
+                return Ok(produto);
+            }
+            catch (Exception ex)
+            {
+                return this.StatusCode(StatusCodes.Status500InternalServerError,
+                    $"Erro ao tentar atualizar o produto. Erro: {ex.Message}"
+                );
+            }
         }
 
         [HttpDelete("{id}")]
@@ -53,21 +62,23 @@ namespace PDV.API.controller
             {
                 if (id == null || id < 0)
                     return BadRequest("Erro ao tentar deletar Produto");
+
                 var resultado = await _produtoService.DeleteProduto(id);
 
                 if (resultado) return Ok("Produto deletado");
+
                 return BadRequest("Produto não deletado");
             }
             catch (Exception ex)
             {
                 return this.StatusCode(StatusCodes.Status500InternalServerError,
-                    $"Erro ao tentar deletar produto. Erro: {ex.Message}"
+                    $"Erro ao tentar deletar o produto. Erro: {ex.Message}"
                 );
             }
         }
 
         [HttpGet]
-        public async Task<IActionResult> GetProdutos()
+        public async Task<ActionResult<ProdutoDTO[]>> GetProdutos()
         {
             try
             {
@@ -82,14 +93,33 @@ namespace PDV.API.controller
             }
         }
 
+
+        [HttpGet("{id}")]
+        public async Task<ActionResult<ProdutoDTO>> GetProdutoById(int id)
+        {
+            try
+            {
+                var produtos = await _produtoService.GetProdutoByIDAsync(id);
+                if (produtos == null) return NoContent();
+                return Ok(produtos);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(StatusCodes.Status500InternalServerError,
+                    $"Erro ao tentar recuperar Produtos por categoria. Erro: {ex.Message}"
+                );
+            }
+        }
+
         [HttpGet("nome/{nomeProduto}")]
-        public async Task<IActionResult> GetProdutosByName(string nomeProduto)
+        public async Task<ActionResult<ProdutoDTO[]>> GetProdutosByName(string nomeProduto)
         {
             try
             {
                 var produtos = await _produtoService.GetAllProdutByNameAsync(nomeProduto);
                 if (produtos == null)
                     return NoContent();
+
                 return Ok(produtos);
             }
             catch (Exception ex)
@@ -100,7 +130,7 @@ namespace PDV.API.controller
         }
 
         [HttpGet("categoria/{categoria}")]
-        public async Task<IActionResult> GetProdutosByCategoria(string categoria)
+        public async Task<ActionResult<ProdutoDTO[]>> GetProdutosByCategoria(string categoria)
         {
             try
             {

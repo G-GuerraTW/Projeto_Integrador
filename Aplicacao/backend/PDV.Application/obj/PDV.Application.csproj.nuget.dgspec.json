@@ -1,6 +1,7 @@
 {
   "format": 1,
   "restore": {
+<<<<<<< HEAD
     "C:\\Users\\YOJP\\Desktop\\Projeto_Integrador\\Aplicacao\\backend\\PDV.Application\\PDV.Application.csproj": {}
   },
   "projects": {
@@ -12,25 +13,57 @@
         "projectPath": "C:\\Users\\YOJP\\Desktop\\Projeto_Integrador\\Aplicacao\\backend\\PDV.Application\\PDV.Application.csproj",
         "packagesPath": "C:\\Users\\YOJP\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\YOJP\\Desktop\\Projeto_Integrador\\Aplicacao\\backend\\PDV.Application\\obj\\",
+=======
+    "C:\\Users\\eliel.silva\\Repositories\\Projeto_Integrador\\Aplicacao\\backend\\PDV.Application\\PDV.Application.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\eliel.silva\\Repositories\\Projeto_Integrador\\Aplicacao\\backend\\PDV.Application\\PDV.Application.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\eliel.silva\\Repositories\\Projeto_Integrador\\Aplicacao\\backend\\PDV.Application\\PDV.Application.csproj",
+        "projectName": "PDV.Application",
+        "projectPath": "C:\\Users\\eliel.silva\\Repositories\\Projeto_Integrador\\Aplicacao\\backend\\PDV.Application\\PDV.Application.csproj",
+        "packagesPath": "C:\\Users\\eliel.silva\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\eliel.silva\\Repositories\\Projeto_Integrador\\Aplicacao\\backend\\PDV.Application\\obj\\",
+>>>>>>> 4ed2af4e31243ebdcbac8ceb57f90e0a1e0eaa39
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
+<<<<<<< HEAD
           "C:\\Users\\YOJP\\AppData\\Roaming\\NuGet\\NuGet.Config"
+=======
+          "C:\\Users\\eliel.silva\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+>>>>>>> 4ed2af4e31243ebdcbac8ceb57f90e0a1e0eaa39
         ],
         "originalTargetFrameworks": [
           "net9.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net9.0": {
             "targetAlias": "net9.0",
             "projectReferences": {
+<<<<<<< HEAD
               "C:\\Users\\YOJP\\Desktop\\Projeto_Integrador\\Aplicacao\\backend\\PDV.Domain\\PDV.Domain.csproj": {
                 "projectPath": "C:\\Users\\YOJP\\Desktop\\Projeto_Integrador\\Aplicacao\\backend\\PDV.Domain\\PDV.Domain.csproj"
               },
               "C:\\Users\\YOJP\\Desktop\\Projeto_Integrador\\Aplicacao\\backend\\PDV.Persistence\\PDV.Persistence.csproj": {
                 "projectPath": "C:\\Users\\YOJP\\Desktop\\Projeto_Integrador\\Aplicacao\\backend\\PDV.Persistence\\PDV.Persistence.csproj"
+=======
+              "C:\\Users\\eliel.silva\\Repositories\\Projeto_Integrador\\Aplicacao\\backend\\PDV.Domain\\PDV.Domain.csproj": {
+                "projectPath": "C:\\Users\\eliel.silva\\Repositories\\Projeto_Integrador\\Aplicacao\\backend\\PDV.Domain\\PDV.Domain.csproj"
+              },
+              "C:\\Users\\eliel.silva\\Repositories\\Projeto_Integrador\\Aplicacao\\backend\\PDV.Persistence\\PDV.Persistence.csproj": {
+                "projectPath": "C:\\Users\\eliel.silva\\Repositories\\Projeto_Integrador\\Aplicacao\\backend\\PDV.Persistence\\PDV.Persistence.csproj"
+>>>>>>> 4ed2af4e31243ebdcbac8ceb57f90e0a1e0eaa39
               }
             }
           }
@@ -84,10 +117,11 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.203/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.201/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
+<<<<<<< HEAD
     "C:\\Users\\YOJP\\Desktop\\Projeto_Integrador\\Aplicacao\\backend\\PDV.Domain\\PDV.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -96,14 +130,35 @@
         "projectPath": "C:\\Users\\YOJP\\Desktop\\Projeto_Integrador\\Aplicacao\\backend\\PDV.Domain\\PDV.Domain.csproj",
         "packagesPath": "C:\\Users\\YOJP\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\YOJP\\Desktop\\Projeto_Integrador\\Aplicacao\\backend\\PDV.Domain\\obj\\",
+=======
+    "C:\\Users\\eliel.silva\\Repositories\\Projeto_Integrador\\Aplicacao\\backend\\PDV.Domain\\PDV.Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\eliel.silva\\Repositories\\Projeto_Integrador\\Aplicacao\\backend\\PDV.Domain\\PDV.Domain.csproj",
+        "projectName": "PDV.Domain",
+        "projectPath": "C:\\Users\\eliel.silva\\Repositories\\Projeto_Integrador\\Aplicacao\\backend\\PDV.Domain\\PDV.Domain.csproj",
+        "packagesPath": "C:\\Users\\eliel.silva\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\eliel.silva\\Repositories\\Projeto_Integrador\\Aplicacao\\backend\\PDV.Domain\\obj\\",
+>>>>>>> 4ed2af4e31243ebdcbac8ceb57f90e0a1e0eaa39
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
+<<<<<<< HEAD
           "C:\\Users\\YOJP\\AppData\\Roaming\\NuGet\\NuGet.Config"
+=======
+          "C:\\Users\\eliel.silva\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+>>>>>>> 4ed2af4e31243ebdcbac8ceb57f90e0a1e0eaa39
         ],
         "originalTargetFrameworks": [
           "net9.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -153,10 +208,11 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.203/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.201/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
+<<<<<<< HEAD
     "C:\\Users\\YOJP\\Desktop\\Projeto_Integrador\\Aplicacao\\backend\\PDV.Persistence\\PDV.Persistence.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -165,22 +221,48 @@
         "projectPath": "C:\\Users\\YOJP\\Desktop\\Projeto_Integrador\\Aplicacao\\backend\\PDV.Persistence\\PDV.Persistence.csproj",
         "packagesPath": "C:\\Users\\YOJP\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\YOJP\\Desktop\\Projeto_Integrador\\Aplicacao\\backend\\PDV.Persistence\\obj\\",
+=======
+    "C:\\Users\\eliel.silva\\Repositories\\Projeto_Integrador\\Aplicacao\\backend\\PDV.Persistence\\PDV.Persistence.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\eliel.silva\\Repositories\\Projeto_Integrador\\Aplicacao\\backend\\PDV.Persistence\\PDV.Persistence.csproj",
+        "projectName": "PDV.Persistence",
+        "projectPath": "C:\\Users\\eliel.silva\\Repositories\\Projeto_Integrador\\Aplicacao\\backend\\PDV.Persistence\\PDV.Persistence.csproj",
+        "packagesPath": "C:\\Users\\eliel.silva\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\eliel.silva\\Repositories\\Projeto_Integrador\\Aplicacao\\backend\\PDV.Persistence\\obj\\",
+>>>>>>> 4ed2af4e31243ebdcbac8ceb57f90e0a1e0eaa39
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
+<<<<<<< HEAD
           "C:\\Users\\YOJP\\AppData\\Roaming\\NuGet\\NuGet.Config"
+=======
+          "C:\\Users\\eliel.silva\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+>>>>>>> 4ed2af4e31243ebdcbac8ceb57f90e0a1e0eaa39
         ],
         "originalTargetFrameworks": [
           "net9.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net9.0": {
             "targetAlias": "net9.0",
             "projectReferences": {
+<<<<<<< HEAD
               "C:\\Users\\YOJP\\Desktop\\Projeto_Integrador\\Aplicacao\\backend\\PDV.Domain\\PDV.Domain.csproj": {
                 "projectPath": "C:\\Users\\YOJP\\Desktop\\Projeto_Integrador\\Aplicacao\\backend\\PDV.Domain\\PDV.Domain.csproj"
+=======
+              "C:\\Users\\eliel.silva\\Repositories\\Projeto_Integrador\\Aplicacao\\backend\\PDV.Domain\\PDV.Domain.csproj": {
+                "projectPath": "C:\\Users\\eliel.silva\\Repositories\\Projeto_Integrador\\Aplicacao\\backend\\PDV.Domain\\PDV.Domain.csproj"
+>>>>>>> 4ed2af4e31243ebdcbac8ceb57f90e0a1e0eaa39
               }
             }
           }
@@ -242,7 +324,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.203/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.201/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

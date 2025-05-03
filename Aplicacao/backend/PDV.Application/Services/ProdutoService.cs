@@ -84,11 +84,11 @@ namespace PDV.Application.Services
             }
         }
 
-        public async Task<ProdutoDTO> GetProdutoByIDAsync(int ID)
+        public async Task<ProdutoDTO> GetProdutoByIDAsync(int id)
         {
             try
             {
-                var produto = await _produtoPersist.GetProdutoByIDAsync(ID);
+                var produto = await _produtoPersist.GetProdutoByIDAsync(id);
 
                 return _mapper.Map<ProdutoDTO>(produto);
             }
