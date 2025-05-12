@@ -1,7 +1,9 @@
 ﻿using AutoMapper;
 using PDV.Application.Contracts;
 using PDV.Application.DTOs;
+using PDV.Domain.Entities;
 using PDV.Persistence.Contracts;
+using PDV.Persistence.Repositories;
 
 namespace PDV.Application.Services
 {
@@ -21,16 +23,16 @@ namespace PDV.Application.Services
         {
             try
             {
-                if (model == null) throw new Exception("Objeto Nulo ou InvÃ¡lido");
-                _vendaPersist.Add(model);
+                if (model is null)
+                    throw new Exception("Objeto Nulo ou Inválido");
+
+                var vendaEntity = _mapper.Map<VendaEntity>(model);
+                _vendaPersist.Add(vendaEntity);
 
                 if (await _vendaPersist.SaveChangesAsync())
-                {
-                    var entity = await _vendaPersist.GetVendasByIDAsync(model.Id);
-                    return _mapper.Map<VendaDTO>(entity);
-                }
+                    return model;
 
-                return null;
+                return model;
             }
             catch (Exception ex)
             {
@@ -80,13 +82,20 @@ namespace PDV.Application.Services
             }
         }
 
-        public async Task<VendaDTO[]> GetAllVendaAsync()
+        public async Task<VendaDTO[]> GetAllVendaAsync(DateTime? data)
         {
             try
             {
-                var produtos = await _vendaPersist.GetAllVendasAsync();
+                var vendas = await _vendaPersist.GetAllVendasAsync(data);
+                var vendasdto = _mapper.Map<VendaDTO[]>(vendas);
 
-                return _mapper.Map<VendaDTO[]>(produtos);
+                foreach (var dto in vendasdto)
+                {
+                    foreach (var item in dto.ItensVenda)
+                        item.SubTotal = item.Quantidade * item.Quantidade;
+                }
+
+                return vendasdto;
             }
             catch (Exception ex)
             {

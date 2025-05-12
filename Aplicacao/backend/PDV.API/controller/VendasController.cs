@@ -5,6 +5,7 @@ using PDV.Application.DTOs;
 
 namespace PDV.API.Controller
 {
+    [Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class VendasController : ControllerBase
@@ -16,7 +17,6 @@ namespace PDV.API.Controller
             _service = service;
         }
 
-        [Authorize]
         [HttpPost]
         public async Task<ActionResult<VendaDTO>> AddVendas(VendaDTO venddaDto)
         {
@@ -39,18 +39,16 @@ namespace PDV.API.Controller
             }
         }
 
-        [Authorize]
         [HttpGet]
-        public async Task<ActionResult<VendaDTO[]>> GetVendas()
+        public async Task<ActionResult<VendaDTO[]>> GetVendas([FromQuery] DateTime data)
         {
-            var result = await _service.GetAllVendaAsync();
+            var result = await _service.GetAllVendaAsync(data);
             if (result is null)
                 return NoContent();
 
             return Ok(result);
         }
 
-        [Authorize]
         [HttpPut("{id}")]
         public async Task<ActionResult<VendaDTO>> UpdateVendas(int id, VendaDTO vendaDto)
         {
@@ -71,7 +69,6 @@ namespace PDV.API.Controller
             }
         }
 
-        [Authorize]    
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteVenda(int id)
         {
@@ -89,7 +86,7 @@ namespace PDV.API.Controller
                 );
             }
         }
-        [Authorize]
+
         [HttpGet("{UserName}")]
         public async Task<ActionResult<VendaDTO[]>> GetVendasByUserName(string userName)
         {

@@ -12,7 +12,5 @@ namespace PDV.Application.DTOs
         public decimal PrecoVenda { get; set; }
         public DateTime CriadoEm { get; set; }
 
-        public IEnumerable<ProdutoDTO> ItensVenda { get; set; } = new List<ProdutoDTO>();
-
     }
 }

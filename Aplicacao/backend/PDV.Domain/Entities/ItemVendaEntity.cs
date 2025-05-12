@@ -7,13 +7,10 @@ namespace PDV.Domain.Entities
         public int Id { get; set; }
         public int Quantidade { get; set; }
         public decimal PrecoUnitario { get; set; }
-        public decimal Subtotal { get; set; }
-
         public int VendaId { get; set; }
         public VendaEntity Venda { get; set; }
         public int ProdutoId { get; set; }
         public ProdutoEntity Produto { get; set; }
-
         public int UserId { get; set; }
         public User User { get; set; }
     }

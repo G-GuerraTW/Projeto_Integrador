@@ -4,7 +4,7 @@ namespace PDV.Persistence.Contracts
 {
     public interface IVendaPersist : IGeralPersist
     {
-        public Task<VendaEntity[]> GetAllVendasAsync();
+        public Task<VendaEntity[]> GetAllVendasAsync(DateTime? data);
         public Task<VendaEntity[]> GetVendasByIDAsync(int ID, bool includeItensVenda = false);
         public Task<VendaEntity[]> GetVendasByUserName(string userName);
     }

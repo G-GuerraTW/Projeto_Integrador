@@ -1,7 +1,6 @@
 ﻿using AutoMapper;
 using PDV.Application.Contracts;
 using PDV.Application.DTOs;
-using PDV.Domain.Entities;
 using PDV.Persistence.Contracts;
 
 namespace PDV.Application.Services
@@ -11,51 +10,18 @@ namespace PDV.Application.Services
         private readonly IVendaPersist _vendaPersist;
         private readonly IMapper _mapper;
         private readonly IItemVendaPersist _itemVendaPersist;
-        private readonly IProdutoPersist _produtoPersist;
 
         public ItemVendaService(
             IMapper mapper,
             IItemVendaPersist itemVendaPersist,
-            IVendaPersist vendaPersist,
-            IProdutoPersist produtoPersist)
+            IVendaPersist vendaPersist)
         {
-            _produtoPersist = produtoPersist;
             _mapper = mapper;
             _vendaPersist = vendaPersist;
             _itemVendaPersist = itemVendaPersist;
         }
         public decimal CalcularPreco(int quantidade, decimal preco) => quantidade * preco;
 
-        public async Task<ItemVendaDTO> AddItemVenda(ItemVendaDTO model)
-        {
-            try
-            {
-                if (model is null)
-                    throw new Exception("Objeto Nulo ou Inválido");
-
-                var venda = await _vendaPersist.GetVendasByIDAsync(model.VendaId);
-                if (venda.Length == 0)
-                    throw new Exception("Não foi possível encontrar a venda");
-
-                var produto = await _produtoPersist.GetProdutoByIDAsync(model.ProdutoId);
-                if (produto is null)
-                    throw new Exception($"Não foi possível encontrar o produto de ID: {model.ProdutoId}");
-
-                var entity = _mapper.Map<ItemVendaEntity>(model);
-
-                entity.Subtotal = CalcularPreco(model.Quantidade, model.PrecoUnitario);
-
-                _itemVendaPersist.Add(entity);
-                if (await _vendaPersist.SaveChangesAsync())
-                    return model;
-
-                return model;
-            }
-            catch (Exception ex)
-            {
-                throw new Exception($"Erro ao inserir itens da venda: {ex.Message}");
-            }
-        }
 
         public async Task<ItemVendaDTO> GetItemVendaByIdAsync(int idItemVenda)
         {
@@ -84,9 +50,9 @@ namespace PDV.Application.Services
                 if (venda.Length == 0)
                     throw new Exception("Não foi possível encontrar a venda");
 
-                var produto = await _produtoPersist.GetProdutoByIDAsync(model.ProdutoId);
-                if (produto is null)
-                    throw new Exception($"Não foi possível encontrar o produto de ID: {model.ProdutoId}");
+                //var produto = await _produtoPersist.GetProdutoByIDAsync(model.ProdutoId);
+                //if (produto is null)
+                //    throw new Exception($"Não foi possível encontrar o produto de ID: {model.ProdutoId}");
 
                 var itemVenda = await _itemVendaPersist.GetItemVendaByIDAsync(idItemVenda) ??
                                 throw new Exception("Não foi possivel encontrar os itens da venda");

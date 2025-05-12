@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 using PDV.Application.Contracts;
 using Microsoft.AspNetCore.Authorization;
 
-namespace PDV.API.controller
+namespace PDV.API.Controller
 {
     [Authorize]
     [ApiController]
@@ -42,7 +42,7 @@ namespace PDV.API.controller
         {
             try
             {
-                if (await accountService.UserExists(userDTO.UserName)) return BadRequest("Usuario j√° Existe");
+                if (await accountService.UserExists(userDTO.UserName)) return BadRequest("Usuario n„o Existe");
 
                 var user = await accountService.CreateAccountAsync(userDTO);
                 if(user != null) return Ok(user);

@@ -13,11 +13,13 @@ namespace PDV.Persistence.Repositories
             this.context = context;
         }
 
-        public async Task<VendaEntity[]> GetAllVendasAsync()
+        public async Task<VendaEntity[]> GetAllVendasAsync(DateTime? data)
         {
             IQueryable<VendaEntity> query = context.Vendas.AsNoTracking();
+           
+            var queryable = data.HasValue ? query.Where(x => x.CriadoEm == data) : query;
 
-            return await query.ToArrayAsync();
+            return await queryable.ToArrayAsync();
         }
 
         public async Task<VendaEntity[]> GetVendasByIDAsync(int ID, bool includeItensVenda = false)
@@ -26,7 +28,7 @@ namespace PDV.Persistence.Repositories
 
             query = query.Where(V => V.Id == ID);
 
-            if(includeItensVenda) query = query.Include(V => V.ItensVenda);
+            if (includeItensVenda) query = query.Include(V => V.ItensVenda);
 
             return await query.ToArrayAsync();
         }

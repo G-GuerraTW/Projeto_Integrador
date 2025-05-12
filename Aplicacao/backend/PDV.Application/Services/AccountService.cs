@@ -1,12 +1,12 @@
 using AutoMapper;
-using PDV.Domain.Identity;
-using PDV.Application.DTOs;
-using PDV.Application.Contracts;
-using PDV.Persistence.Contracts;
-using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
+using PDV.Application.Contracts;
+using PDV.Application.DTOs;
+using PDV.Domain.Identity;
+using PDV.Persistence.Contracts;
 
-namespace Application.Services
+namespace PDV.Application.Services
 {
     public class AccountService : IAccountService
     {

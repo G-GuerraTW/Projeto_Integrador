@@ -4,7 +4,6 @@ namespace PDV.Application.Contracts
 {
     public interface IItemVendaService
     {
-        public Task<ItemVendaDTO> AddItemVenda(ItemVendaDTO model);
         public Task<ItemVendaDTO> UpdateItemVenda(int idItemVenda, ItemVendaDTO model);
         public Task<bool> DeleteItemVenda(int idItemVenda);
         public Task<ItemVendaDTO[]> GetAllItemVendaAsync(int vendaId);

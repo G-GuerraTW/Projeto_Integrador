@@ -51,22 +51,6 @@ namespace PDV.API.Controller
             }
         }
 
-        [HttpPost]
-        public async Task<ActionResult<ItemVendaDTO>> PostItemVenda([FromBody] ItemVendaDTO itemVenda)
-        {
-            try
-            {
-                var result = await _itemVendaService.AddItemVenda(itemVenda);
-                return Ok(result);
-            }
-            catch (Exception ex)
-            {
-                return StatusCode(StatusCodes.Status500InternalServerError,
-                    $"Erro ao tentar adicionar um item, Erro: {ex.Message}"
-                );
-            }
-        }
-
         [HttpPut("itensVenda/{idItemVenda}")]
         public async Task<ActionResult<ItemVendaDTO>> PutItemVenda(int idItemVenda, [FromBody] ItemVendaDTO itemVenda)
         {
@@ -83,7 +67,7 @@ namespace PDV.API.Controller
             }
         }
 
-        [HttpDelete("itensVenda/{idItemVenda}s")]
+        [HttpDelete("itensVenda/{idItemVenda}")]
         public async Task<ActionResult<bool>> DeleteItemVenda(int idItemVenda)
         {
             try

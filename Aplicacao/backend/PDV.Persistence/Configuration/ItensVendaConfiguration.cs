@@ -12,7 +12,6 @@ namespace PDV.Persistence.Configuration
             builder.HasKey(I => I.Id);
             builder.Property(I => I.Quantidade).HasColumnType("INTEGER");
             builder.Property(I => I.PrecoUnitario).HasColumnType("REAL");
-            builder.Property(I => I.Subtotal).HasColumnType("REAL");
 
             builder.HasOne(I => I.Venda)
                 .WithMany(V => V.ItensVenda)

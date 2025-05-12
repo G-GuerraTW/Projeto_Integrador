@@ -3,9 +3,12 @@ namespace PDV.Application.DTOs
     public class VendaDTO
     {
         public int Id { get; set; }
-        public int usuario_Id { get; set; }
-        public decimal valorTotal { get; set; }
-        public DateTime CriadoEm { get; set; }
-        public IEnumerable<ItemVendaDTO> itensVenda{ get; set; } = new List<ItemVendaDTO>();
+        public DateTime Data { get; set; }
+        public decimal Total { get; set; }
+        public decimal ValorPago { get; set; }
+        public decimal Troco { get; set; }
+        public int UsuarioId { get; set; }
+        public string FormaPagamento { get; set; } = string.Empty;
+        public IEnumerable<ItemVendaDTO> ItensVenda { get; set; } = new List<ItemVendaDTO>();
     }
 }
