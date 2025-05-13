@@ -10,7 +10,8 @@ namespace PDV.Application.DTOs
         public int Quantidade { get; set; }
         public decimal PrecoCusto { get; set; }
         public decimal PrecoVenda { get; set; }
-        public DateTime CriadoEm { get; set; }
+        public DateTime? CriadoEm { get; set; } = DateTime.Now;
+        public int userID { get; set; }
 
     }
 }

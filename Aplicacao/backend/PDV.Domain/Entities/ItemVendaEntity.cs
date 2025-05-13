@@ -6,7 +6,7 @@ namespace PDV.Domain.Entities
     {
         public int Id { get; set; }
         public int Quantidade { get; set; }
-        public decimal PrecoUnitario { get; set; }
+        public double PrecoUnitario { get; set; }
         public int VendaId { get; set; }
         public VendaEntity Venda { get; set; }
         public int ProdutoId { get; set; }

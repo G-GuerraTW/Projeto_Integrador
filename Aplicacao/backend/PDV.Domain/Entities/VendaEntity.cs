@@ -6,7 +6,7 @@ namespace PDV.Domain.Entities
     {
         public int Id { get; set; }
         public DateTime Data { get; set; }
-        public decimal ValorTotal { get; set; }
+        public double ValorTotal { get; set; }
         public string FormaPagamento { get; set; } = string.Empty;
         public DateTime CriadoEm { get; set; }
         // public Usuario Usuario { get; set; }

@@ -16,8 +16,8 @@ public class ProdutoConfiguration : IEntityTypeConfiguration<ProdutoEntity>
         builder.Property(P => P.Tamanho).HasColumnType("INTEGER");
         builder.Property(P => P.Cor).HasColumnType("VARCHAR(80)");
         builder.Property(P => P.Quantidade).HasColumnType("INTEGER");
-        builder.Property(P => P.PrecoCusto).HasColumnType("REAL");
-        builder.Property(P => P.PrecoVenda).HasColumnType("REAL");
+        builder.Property(P => P.PrecoCusto).HasColumnType("DOUBLE");
+        builder.Property(P => P.PrecoVenda).HasColumnType("DOUBLE");
         builder.Property(P => P.CriadoEm).HasColumnType("TEXT");
 
         builder.HasMany(P => P.ItensVenda)

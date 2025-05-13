@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("PDV.Domain")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+cfbac4044afcb0272061f951a8df8842e7de89d6")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d53462ff2740a93960844ce454f8de41ef9a8db8")]
 [assembly: System.Reflection.AssemblyProductAttribute("PDV.Domain")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PDV.Domain")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
