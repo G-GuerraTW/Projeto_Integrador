@@ -26,7 +26,8 @@ namespace PDV.Application.Services
         {
             try
             {
-                var user = await userManager.Users.SingleOrDefaultAsync(U => U.UserName == userUpdateDTO.UserName);  
+                var user = await userManager.Users.SingleOrDefaultAsync(U => U.Email == userUpdateDTO.Email);  
+
                 return await signInManager.CheckPasswordSignInAsync(user, password, false);
             }
             catch (Exception ex)
@@ -40,6 +41,7 @@ namespace PDV.Application.Services
         {
             try
             {
+                userDTO.SincronizaUsernameComEmail();
                 var user = mapper.Map<User>(userDTO);
                 var result = await userManager.CreateAsync(user, userDTO.Password);
 
@@ -54,6 +56,22 @@ namespace PDV.Application.Services
             {
                 
                 throw new Exception($"Erro ao tentar Criar Conta. Erro: {ex.Message}");
+            }
+        }
+
+        public async Task<UserUpdateDTO> GetUserByEmailAsync(string email)
+        {
+            try
+            {
+                var user = await userManager.FindByEmailAsync(email.ToLower());
+                if(user == null) return null;
+
+                var userRetorno = mapper.Map<UserUpdateDTO>(user);
+                return userRetorno;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception($"Erro ao recuperar usuario por email: {ex.Message}");
             }
         }
 
@@ -79,7 +97,7 @@ namespace PDV.Application.Services
         {
             try
             {
-                var user = await userPersist.GetUserByUsernameAsync(userUpdateDTO.UserName);
+                var user = await userPersist.GetUserByUsernameAsync(userUpdateDTO.Nome);
                 if(user == null) return null;
 
                 var token = await userManager.GeneratePasswordResetTokenAsync(user);

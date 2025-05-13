@@ -42,7 +42,7 @@ namespace PDV.API.Controller
         {
             try
             {
-                if (await accountService.UserExists(userDTO.UserName)) return BadRequest("Usuario n�o Existe");
+                if (await accountService.UserExists(userDTO.nome)) return BadRequest("Usuario n�o Existe");
 
                 var user = await accountService.CreateAccountAsync(userDTO);
                 if(user != null) return Ok(user);
@@ -82,7 +82,7 @@ namespace PDV.API.Controller
         {
             try
             {
-                var user = await this.accountService.GetUserByUsernameAsync(userLogin.UserName);
+                var user = await this.accountService.GetUserByEmailAsync(userLogin.Email);
                 if(user == null) return Unauthorized("Usuário ou senha está errado.");
 
                 var result = await accountService.CheckUserPasswordAsync(user, userLogin.Password);
@@ -90,10 +90,9 @@ namespace PDV.API.Controller
 
                 return Ok(new 
                 {
-                    userName = user.UserName,
-                    PrimeiroNome = user.NomeCompleto,
-                    Funcao = user.Funcao,
-                    Titulo = user.Titulo,
+                    nome = user.Nome,
+                    email = user.Email,
+                    Perfil = user.Perfil,
                     token = tokenService.CreateToken(user).Result
                 });
             }
