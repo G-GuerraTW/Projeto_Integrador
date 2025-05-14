@@ -89,11 +89,11 @@ namespace PDV.Application.Services
                 var vendas = await _vendaPersist.GetAllVendasAsync(data);
                 var vendasdto = _mapper.Map<VendaDTO[]>(vendas);
 
-                foreach (var dto in vendasdto)
-                {
-                    foreach (var item in dto.ItensVenda)
-                        item.SubTotal = item.Quantidade * item.Quantidade;
-                }
+                // foreach (var dto in vendasdto)
+                // {
+                //     foreach (var item in dto.ItensVenda)
+                //         item.SubTotal = item.Quantidade * item.Quantidade;
+                // }
 
                 return vendasdto;
             }

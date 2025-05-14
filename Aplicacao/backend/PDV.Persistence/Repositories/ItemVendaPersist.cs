@@ -19,7 +19,7 @@ namespace PDV.Persistence.Repositories
         {
             IQueryable<ItemVendaEntity> query = contexto.ItemVendas.AsNoTracking();
 
-            query = query.Where(x => x.Id == id);
+            // query = query.Where(x => x.Id == id);
             return Task.FromResult(query.FirstOrDefault());
         }
     }

@@ -29,7 +29,7 @@ namespace PDV.Application.Services
 
                 if (await _produtoPersist.SaveChangesAsync())
                 {
-                    var produtoEntity = await _produtoPersist.GetProdutoByIDAsync(model.Id);
+                    var produtoEntity = await _produtoPersist.GetProdutoByIDAsync(entity.Id);
                     return _mapper.Map<ProdutoDTO>(produtoEntity);
                 }
                 return null;
@@ -47,10 +47,10 @@ namespace PDV.Application.Services
                 if (model == null)
                     throw new Exception("Objeto Nulo ou Inválido");
 
-                var modelUpdate = await _produtoPersist.GetProdutoByIDAsync(produtoId) ??
+                var produto = await _produtoPersist.GetProdutoByIDAsync(produtoId) ??
                                   throw new Exception($"Não foi possível encontrar um produto de Id: {produtoId}");
 
-                _mapper.Map(model, modelUpdate);
+                var modelUpdate = _mapper.Map<ProdutoEntity>(model);
 
                 _produtoPersist.Update(modelUpdate);
 

@@ -11,7 +11,7 @@ namespace PDV.Persistence.Configuration
         {
             builder.ToTable("Venda");
             builder.HasKey(V => V.Id);
-            builder.Property(V => V.ValorTotal).HasColumnType("REAL");
+            builder.Property(V => V.ValorTotal).HasColumnType("DOUBLE");
             builder.Property(V => V.CriadoEm).HasColumnType("TEXT");
 
             builder.HasMany(V => V.ItensVenda)

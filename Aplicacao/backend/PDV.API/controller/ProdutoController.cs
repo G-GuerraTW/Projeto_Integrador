@@ -37,7 +37,7 @@ namespace PDV.API.Controller
         }
 
         [HttpPut("{id}")]
-        public async Task<ActionResult<ProdutoDTO>> UpdateEvento(int id, ProdutoDTO model)
+        public async Task<ActionResult<ProdutoDTO>> UpdateProduto(int id, ProdutoDTO model)
         {
             try
             {
@@ -92,7 +92,6 @@ namespace PDV.API.Controller
                     $"Erro ao tentar recuperar Produtos Erro: {ex.Message}");
             }
         }
-
 
         [HttpGet("{id}")]
         public async Task<ActionResult<ProdutoDTO>> GetProdutoById(int id)

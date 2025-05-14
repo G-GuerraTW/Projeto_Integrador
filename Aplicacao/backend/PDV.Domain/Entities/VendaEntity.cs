@@ -1,4 +1,6 @@
 using PDV.Domain.Identity;
+using System;
+using System.Collections.Generic;
 
 namespace PDV.Domain.Entities
 {
@@ -9,8 +11,9 @@ namespace PDV.Domain.Entities
         public double ValorTotal { get; set; }
         public string FormaPagamento { get; set; } = string.Empty;
         public DateTime CriadoEm { get; set; }
-        // public Usuario Usuario { get; set; }
+
         public IEnumerable<ItemVendaEntity> ItensVenda { get; set; } = new List<ItemVendaEntity>();
+
         public int UserId { get; set; }
         public User User { get; set; }
     }

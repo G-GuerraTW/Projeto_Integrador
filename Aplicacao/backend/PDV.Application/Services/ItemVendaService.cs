@@ -46,9 +46,9 @@ namespace PDV.Application.Services
         {
             try
             {
-                var venda = await _vendaPersist.GetVendasByIDAsync(model.VendaId);
-                if (venda.Length == 0)
-                    throw new Exception("Não foi possível encontrar a venda");
+                // var venda = await _vendaPersist.GetVendasByIDAsync(model.Id);
+                // if (venda.Length == 0)
+                //     throw new Exception("Não foi possível encontrar a venda");
 
                 //var produto = await _produtoPersist.GetProdutoByIDAsync(model.ProdutoId);
                 //if (produto is null)

@@ -18,14 +18,14 @@ namespace PDV.API.Controller
         }
 
         [HttpPost]
-        public async Task<ActionResult<VendaDTO>> AddVendas(VendaDTO venddaDto)
+        public async Task<ActionResult<VendaDTO>> AddVendas(VendaDTO vendaDto)
         {
             try
             {
-                if (venddaDto == null)
+                if (vendaDto == null)
                     return BadRequest("Erro ao criar uma venda");
 
-                var venda = await _service.AddVenda(venddaDto);
+                var venda = await _service.AddVenda(vendaDto);
                 if (venda == null)
                     return BadRequest("Erro ao persistir uma venda.");
 
