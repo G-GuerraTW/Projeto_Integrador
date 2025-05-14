@@ -23,16 +23,17 @@ namespace PDV.Application.Services
         {
             try
             {
-                if (model is null)
-                    throw new Exception("Objeto Nulo ou Inválido");
+                if (model is null) throw new Exception("Objeto Nulo ou Inválido");
 
                 var vendaEntity = _mapper.Map<VendaEntity>(model);
                 _vendaPersist.Add(vendaEntity);
 
                 if (await _vendaPersist.SaveChangesAsync())
-                    return model;
-
-                return model;
+                {
+                    return _mapper.Map<VendaDTO>(vendaEntity);
+                }
+                    
+                return null;
             }
             catch (Exception ex)
             {

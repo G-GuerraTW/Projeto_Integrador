@@ -98,7 +98,10 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
 
 //Configurando Conex�o com o Banco
 builder.Services.AddDbContext<PDVContext>(options =>
-    options.UseSqlite("DATA Source=banco.db")
+    options
+        .UseSqlite("DATA Source=banco.db")
+        .EnableSensitiveDataLogging()
+        .LogTo(Console.WriteLine, LogLevel.Debug)
 );
 
 var app = builder.Build();
