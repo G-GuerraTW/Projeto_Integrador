@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ZKdZAKHc3x4=",
+  "dgSpecHash": "hDsyMyg6BUA=",
   "success": true,
-  "projectFilePath": "c:\\Users\\gabriel.guerra\\Desktop\\Projeto_Integrador\\Aplicacao\\backend\\PDV.Application\\PDV.Application.csproj",
+  "projectFilePath": "C:\\Users\\gabriel.guerra\\Desktop\\Projeto_Integrador\\Aplicacao\\backend\\PDV.Application\\PDV.Application.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\gabriel.guerra\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\gabriel.guerra\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",

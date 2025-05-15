@@ -57,9 +57,11 @@ builder.Services.AddScoped<IGeralPersist, GeralPersist>();
 builder.Services.AddScoped<IVendaPersist, VendaPersist>();
 builder.Services.AddScoped<IProdutoPersist, ProdutoPersist>();
 builder.Services.AddScoped<IUserPersist, UserPersist>();
+builder.Services.AddScoped<IItemVendaPersist, ItemVendaPersist>();
 
 //Adicionando Scopeds Serviços
 builder.Services.AddScoped<IVendaService, VendaService>();
+builder.Services.AddScoped<IItemVendaService, ItemVendaService>();
 builder.Services.AddScoped<IProdutoService, ProdutoService>();
 builder.Services.AddScoped<IAccountService, AccountService>();  
 builder.Services.AddScoped<ITokenService, TokenService>();

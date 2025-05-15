@@ -7,7 +7,7 @@ public class VendaDTO
     public double Total { get; set; }
     public double ValorPago { get; set; }
     public double Troco { get; set; }
-    public int UsuarioId { get; set; }
+    public int UserId { get; set; }
     public string FormaPagamento { get; set; } = string.Empty;
-    public IEnumerable<ItemVendaDTO> ItensVenda { get; set; } = new List<ItemVendaDTO>();
+    public IEnumerable<ItemVendaDTO>? ItensVenda { get; set; } = new List<ItemVendaDTO>();
 }

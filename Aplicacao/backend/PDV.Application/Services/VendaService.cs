@@ -11,11 +11,14 @@ namespace PDV.Application.Services
     {
         private readonly IVendaPersist _vendaPersist;
         private readonly IMapper _mapper;
+        private readonly IUserPersist userPersist;
 
         public VendaService(
             IVendaPersist vendaPersist,
+            IUserPersist userPersist,
             IMapper mapper)
         {
+            this.userPersist = userPersist;
             _mapper = mapper;
             _vendaPersist = vendaPersist;
         }
@@ -45,24 +48,25 @@ namespace PDV.Application.Services
         {
             try
             {
-                if (model == null)
-                    throw new Exception("Objeto Nulo ou Inválido");
+                if (model == null) throw new Exception("Objeto Nulo ou Inválido");
+            
+                var venda = await _vendaPersist.GetVendasByIDAsync(vendaId) ??
+                            throw new Exception($"Não foi possível encontrar a venda de Id: {vendaId}");
 
-                var modelUpdate = await _vendaPersist.GetVendasByIDAsync(vendaId) ??
-                                  throw new Exception($"NÃo foi possÃ­vel encontrar um produto de Id: {vendaId}");
+                var vendaAlterada = _mapper.Map<VendaEntity>(model);
 
-                var venda = modelUpdate.FirstOrDefault();
-                _mapper.Map(model, venda);
-                _vendaPersist.Update(venda!);
+                _vendaPersist.Update(venda);
 
                 if (await _vendaPersist.SaveChangesAsync())
-                    return _mapper.Map<VendaDTO>(modelUpdate);
+                {
+                    return _mapper.Map<VendaDTO>(venda);
+                }
 
-                return _mapper.Map<VendaDTO>(modelUpdate);
+                return _mapper.Map<VendaDTO>(venda);
             }
             catch (Exception ex)
             {
-                throw new Exception($"Erro ao atualizar o produto: {ex.Message}");
+                throw new Exception($"Erro ao atualizar a venda: {ex.Message}");
             }
         }
 
@@ -90,11 +94,16 @@ namespace PDV.Application.Services
                 var vendas = await _vendaPersist.GetAllVendasAsync(data);
                 var vendasdto = _mapper.Map<VendaDTO[]>(vendas);
 
-                // foreach (var dto in vendasdto)
-                // {
-                //     foreach (var item in dto.ItensVenda)
-                //         item.SubTotal = item.Quantidade * item.Quantidade;
-                // }
+                foreach (var venda in vendasdto)
+                {
+                    if (venda.ItensVenda != null)
+                    {
+                        foreach (var item in venda.ItensVenda)
+                        {
+                            item.SubTotal = item.Produto?.PrecoVenda.GetValueOrDefault() * item.Quantidade ?? 0;
+                        }
+                    }
+                }
 
                 return vendasdto;
             }
@@ -104,18 +113,33 @@ namespace PDV.Application.Services
             }
         }
 
+
         public async Task<VendaDTO[]> GetVendasByUserName(string userName)
         {
             try
             {
-                var vendas = await _vendaPersist.GetVendasByUserName(userName);
-
-                return _mapper.Map<VendaDTO[]>(vendas);
+                var user = await userPersist.GetUserByUsernameAsync(userName);
+                var vendas = await _vendaPersist.GetVendasByUserIDAsync(user.Id);
+                var vendasDto = _mapper.Map<VendaDTO[]>(vendas);
+        
+                foreach (var venda in vendasDto)
+                {
+                    if (venda.ItensVenda != null)
+                    {
+                        foreach (var item in venda.ItensVenda)
+                        {
+                            item.SubTotal = item.Produto?.PrecoVenda.GetValueOrDefault() * item.Quantidade ?? 0;
+                        }
+                    }
+                }
+        
+                return vendasDto;
             }
             catch (Exception ex)
             {
                 throw new Exception($"Erro ao buscar as vendas do usuario: {ex.Message}");
             }
         }
+
     }
 }

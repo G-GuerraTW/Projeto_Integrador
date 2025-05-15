@@ -100,8 +100,6 @@ namespace PDV.Application.Services
                     throw new Exception("Codigo da venda inválido");
 
                 var venda = await _vendaPersist.GetVendasByIDAsync(vendaId);
-                if (venda.Length <= 0)
-                    throw new Exception($"Não foi possivel encontrar a venda de Id: {vendaId}");
 
                 var entities = await _itemVendaPersist.GetAllItensVendaAsync(vendaId);
 

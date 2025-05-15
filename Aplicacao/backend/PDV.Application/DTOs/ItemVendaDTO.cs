@@ -4,9 +4,9 @@ namespace PDV.Application.DTOs
     {
         public int Quantidade { get; set; }
         public double SubTotal { get; set; }
-        public int? VendaId { get; set; }
+        public int VendaId { get; set; }
         public VendaDTO? Venda { get; set; }
         public int ProdutoId { get; set; }
-        //public IEnumerable<ProdutoDTO>? ProdutoDTOs { get; set; } = new List<ProdutoDTO>();
+        public ProdutoDTO? Produto { get; set; }
     }
 }
