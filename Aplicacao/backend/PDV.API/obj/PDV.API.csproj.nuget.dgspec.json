@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\gabriel.guerra\\Desktop\\Projeto_Integrador\\Aplicacao\\backend\\PDV.API\\PDV.API.csproj": {}
+    "c:\\Users\\gabriel.guerra\\Desktop\\Projeto_Integrador\\Aplicacao\\backend\\PDV.API\\PDV.API.csproj": {}
   },
   "projects": {
-    "C:\\Users\\gabriel.guerra\\Desktop\\Projeto_Integrador\\Aplicacao\\backend\\PDV.API\\PDV.API.csproj": {
+    "c:\\Users\\gabriel.guerra\\Desktop\\Projeto_Integrador\\Aplicacao\\backend\\PDV.API\\PDV.API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\gabriel.guerra\\Desktop\\Projeto_Integrador\\Aplicacao\\backend\\PDV.API\\PDV.API.csproj",
+        "projectUniqueName": "c:\\Users\\gabriel.guerra\\Desktop\\Projeto_Integrador\\Aplicacao\\backend\\PDV.API\\PDV.API.csproj",
         "projectName": "PDV.API",
-        "projectPath": "C:\\Users\\gabriel.guerra\\Desktop\\Projeto_Integrador\\Aplicacao\\backend\\PDV.API\\PDV.API.csproj",
+        "projectPath": "c:\\Users\\gabriel.guerra\\Desktop\\Projeto_Integrador\\Aplicacao\\backend\\PDV.API\\PDV.API.csproj",
         "packagesPath": "C:\\Users\\gabriel.guerra\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\gabriel.guerra\\Desktop\\Projeto_Integrador\\Aplicacao\\backend\\PDV.API\\obj\\",
+        "outputPath": "c:\\Users\\gabriel.guerra\\Desktop\\Projeto_Integrador\\Aplicacao\\backend\\PDV.API\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -32,8 +32,8 @@
           "net9.0": {
             "targetAlias": "net9.0",
             "projectReferences": {
-              "C:\\Users\\gabriel.guerra\\Desktop\\Projeto_Integrador\\Aplicacao\\backend\\PDV.Application\\PDV.Application.csproj": {
-                "projectPath": "C:\\Users\\gabriel.guerra\\Desktop\\Projeto_Integrador\\Aplicacao\\backend\\PDV.Application\\PDV.Application.csproj"
+              "c:\\Users\\gabriel.guerra\\Desktop\\Projeto_Integrador\\Aplicacao\\backend\\PDV.Application\\PDV.Application.csproj": {
+                "projectPath": "c:\\Users\\gabriel.guerra\\Desktop\\Projeto_Integrador\\Aplicacao\\backend\\PDV.Application\\PDV.Application.csproj"
               },
               "c:\\Users\\gabriel.guerra\\Desktop\\Projeto_Integrador\\Aplicacao\\backend\\PDV.Persistence\\PDV.Persistence.csproj": {
                 "projectPath": "c:\\Users\\gabriel.guerra\\Desktop\\Projeto_Integrador\\Aplicacao\\backend\\PDV.Persistence\\PDV.Persistence.csproj"
@@ -103,14 +103,14 @@
         }
       }
     },
-    "C:\\Users\\gabriel.guerra\\Desktop\\Projeto_Integrador\\Aplicacao\\backend\\PDV.Application\\PDV.Application.csproj": {
+    "c:\\Users\\gabriel.guerra\\Desktop\\Projeto_Integrador\\Aplicacao\\backend\\PDV.Application\\PDV.Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\gabriel.guerra\\Desktop\\Projeto_Integrador\\Aplicacao\\backend\\PDV.Application\\PDV.Application.csproj",
+        "projectUniqueName": "c:\\Users\\gabriel.guerra\\Desktop\\Projeto_Integrador\\Aplicacao\\backend\\PDV.Application\\PDV.Application.csproj",
         "projectName": "PDV.Application",
-        "projectPath": "C:\\Users\\gabriel.guerra\\Desktop\\Projeto_Integrador\\Aplicacao\\backend\\PDV.Application\\PDV.Application.csproj",
+        "projectPath": "c:\\Users\\gabriel.guerra\\Desktop\\Projeto_Integrador\\Aplicacao\\backend\\PDV.Application\\PDV.Application.csproj",
         "packagesPath": "C:\\Users\\gabriel.guerra\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\gabriel.guerra\\Desktop\\Projeto_Integrador\\Aplicacao\\backend\\PDV.Application\\obj\\",
+        "outputPath": "c:\\Users\\gabriel.guerra\\Desktop\\Projeto_Integrador\\Aplicacao\\backend\\PDV.Application\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -131,8 +131,8 @@
           "net9.0": {
             "targetAlias": "net9.0",
             "projectReferences": {
-              "C:\\Users\\gabriel.guerra\\Desktop\\Projeto_Integrador\\Aplicacao\\backend\\PDV.Domain\\PDV.Domain.csproj": {
-                "projectPath": "C:\\Users\\gabriel.guerra\\Desktop\\Projeto_Integrador\\Aplicacao\\backend\\PDV.Domain\\PDV.Domain.csproj"
+              "c:\\Users\\gabriel.guerra\\Desktop\\Projeto_Integrador\\Aplicacao\\backend\\PDV.Domain\\PDV.Domain.csproj": {
+                "projectPath": "c:\\Users\\gabriel.guerra\\Desktop\\Projeto_Integrador\\Aplicacao\\backend\\PDV.Domain\\PDV.Domain.csproj"
               },
               "c:\\Users\\gabriel.guerra\\Desktop\\Projeto_Integrador\\Aplicacao\\backend\\PDV.Persistence\\PDV.Persistence.csproj": {
                 "projectPath": "c:\\Users\\gabriel.guerra\\Desktop\\Projeto_Integrador\\Aplicacao\\backend\\PDV.Persistence\\PDV.Persistence.csproj"
@@ -193,14 +193,14 @@
         }
       }
     },
-    "C:\\Users\\gabriel.guerra\\Desktop\\Projeto_Integrador\\Aplicacao\\backend\\PDV.Domain\\PDV.Domain.csproj": {
+    "c:\\Users\\gabriel.guerra\\Desktop\\Projeto_Integrador\\Aplicacao\\backend\\PDV.Domain\\PDV.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\gabriel.guerra\\Desktop\\Projeto_Integrador\\Aplicacao\\backend\\PDV.Domain\\PDV.Domain.csproj",
+        "projectUniqueName": "c:\\Users\\gabriel.guerra\\Desktop\\Projeto_Integrador\\Aplicacao\\backend\\PDV.Domain\\PDV.Domain.csproj",
         "projectName": "PDV.Domain",
-        "projectPath": "C:\\Users\\gabriel.guerra\\Desktop\\Projeto_Integrador\\Aplicacao\\backend\\PDV.Domain\\PDV.Domain.csproj",
+        "projectPath": "c:\\Users\\gabriel.guerra\\Desktop\\Projeto_Integrador\\Aplicacao\\backend\\PDV.Domain\\PDV.Domain.csproj",
         "packagesPath": "C:\\Users\\gabriel.guerra\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\gabriel.guerra\\Desktop\\Projeto_Integrador\\Aplicacao\\backend\\PDV.Domain\\obj\\",
+        "outputPath": "c:\\Users\\gabriel.guerra\\Desktop\\Projeto_Integrador\\Aplicacao\\backend\\PDV.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -296,8 +296,8 @@
           "net9.0": {
             "targetAlias": "net9.0",
             "projectReferences": {
-              "C:\\Users\\gabriel.guerra\\Desktop\\Projeto_Integrador\\Aplicacao\\backend\\PDV.Domain\\PDV.Domain.csproj": {
-                "projectPath": "C:\\Users\\gabriel.guerra\\Desktop\\Projeto_Integrador\\Aplicacao\\backend\\PDV.Domain\\PDV.Domain.csproj"
+              "c:\\Users\\gabriel.guerra\\Desktop\\Projeto_Integrador\\Aplicacao\\backend\\PDV.Domain\\PDV.Domain.csproj": {
+                "projectPath": "c:\\Users\\gabriel.guerra\\Desktop\\Projeto_Integrador\\Aplicacao\\backend\\PDV.Domain\\PDV.Domain.csproj"
               }
             }
           }

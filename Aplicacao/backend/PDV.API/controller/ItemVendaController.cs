@@ -1,9 +1,11 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using PDV.Application.Contracts;
 using PDV.Application.DTOs;
 
 namespace PDV.API.Controller
 {
+    [Authorize]
     [Route("api/vendas")]
     [ApiController]
     public class ItemVendaController : ControllerBase

@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("PDV.Application")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4626d3366cbd948c2a1f45e2d3a5a97e6d575efb")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+939b8397ddc473e20e6f879c2b2a49c10f7b3b49")]
 [assembly: System.Reflection.AssemblyProductAttribute("PDV.Application")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PDV.Application")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
