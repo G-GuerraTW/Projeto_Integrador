@@ -58,6 +58,26 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "PDV.API.Controller.HistoricoController",
+    "Method": "GetAsync",
+    "RelativePath": "api/Historico",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "PDV.Application.DTOs.HistoricoDTO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
     "ContainingType": "PDV.API.Controller.ProdutoController",
     "Method": "AddProduto",
     "RelativePath": "api/Produto",
@@ -105,7 +125,7 @@
   },
   {
     "ContainingType": "PDV.API.Controller.ProdutoController",
-    "Method": "UpdateEvento",
+    "Method": "UpdateProduto",
     "RelativePath": "api/Produto/{id}",
     "HttpMethod": "PUT",
     "IsController": true,
@@ -237,14 +257,14 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "venddaDto",
-        "Type": "PDV.Application.DTOs.VendaDTO",
+        "Name": "vendaDto",
+        "Type": "VendaDTO",
         "IsRequired": true
       }
     ],
     "ReturnTypes": [
       {
-        "Type": "PDV.Application.DTOs.VendaDTO",
+        "Type": "VendaDTO",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -270,7 +290,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "PDV.Application.DTOs.VendaDTO[]",
+        "Type": "VendaDTO[]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -295,13 +315,13 @@
       },
       {
         "Name": "vendaDto",
-        "Type": "PDV.Application.DTOs.VendaDTO",
+        "Type": "VendaDTO",
         "IsRequired": true
       }
     ],
     "ReturnTypes": [
       {
-        "Type": "PDV.Application.DTOs.VendaDTO",
+        "Type": "VendaDTO",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -369,7 +389,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "PDV.Application.DTOs.VendaDTO[]",
+        "Type": "VendaDTO[]",
         "MediaTypes": [
           "text/plain",
           "application/json",

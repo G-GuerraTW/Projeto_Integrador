@@ -13,7 +13,6 @@ namespace PDV.Domain.Entities
         public double PrecoCusto { get; set; }
         public double PrecoVenda { get; set; }
         public DateTime CriadoEm { get; set; }
-
         public IEnumerable<ItemVendaEntity> ItensVenda { get; set; } = new List<ItemVendaEntity>();
 
         public int UserId { get; set; }

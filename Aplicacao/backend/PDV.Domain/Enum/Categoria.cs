@@ -1,9 +1,13 @@
+using System.ComponentModel;
+
 namespace PDV.Domain.Enum
 {
     public enum Categoria
     {
-        CalÃ§ados,
-        Roupas,
-        AcessÃ³rios
+        [Description("Calçados")]
+        Calcados = 1,
+        Roupas = 2,
+        [Description("Acessórios")]
+        Acessorios = 3,
     }
 }

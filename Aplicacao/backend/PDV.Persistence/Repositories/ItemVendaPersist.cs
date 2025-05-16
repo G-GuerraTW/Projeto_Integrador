@@ -11,6 +11,7 @@ namespace PDV.Persistence.Repositories
         public async Task<ItemVendaEntity[]> GetAllItensVendaAsync(int vendaId)
         {
             IQueryable<ItemVendaEntity> query = contexto.ItemVendas.AsNoTracking();
+            query = query.Where(x => x.VendaId == vendaId);
 
             return await query.ToArrayAsync();
         }

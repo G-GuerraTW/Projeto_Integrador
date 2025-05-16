@@ -1,4 +1,3 @@
-using PDV.Domain.Identity;
 
 namespace PDV.Domain.Entities
 {
