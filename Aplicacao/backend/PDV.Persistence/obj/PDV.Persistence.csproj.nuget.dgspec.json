@@ -1,9 +1,10 @@
 {
   "format": 1,
   "restore": {
-    "c:\\Users\\gabriel.guerra\\Desktop\\Projeto_Integrador\\Aplicacao\\backend\\PDV.Persistence\\PDV.Persistence.csproj": {}
+    "C:\\Repositories\\Projeto_Integrador\\Aplicacao\\backend\\PDV.Persistence\\PDV.Persistence.csproj": {}
   },
   "projects": {
+<<<<<<< HEAD
     "c:\\Users\\gabriel.guerra\\Desktop\\Projeto_Integrador\\Aplicacao\\backend\\PDV.Domain\\PDV.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -12,12 +13,22 @@
         "projectPath": "c:\\Users\\gabriel.guerra\\Desktop\\Projeto_Integrador\\Aplicacao\\backend\\PDV.Domain\\PDV.Domain.csproj",
         "packagesPath": "C:\\Users\\gabriel.guerra\\.nuget\\packages\\",
         "outputPath": "c:\\Users\\gabriel.guerra\\Desktop\\Projeto_Integrador\\Aplicacao\\backend\\PDV.Domain\\obj\\",
+=======
+    "C:\\Repositories\\Projeto_Integrador\\Aplicacao\\backend\\PDV.Domain\\PDV.Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Repositories\\Projeto_Integrador\\Aplicacao\\backend\\PDV.Domain\\PDV.Domain.csproj",
+        "projectName": "PDV.Domain",
+        "projectPath": "C:\\Repositories\\Projeto_Integrador\\Aplicacao\\backend\\PDV.Domain\\PDV.Domain.csproj",
+        "packagesPath": "C:\\Users\\eliel.silva\\.nuget\\packages\\",
+        "outputPath": "C:\\Repositories\\Projeto_Integrador\\Aplicacao\\backend\\PDV.Domain\\obj\\",
+>>>>>>> fc421b766d6a244a1506d0974ed3b12fbc481d78
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\gabriel.guerra\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\eliel.silva\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -26,6 +37,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -44,7 +56,7 @@
           "auditLevel": "low",
           "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "9.0.100"
+        "SdkAnalysisLevel": "9.0.200"
       },
       "frameworks": {
         "net9.0": {
@@ -75,24 +87,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.101/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.201/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "c:\\Users\\gabriel.guerra\\Desktop\\Projeto_Integrador\\Aplicacao\\backend\\PDV.Persistence\\PDV.Persistence.csproj": {
+    "C:\\Repositories\\Projeto_Integrador\\Aplicacao\\backend\\PDV.Persistence\\PDV.Persistence.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\gabriel.guerra\\Desktop\\Projeto_Integrador\\Aplicacao\\backend\\PDV.Persistence\\PDV.Persistence.csproj",
+        "projectUniqueName": "C:\\Repositories\\Projeto_Integrador\\Aplicacao\\backend\\PDV.Persistence\\PDV.Persistence.csproj",
         "projectName": "PDV.Persistence",
-        "projectPath": "c:\\Users\\gabriel.guerra\\Desktop\\Projeto_Integrador\\Aplicacao\\backend\\PDV.Persistence\\PDV.Persistence.csproj",
-        "packagesPath": "C:\\Users\\gabriel.guerra\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\gabriel.guerra\\Desktop\\Projeto_Integrador\\Aplicacao\\backend\\PDV.Persistence\\obj\\",
+        "projectPath": "C:\\Repositories\\Projeto_Integrador\\Aplicacao\\backend\\PDV.Persistence\\PDV.Persistence.csproj",
+        "packagesPath": "C:\\Users\\eliel.silva\\.nuget\\packages\\",
+        "outputPath": "C:\\Repositories\\Projeto_Integrador\\Aplicacao\\backend\\PDV.Persistence\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\gabriel.guerra\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\eliel.silva\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -101,14 +113,20 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net9.0": {
             "targetAlias": "net9.0",
             "projectReferences": {
+<<<<<<< HEAD
               "c:\\Users\\gabriel.guerra\\Desktop\\Projeto_Integrador\\Aplicacao\\backend\\PDV.Domain\\PDV.Domain.csproj": {
                 "projectPath": "c:\\Users\\gabriel.guerra\\Desktop\\Projeto_Integrador\\Aplicacao\\backend\\PDV.Domain\\PDV.Domain.csproj"
+=======
+              "C:\\Repositories\\Projeto_Integrador\\Aplicacao\\backend\\PDV.Domain\\PDV.Domain.csproj": {
+                "projectPath": "C:\\Repositories\\Projeto_Integrador\\Aplicacao\\backend\\PDV.Domain\\PDV.Domain.csproj"
+>>>>>>> fc421b766d6a244a1506d0974ed3b12fbc481d78
               }
             }
           }
@@ -123,7 +141,7 @@
           "auditLevel": "low",
           "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "9.0.100"
+        "SdkAnalysisLevel": "9.0.200"
       },
       "frameworks": {
         "net9.0": {
@@ -170,7 +188,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.101/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.201/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

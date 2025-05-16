@@ -69,6 +69,7 @@ builder.Services.AddScoped<IItemVendaService, ItemVendaService>();
 builder.Services.AddScoped<IProdutoService, ProdutoService>();
 builder.Services.AddScoped<IAccountService, AccountService>();  
 builder.Services.AddScoped<ITokenService, TokenService>();
+builder.Services.AddScoped<IHistoricoService, HistoricoService>();
 
 //Configurando Identity (Usuário, Senhas, Regras)
 builder.Services.AddIdentityCore<User>(options =>

@@ -125,6 +125,35 @@
         }
       }
     },
+    "/api/Historico": {
+      "get": {
+        "tags": [
+          "Historico"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/HistoricoDTO"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HistoricoDTO"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HistoricoDTO"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/api/vendas/itensVenda/{idItemVenda}": {
       "get": {
         "tags": [
@@ -857,35 +886,98 @@
   },
   "components": {
     "schemas": {
+      "CategoriasDTO": {
+        "type": "object",
+        "properties": {
+          "calcados": {
+            "type": "number",
+            "format": "double"
+          },
+          "roupas": {
+            "type": "number",
+            "format": "double"
+          },
+          "acessorios": {
+            "type": "number",
+            "format": "double"
+          }
+        },
+        "additionalProperties": false
+      },
+      "FormaPagamento": {
+        "type": "object",
+        "properties": {
+          "dinheiro": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "cartão": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "pix": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "HistoricoDTO": {
+        "type": "object",
+        "properties": {
+          "vendasHoje": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "valorTotalVendas": {
+            "type": "number",
+            "format": "double"
+          },
+          "produtosCadastrados": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "produtosEmEstoque": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "produtosSemEstoque": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "vendasPorFormaPagamento": {
+            "$ref": "#/components/schemas/FormaPagamento"
+          },
+          "vendasPorCategoria": {
+            "$ref": "#/components/schemas/CategoriasDTO"
+          }
+        },
+        "additionalProperties": false
+      },
       "ItemVendaDTO": {
         "type": "object",
         "properties": {
-          "id": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "vendaId": {
-            "type": "integer",
-            "format": "int32"
-          },
           "quantidade": {
             "type": "integer",
             "format": "int32"
-          },
-          "precoUnitario": {
-            "type": "number",
-            "format": "double"
           },
           "subTotal": {
             "type": "number",
             "format": "double"
           },
-          "produtos": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/ProdutoDTO"
-            },
-            "nullable": true
+          "vendaId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "venda": {
+            "$ref": "#/components/schemas/VendaDTO"
+          },
+          "produtoId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "produto": {
+            "$ref": "#/components/schemas/ProdutoDTO"
           }
         },
         "additionalProperties": false
@@ -907,7 +999,8 @@
           },
           "tamanho": {
             "type": "integer",
-            "format": "int32"
+            "format": "int32",
+            "nullable": true
           },
           "cor": {
             "type": "string",
@@ -919,15 +1012,22 @@
           },
           "precoCusto": {
             "type": "number",
-            "format": "double"
+            "format": "double",
+            "nullable": true
           },
           "precoVenda": {
             "type": "number",
-            "format": "double"
+            "format": "double",
+            "nullable": true
           },
           "criadoEm": {
             "type": "string",
-            "format": "date-time"
+            "format": "date-time",
+            "nullable": true
+          },
+          "userID": {
+            "type": "integer",
+            "format": "int32"
           }
         },
         "additionalProperties": false
@@ -935,7 +1035,7 @@
       "UserDTO": {
         "type": "object",
         "properties": {
-          "userName": {
+          "nome": {
             "type": "string",
             "nullable": true
           },
@@ -943,15 +1043,15 @@
             "type": "string",
             "nullable": true
           },
+          "userName": {
+            "type": "string",
+            "nullable": true
+          },
           "password": {
             "type": "string",
             "nullable": true
           },
-          "nomeCompleto": {
-            "type": "string",
-            "nullable": true
-          },
-          "funcao": {
+          "perfil": {
             "type": "string",
             "nullable": true
           }
@@ -961,7 +1061,7 @@
       "UserLoginDTO": {
         "type": "object",
         "properties": {
-          "userName": {
+          "email": {
             "type": "string",
             "nullable": true
           },
@@ -979,31 +1079,15 @@
             "type": "string",
             "nullable": true
           },
-          "titulo": {
+          "perfil": {
             "type": "string",
             "nullable": true
           },
-          "userName": {
-            "type": "string",
-            "nullable": true
-          },
-          "nomeCompleto": {
+          "nome": {
             "type": "string",
             "nullable": true
           },
           "email": {
-            "type": "string",
-            "nullable": true
-          },
-          "phoneNumber": {
-            "type": "string",
-            "nullable": true
-          },
-          "funcao": {
-            "type": "string",
-            "nullable": true
-          },
-          "descricao": {
             "type": "string",
             "nullable": true
           },
@@ -1041,7 +1125,7 @@
             "type": "number",
             "format": "double"
           },
-          "usuarioId": {
+          "userId": {
             "type": "integer",
             "format": "int32"
           },

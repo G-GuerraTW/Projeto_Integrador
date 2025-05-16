@@ -24,3 +24,16 @@ C:\Users\gabriel.guerra\Desktop\Projeto_Integrador\Aplicacao\backend\PDV.Domain\
 C:\Users\gabriel.guerra\Desktop\Projeto_Integrador\Aplicacao\backend\PDV.Domain\obj\Debug\net9.0\refint\PDV.Domain.dll
 C:\Users\gabriel.guerra\Desktop\Projeto_Integrador\Aplicacao\backend\PDV.Domain\obj\Debug\net9.0\PDV.Domain.pdb
 C:\Users\gabriel.guerra\Desktop\Projeto_Integrador\Aplicacao\backend\PDV.Domain\obj\Debug\net9.0\ref\PDV.Domain.dll
+C:\Repositories\Projeto_Integrador\Aplicacao\backend\PDV.Domain\bin\Debug\net9.0\PDV.Domain.deps.json
+C:\Repositories\Projeto_Integrador\Aplicacao\backend\PDV.Domain\bin\Debug\net9.0\PDV.Domain.dll
+C:\Repositories\Projeto_Integrador\Aplicacao\backend\PDV.Domain\bin\Debug\net9.0\PDV.Domain.pdb
+C:\Repositories\Projeto_Integrador\Aplicacao\backend\PDV.Domain\obj\Debug\net9.0\PDV.Domain.csproj.AssemblyReference.cache
+C:\Repositories\Projeto_Integrador\Aplicacao\backend\PDV.Domain\obj\Debug\net9.0\PDV.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Repositories\Projeto_Integrador\Aplicacao\backend\PDV.Domain\obj\Debug\net9.0\PDV.Domain.AssemblyInfoInputs.cache
+C:\Repositories\Projeto_Integrador\Aplicacao\backend\PDV.Domain\obj\Debug\net9.0\PDV.Domain.AssemblyInfo.cs
+C:\Repositories\Projeto_Integrador\Aplicacao\backend\PDV.Domain\obj\Debug\net9.0\PDV.Domain.csproj.CoreCompileInputs.cache
+C:\Repositories\Projeto_Integrador\Aplicacao\backend\PDV.Domain\obj\Debug\net9.0\PDV.Domain.sourcelink.json
+C:\Repositories\Projeto_Integrador\Aplicacao\backend\PDV.Domain\obj\Debug\net9.0\PDV.Domain.dll
+C:\Repositories\Projeto_Integrador\Aplicacao\backend\PDV.Domain\obj\Debug\net9.0\refint\PDV.Domain.dll
+C:\Repositories\Projeto_Integrador\Aplicacao\backend\PDV.Domain\obj\Debug\net9.0\PDV.Domain.pdb
+C:\Repositories\Projeto_Integrador\Aplicacao\backend\PDV.Domain\obj\Debug\net9.0\ref\PDV.Domain.dll
