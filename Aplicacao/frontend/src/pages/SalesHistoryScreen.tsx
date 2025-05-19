@@ -523,14 +523,6 @@ const SalesHistoryScreen = () => {
         {/* Filtros */}
         <Paper sx={{ p: 3, mb: 3, borderRadius: '8px' }}>
           <Typography variant="h6" sx={{ mb: 2 }}>Filtros</Typography>
-
-
-
-
-
-
-
-
           
           <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
             {/* Primeira linha de filtros */}
@@ -552,7 +544,6 @@ const SalesHistoryScreen = () => {
                     ),
                   }}
                 />
-
               </Box>
               
               {/* Filtro por forma de pagamento */}
@@ -574,41 +565,11 @@ const SalesHistoryScreen = () => {
                 </TextField>
               </Box>
             </Box>
-
-
-
-
-
-
-
-
-
             
             {/* Segunda linha de filtros - Datas */}
             <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 2 }}>
               {/* Filtro por data inicial */}
               <Box sx={{ flex: '1 1 200px', minWidth: '150px' }}>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
                 <TextField
                   fullWidth
                   label="Data Inicial"
@@ -623,27 +584,6 @@ const SalesHistoryScreen = () => {
               
               {/* Filtro por data final */}
               <Box sx={{ flex: '1 1 200px', minWidth: '150px' }}>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
                 <TextField
                   fullWidth
                   label="Data Final"
@@ -656,13 +596,6 @@ const SalesHistoryScreen = () => {
                 />
               </Box>
             </Box>
-
-
-
-
-
-
-
             
             {/* Terceira linha - Botões de ação */}
             <Box sx={{ display: 'flex', justifyContent: 'flex-end', gap: 2, mt: 1 }}>
@@ -673,13 +606,6 @@ const SalesHistoryScreen = () => {
                 size="medium"
                 sx={{ borderColor: '#4A148C', color: '#4A148C' }}
               >
-
-
-
-
-
-
-
                 Limpar Filtros
               </Button>
               
@@ -687,21 +613,11 @@ const SalesHistoryScreen = () => {
                 variant="contained"
                 startIcon={<SearchIcon />}
                 onClick={applyFilters}
-
                 size="medium"
                 sx={{ backgroundColor: "#4A148C" }}
               >
-
                 Aplicar Filtros
               </Button>
-
-
-
-
-
-
-
-
             </Box>
           </Box>
         </Paper>
@@ -712,7 +628,6 @@ const SalesHistoryScreen = () => {
           <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 3 }}>
             <Box sx={{ flex: '1 1 200px' }}>
               <Typography variant="body1">
-
                 Total de Vendas: <strong>{totalSales}</strong>
               </Typography>
             </Box>
@@ -726,7 +641,6 @@ const SalesHistoryScreen = () => {
                 Formas de Pagamento:
               </Typography>
               <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 1, mt: 1 }}>
-
                 {Object.entries(
                   filteredSales.reduce((acc, sale) => {
                     const method = sale.formaPagamento;
@@ -775,7 +689,6 @@ const SalesHistoryScreen = () => {
                   </TableRow>
                 </TableHead>
                 <TableBody>
-
                   {filteredSales.length === 0 ? (
                     <TableRow>
                       <TableCell colSpan={7} align="center">
@@ -783,7 +696,6 @@ const SalesHistoryScreen = () => {
                       </TableCell>
                     </TableRow>
                   ) : (
-
                     filteredSales.map((sale) => (
                       <TableRow 
                         key={sale.id}
@@ -823,19 +735,6 @@ const SalesHistoryScreen = () => {
                 </TableBody>
               </Table>
             </TableContainer>
-
-
-
-
-
-
-
-
-
-
-
-
-
           </>
         )}
 
