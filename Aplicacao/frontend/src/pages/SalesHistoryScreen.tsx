@@ -24,22 +24,27 @@ import {
   useTheme,
   TextField,
   MenuItem,
+  InputAdornment,
   Alert,
-  Snackbar,
-  Pagination
+
+
+  Snackbar
 } from "@mui/material";
 import { useNavigate } from "react-router-dom";
-import { DatePicker } from '@mui/x-date-pickers/DatePicker';
-import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
-import { AdapterDateFns } from '@mui/x-date-pickers/AdapterDateFns';
-// import ptBR from 'date-fns/locale/pt-BR';
+
+
+
+
 import RefreshIcon from '@mui/icons-material/Refresh';
-import SearchIcon from '@mui/icons-material/Search';
+
+import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
+import InventoryIcon from '@mui/icons-material/Inventory';
 import PointOfSaleIcon from '@mui/icons-material/PointOfSale';
 import ReceiptLongIcon from '@mui/icons-material/ReceiptLong';
 import DashboardIcon from '@mui/icons-material/Dashboard';
-import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
-import InventoryIcon from '@mui/icons-material/Inventory';
+
+
+import SearchIcon from '@mui/icons-material/Search';
 import ClearIcon from '@mui/icons-material/Clear';
 
 // Interface para vendas
@@ -63,6 +68,14 @@ interface SaleItem {
   nomeProduto?: string;
 }
 
+// Opções de formas de pagamento para o filtro
+const paymentOptions = [
+  { value: "", label: "Todas" },
+  { value: "Dinheiro", label: "Dinheiro" },
+  { value: "Cartão", label: "Cartão" },
+  { value: "Pix", label: "Pix" }
+];
+
 const SalesHistoryScreen = () => {
   const theme = useTheme();
   const navigate = useNavigate();
@@ -76,13 +89,17 @@ const SalesHistoryScreen = () => {
   const [openSnackbar, setOpenSnackbar] = useState<boolean>(false);
   const [snackbarMessage, setSnackbarMessage] = useState<string>('');
   const [snackbarSeverity, setSnackbarSeverity] = useState<'success' | 'error'>('success');
-  
+
+
   // Estados para filtros
-  const [startDate, setStartDate] = useState<Date | null>(null);
-  const [endDate, setEndDate] = useState<Date | null>(null);
+
+
+  const [startDate, setStartDate] = useState<string>('');
+  const [endDate, setEndDate] = useState<string>('');
+  const [saleNumber, setSaleNumber] = useState<string>('');
   const [paymentMethod, setPaymentMethod] = useState<string>('');
-  const [page, setPage] = useState(1);
-  const rowsPerPage = 10;
+
+
 
   // Função para mostrar notificação
   const showNotification = (message: string, severity: 'success' | 'error') => {
@@ -97,11 +114,17 @@ const SalesHistoryScreen = () => {
     setError(null);
     
     try {
-      // Em produção, substitua por chamadas reais à API
-      // const response = await fetch('http://localhost:5193/api/venda');
-      // if (!response.ok) throw new Error(`Erro ao buscar vendas: ${response.status}`);
-      // const data = await response.json();
+
+
+
+
+      // Simulando chamada à API - em produção, substitua por chamadas reais
+      // const salesResponse = await fetch('http://localhost:5193/api/venda');
       
+      // if (!salesResponse.ok) throw new Error(`Erro ao buscar vendas: ${salesResponse.status}`);
+      
+      // const salesData = await salesResponse.json();
+
       // Dados fictícios para simulação
       const mockSales: Sale[] = [
         {
@@ -163,6 +186,102 @@ const SalesHistoryScreen = () => {
               precoUnitario: 179.99,
               subtotal: 179.99,
               nomeProduto: "Relógio Esportivo"
+            },
+            {
+              id: 5,
+              produtoId: 3,
+              quantidade: 0.5,
+              precoUnitario: 39.99,
+              subtotal: 19.99,
+              nomeProduto: "Boné Ajustável"
+            }
+          ]
+        },
+        {
+          id: 4,
+          data: "2023-06-10T09:30:00",
+          total: 179.99,
+          valorPago: 200.00,
+          troco: 20.01,
+          formaPagamento: "Dinheiro",
+          itens: [
+            {
+              id: 6,
+              produtoId: 5,
+              quantidade: 1,
+              precoUnitario: 179.99,
+              subtotal: 179.99,
+              nomeProduto: "Relógio Esportivo"
+            }
+          ]
+        },
+        {
+          id: 5,
+          data: "2023-06-15T13:45:00",
+          total: 299.97,
+          valorPago: 299.97,
+          troco: 0.00,
+          formaPagamento: "Cartão",
+          itens: [
+            {
+              id: 7,
+              produtoId: 1,
+              quantidade: 1,
+              precoUnitario: 249.99,
+              subtotal: 249.99,
+              nomeProduto: "Tênis Esportivo"
+            },
+            {
+              id: 8,
+              produtoId: 3,
+              quantidade: 1,
+              precoUnitario: 39.99,
+              subtotal: 39.99,
+              nomeProduto: "Boné Ajustável"
+            }
+          ]
+        },
+        {
+          id: 6,
+          data: "2023-06-20T16:20:00",
+          total: 189.98,
+          valorPago: 189.98,
+          troco: 0.00,
+          formaPagamento: "Pix",
+          itens: [
+            {
+              id: 9,
+              produtoId: 2,
+              quantidade: 2,
+              precoUnitario: 59.99,
+              subtotal: 119.98,
+              nomeProduto: "Camiseta Básica"
+            },
+            {
+              id: 10,
+              produtoId: 3,
+              quantidade: 1,
+              precoUnitario: 39.99,
+              subtotal: 39.99,
+              nomeProduto: "Boné Ajustável"
+            }
+          ]
+        },
+        {
+          id: 7,
+          data: "2023-06-25T11:10:00",
+          total: 129.99,
+          valorPago: 130.00,
+          troco: 0.01,
+          formaPagamento: "Dinheiro",
+          itens: [
+            {
+              id: 11,
+              produtoId: 4,
+              quantidade: 1,
+              precoUnitario: 129.99,
+              subtotal: 129.99,
+              nomeProduto: "Calça Jeans"
             }
           ]
         }
@@ -170,7 +289,8 @@ const SalesHistoryScreen = () => {
 
       setSales(mockSales);
       setFilteredSales(mockSales);
-      showNotification('Dados carregados com sucesso!', 'success');
+
+      showNotification('Dados atualizados com sucesso!', 'success');
     } catch (err) {
       const errorMessage = err instanceof Error ? err.message : 'Erro desconhecido ao buscar dados';
       setError(errorMessage);
@@ -195,64 +315,89 @@ const SalesHistoryScreen = () => {
   const applyFilters = () => {
     let filtered = [...sales];
     
+    // Filtrar por número de venda
+    if (saleNumber) {
+      filtered = filtered.filter(sale => 
+        sale.id.toString().includes(saleNumber)
+      );
+    }
+    
+    // Filtrar por forma de pagamento
+    if (paymentMethod) {
+      filtered = filtered.filter(sale => 
+        sale.formaPagamento === paymentMethod
+      );
+    }
+    
     // Filtrar por data de início
     if (startDate) {
-      filtered = filtered.filter(sale => {
-        const saleDate = new Date(sale.data);
-        return saleDate >= startDate;
-      });
+
+
+
+
+      const start = new Date(startDate);
+      filtered = filtered.filter(sale => 
+        new Date(sale.data) >= start
+      );
     }
     
     // Filtrar por data de fim
     if (endDate) {
-      // Ajustar para o final do dia
-      const endOfDay = new Date(endDate);
-      endOfDay.setHours(23, 59, 59, 999);
-      
-      filtered = filtered.filter(sale => {
-        const saleDate = new Date(sale.data);
-        return saleDate <= endOfDay;
-      });
-    }
-    
-    // Filtrar por método de pagamento
-    if (paymentMethod) {
+
+
+
+
+
+
+
+
+
+
+
+
+      const end = new Date(endDate);
+      end.setHours(23, 59, 59, 999);
       filtered = filtered.filter(sale => 
-        sale.formaPagamento.toLowerCase() === paymentMethod.toLowerCase()
+
+        new Date(sale.data) <= end
       );
     }
     
     setFilteredSales(filtered);
-    setPage(1); // Reset para a primeira página ao aplicar filtros
+
   };
 
   // Função para limpar filtros
   const clearFilters = () => {
-    setStartDate(null);
-    setEndDate(null);
+
+
+    setSaleNumber('');
     setPaymentMethod('');
+    setStartDate('');
+    setEndDate('');
     setFilteredSales(sales);
-    setPage(1);
+
   };
 
-  // Calcular paginação
-  const paginatedSales = filteredSales.slice(
-    (page - 1) * rowsPerPage,
-    page * rowsPerPage
-  );
-  
-  const pageCount = Math.ceil(filteredSales.length / rowsPerPage);
+
+
+
+
+
+
+
 
   // Calcular estatísticas
-  const totalSalesCount = filteredSales.length;
+
+  const totalSales = filteredSales.length;
   const totalSalesValue = filteredSales.reduce((sum, sale) => sum + sale.total, 0);
-  
-  // Contagem por método de pagamento
-  const paymentMethodCounts = filteredSales.reduce((acc, sale) => {
-    const method = sale.formaPagamento;
-    acc[method] = (acc[method] || 0) + 1;
-    return acc;
-  }, {} as Record<string, number>);
+
+
+
+
+
+
+
 
   return (
     <Box sx={{ display: "flex", height: "100vh" }}>
@@ -378,59 +523,185 @@ const SalesHistoryScreen = () => {
         {/* Filtros */}
         <Paper sx={{ p: 3, mb: 3, borderRadius: '8px' }}>
           <Typography variant="h6" sx={{ mb: 2 }}>Filtros</Typography>
-          <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 2 }}>
-            <Box sx={{ flex: '1 1 200px' }}>
-              {/* <LocalizationProvider dateAdapter={AdapterDateFns} adapterLocale={ptBR}>
-                <DatePicker
+
+
+
+
+
+
+
+
+          
+          <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
+            {/* Primeira linha de filtros */}
+            <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 2 }}>
+              {/* Filtro por número de venda */}
+              <Box sx={{ flex: '1 1 200px', minWidth: '150px' }}>
+                <TextField
+                  fullWidth
+                  label="Número da Venda"
+                  variant="outlined"
+                  size="small"
+                  value={saleNumber}
+                  onChange={(e) => setSaleNumber(e.target.value)}
+                  InputProps={{
+                    startAdornment: (
+                      <InputAdornment position="start">
+                        <SearchIcon fontSize="small" />
+                      </InputAdornment>
+                    ),
+                  }}
+                />
+
+              </Box>
+              
+              {/* Filtro por forma de pagamento */}
+              <Box sx={{ flex: '1 1 200px', minWidth: '150px' }}>
+                <TextField
+                  select
+                  fullWidth
+                  label="Forma de Pagamento"
+                  variant="outlined"
+                  size="small"
+                  value={paymentMethod}
+                  onChange={(e) => setPaymentMethod(e.target.value)}
+                >
+                  {paymentOptions.map((option) => (
+                    <MenuItem key={option.value} value={option.value}>
+                      {option.label}
+                    </MenuItem>
+                  ))}
+                </TextField>
+              </Box>
+            </Box>
+
+
+
+
+
+
+
+
+
+            
+            {/* Segunda linha de filtros - Datas */}
+            <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 2 }}>
+              {/* Filtro por data inicial */}
+              <Box sx={{ flex: '1 1 200px', minWidth: '150px' }}>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                <TextField
+                  fullWidth
                   label="Data Inicial"
+                  type="date"
+                  variant="outlined"
+                  size="small"
                   value={startDate}
-                  onChange={(newValue) => setStartDate(newValue)}
-                  slotProps={{ textField: { fullWidth: true, variant: 'outlined' } }}
+                  onChange={(e) => setStartDate(e.target.value)}
+                  InputLabelProps={{ shrink: true }}
                 />
-              </LocalizationProvider> */}
-            </Box>
-            <Box sx={{ flex: '1 1 200px' }}>
-              {/* <LocalizationProvider dateAdapter={AdapterDateFns} adapterLocale={ptBR}>
-                <DatePicker
+              </Box>
+              
+              {/* Filtro por data final */}
+              <Box sx={{ flex: '1 1 200px', minWidth: '150px' }}>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                <TextField
+                  fullWidth
                   label="Data Final"
+                  type="date"
+                  variant="outlined"
+                  size="small"
                   value={endDate}
-                  onChange={(newValue) => setEndDate(newValue)}
-                  slotProps={{ textField: { fullWidth: true, variant: 'outlined' } }}
+                  onChange={(e) => setEndDate(e.target.value)}
+                  InputLabelProps={{ shrink: true }}
                 />
-              </LocalizationProvider> */}
+              </Box>
             </Box>
-            <Box sx={{ flex: '1 1 200px' }}>
-              <TextField
-                select
-                label="Forma de Pagamento"
-                value={paymentMethod}
-                onChange={(e) => setPaymentMethod(e.target.value)}
-                fullWidth
-                variant="outlined"
-              >
-                <MenuItem value="">Todos</MenuItem>
-                <MenuItem value="Dinheiro">Dinheiro</MenuItem>
-                <MenuItem value="Cartão">Cartão</MenuItem>
-                <MenuItem value="Pix">Pix</MenuItem>
-              </TextField>
-            </Box>
-            <Box sx={{ flex: '1 1 200px', display: 'flex', alignItems: 'center' }}>
-              <Button
-                variant="contained"
-                startIcon={<SearchIcon />}
-                onClick={applyFilters}
-                sx={{ mr: 1, backgroundColor: "#4A148C", flex: 1 }}
-              >
-                Filtrar
-              </Button>
+
+
+
+
+
+
+
+            
+            {/* Terceira linha - Botões de ação */}
+            <Box sx={{ display: 'flex', justifyContent: 'flex-end', gap: 2, mt: 1 }}>
               <Button
                 variant="outlined"
                 startIcon={<ClearIcon />}
                 onClick={clearFilters}
-                sx={{ borderColor: '#4A148C', color: '#4A148C', flex: 1 }}
+                size="medium"
+                sx={{ borderColor: '#4A148C', color: '#4A148C' }}
               >
-                Limpar
+
+
+
+
+
+
+
+                Limpar Filtros
               </Button>
+              
+              <Button
+                variant="contained"
+                startIcon={<SearchIcon />}
+                onClick={applyFilters}
+
+                size="medium"
+                sx={{ backgroundColor: "#4A148C" }}
+              >
+
+                Aplicar Filtros
+              </Button>
+
+
+
+
+
+
+
+
             </Box>
           </Box>
         </Paper>
@@ -441,7 +712,8 @@ const SalesHistoryScreen = () => {
           <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 3 }}>
             <Box sx={{ flex: '1 1 200px' }}>
               <Typography variant="body1">
-                Total de Vendas: <strong>{totalSalesCount}</strong>
+
+                Total de Vendas: <strong>{totalSales}</strong>
               </Typography>
             </Box>
             <Box sx={{ flex: '1 1 200px' }}>
@@ -454,7 +726,14 @@ const SalesHistoryScreen = () => {
                 Formas de Pagamento:
               </Typography>
               <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 1, mt: 1 }}>
-                {Object.entries(paymentMethodCounts).map(([method, count]) => (
+
+                {Object.entries(
+                  filteredSales.reduce((acc, sale) => {
+                    const method = sale.formaPagamento;
+                    acc[method] = (acc[method] || 0) + 1;
+                    return acc;
+                  }, {} as Record<string, number>)
+                ).map(([method, count]) => (
                   <Chip 
                     key={method}
                     label={`${method}: ${count}`} 
@@ -496,14 +775,16 @@ const SalesHistoryScreen = () => {
                   </TableRow>
                 </TableHead>
                 <TableBody>
-                  {paginatedSales.length === 0 ? (
+
+                  {filteredSales.length === 0 ? (
                     <TableRow>
                       <TableCell colSpan={7} align="center">
                         Nenhuma venda encontrada com os filtros selecionados
                       </TableCell>
                     </TableRow>
                   ) : (
-                    paginatedSales.map((sale) => (
+
+                    filteredSales.map((sale) => (
                       <TableRow 
                         key={sale.id}
                         sx={{ 
@@ -543,18 +824,18 @@ const SalesHistoryScreen = () => {
               </Table>
             </TableContainer>
 
-            {/* Paginação */}
-            {pageCount > 1 && (
-              <Box sx={{ display: 'flex', justifyContent: 'center', mt: 2, mb: 4 }}>
-                <Pagination 
-                  count={pageCount} 
-                  page={page} 
-                  onChange={(_, newPage) => setPage(newPage)}
-                  color="primary"
-                  size="large"
-                />
-              </Box>
-            )}
+
+
+
+
+
+
+
+
+
+
+
+
           </>
         )}
 

@@ -147,15 +147,21 @@ const ProductsScreen = () => {
   }, []);
 
   // Funções para manipulação de produtos
-  const handleInputChange = (
-
-    e: React.ChangeEvent<HTMLInputElement>
-  ) => {
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
-    setProduct({
-      ...product,
-      [name as string]: value
-    });
+    
+    // Tratar campos numéricos
+    if (name === 'quantidade' || name === 'precoCusto' || name === 'precoVenda') {
+      setProduct({
+        ...product,
+        [name]: value === '' ? '' : Number(value)
+      });
+    } else {
+      setProduct({
+        ...product,
+        [name]: value
+      });
+    }
   };
 
   // Adicione esta função
@@ -183,17 +189,72 @@ const ProductsScreen = () => {
   const handleSave = () => {
     if (!validateForm()) return;
     
-    if (product.id === 0) {
+
+    // Converter valores de string para número antes de salvar
+    const productToSave = {
+      ...product,
+      quantidade: Number(product.quantidade),
+      precoCusto: Number(product.precoCusto),
+      precoVenda: Number(product.precoVenda)
+    };
+    
+    if (productToSave.id === 0) {
       // Adicionar novo produto
       const newProduct = {
-        ...product,
+
+        ...productToSave,
         id: Date.now(), // Gera um ID único baseado no timestamp
         criadoEm: new Date().toISOString()
       };
       setProducts([...products, newProduct]);
+      
+      // Aqui você adicionaria a chamada à API para persistir no backend
+      // Por exemplo:
+      /*
+      fetch('http://localhost:5193/api/produto', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(newProduct)
+      })
+      .then(response => {
+        if (!response.ok) throw new Error('Erro ao salvar produto');
+        return response.json();
+      })
+      .then(data => {
+        console.log('Produto salvo com sucesso:', data);
+      })
+      .catch(error => {
+        console.error('Erro:', error);
+      });
+      */
     } else {
       // Atualizar produto existente
-      setProducts(products.map(p => p.id === product.id ? product : p));
+
+      setProducts(products.map(p => p.id === productToSave.id ? productToSave : p));
+      
+      // Aqui você adicionaria a chamada à API para atualizar no backend
+      // Por exemplo:
+      /*
+      fetch(`http://localhost:5193/api/produto/${productToSave.id}`, {
+        method: 'PUT',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(productToSave)
+      })
+      .then(response => {
+        if (!response.ok) throw new Error('Erro ao atualizar produto');
+        return response.json();
+      })
+      .then(data => {
+        console.log('Produto atualizado com sucesso:', data);
+      })
+      .catch(error => {
+        console.error('Erro:', error);
+      });
+      */
     }
     
     // Resetar formulário e fechar modal

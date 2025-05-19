@@ -36,7 +36,7 @@ import PointOfSaleIcon from '@mui/icons-material/PointOfSale';
 import ReceiptLongIcon from '@mui/icons-material/ReceiptLong';
 import DashboardIcon from '@mui/icons-material/Dashboard';
 import { styled } from '@mui/material/styles';
-import { PieChart, Pie, Cell, ResponsiveContainer, LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip as RechartsTooltip, Legend } from 'recharts';
+// import { PieChart, Pie, Cell, ResponsiveContainer, LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip as RechartsTooltip, Legend } from 'recharts';
 
 // Interface que corresponderá ao modelo do backend
 export interface Product {
@@ -71,7 +71,6 @@ interface SaleItem {
   subtotal: number;
   nomeProduto?: string;
 }
-
 // Componente de card estilizado
 const StatsCard = styled(Card)(({ theme }) => ({
   height: '100%',
@@ -391,14 +390,14 @@ const PdvScreen = () => {
                 <RefreshIcon />
               </IconButton>
             </Tooltip>
-            <Button
-              variant="contained"
-              startIcon={<AddShoppingCartIcon />}
-              onClick={startNewSale}
-              sx={{ backgroundColor: "#4A148C" }}
-            >
-              Nova Venda
-            </Button>
+
+
+
+
+
+
+
+
           </Box>
         </Box>
 
@@ -437,26 +436,7 @@ const PdvScreen = () => {
               </CardContent>
             </StatsCard>
           </Box>
-          {/* Card: Total de Vendas */}
-          <Box sx={{ flex: '1 1 calc(25% - 16px)', minWidth: '240px' }}>
-            <StatsCard>
-              <CardContent>
-                <Typography variant="subtitle1" color="text.secondary">
-                  Total de Vendas
-                </Typography>
-                <Typography variant="h4" sx={{ mt: 1, fontWeight: 'bold' }}>
-                  {loading ? <CircularProgress size={24} /> : totalSales}
-                </Typography>
-                <Chip 
-                  label="Hoje" 
-                  size="small" 
-                  color="primary" 
-                  sx={{ mt: 1, backgroundColor: '#4A148C' }} 
-                />
-              </CardContent>
-            </StatsCard>
-          </Box>
-
+          
           {/* Card: Valor Total Vendido */}
           <Box sx={{ flex: '1 1 calc(25% - 16px)', minWidth: '240px' }}>
             <StatsCard>
@@ -565,7 +545,7 @@ const PdvScreen = () => {
             </Typography>
             <Button 
               variant="outlined" 
-              onClick={() => navigate("/sales")}
+              onClick={() => navigate("/sales-history")}
               sx={{ borderColor: '#4A148C', color: '#4A148C' }}
             >
               Ver Todas
